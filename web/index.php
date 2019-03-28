@@ -152,7 +152,7 @@ include"db/koneksi.php";
                                 	yang berada di Kota Batu, Jawa Timur. 
                                 </h3>
                                 <h3>
-                                	 <!--<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>-->
+                                	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
                                 	</h3>
                             </div>
                         </li>
@@ -162,18 +162,6 @@ include"db/koneksi.php";
                             	<h2>Pulau Sempu</h2>
                                 <h3 class="active">Pulau Sempu adalah sebuah pulau kecil yang terletak di<br>
                                 	sebelah selatan Pulau Jawa.
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
-                                </h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="images/jatimpark3.jpg" alt="image02" />
-                            <div class="ei-title">
-                                <h2>Jatim Park 3</h2>
-                                <h3 class="active">Kehadiran Jawa Timur Park 3 (JTP 3) sukses <br>
-                                	menarik perhatian wisatawan dalam waktu singkat.
                                 </h3>
                                 <h3>
                                 	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
@@ -216,33 +204,48 @@ include"db/koneksi.php";
                                 </h3>
                             </div>
                         </li>
-                        <li>
-                            <img src="images/jodipan.jpg" alt="image07"/>
-                            <div class="ei-title">
-                                <h2>Kampung Jodipan</h2>
-                                <h3 class="active">It is a long established fact that a reader<br>
-                                	Lorem Ipsum is that it has a more-or-less 
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
-                                </h3>
-                            </div>
-                        </li>
+                        
                     </ul><!-- ei-slider-large -->
                     <ul class="ei-slider-thumbs">
                         <li class="ei-slider-element">Current</li>
 						<li>
 							<a href="#">
-								<span class="active">Batu Night Spectacular</span>
+								<span class="active">Home</span>
 							</a>
-							<img src="images/thumbs/1b.jpg" alt="thumb01" />
 						</li>
-                        <li class="hide"><a href="#"><span>Pulau Sempu</span></a><img src="images/thumbs/2b.jpg" alt="thumb01" /></li>
-                        <li  class="hide1"><a href="#"><span>Jatim Park 3</span></a><img src="images/thumbs/3b.jpg" alt="thumb02" /></li>
-                        <li class="hide1"><a href="#"><span>Museum Angkut</span></a><img src="images/thumbs/4b.jpg" alt="thumb03" /></li>
-                        <li><a href="#"><span>Pantai Balekambang</span> </a><img src="images/thumbs/5b.jpg" alt="thumb04" /></li>
-                        <li><a href="#"><span>Pantai Watu Leter</span></a><img src="images/thumbs/6b.jpg" alt="thumb05" /></li>
-                        <li><a href="#"><span>Kampung Jodipan</span> </a><img src="images/thumbs/7b.jpg" alt="thumb07" /></li>
+
+                        <li class="dropdown"><a href="#"><span>Kedaruratan</span></a>
+					<ul class="isi-dropdown">
+					<li><a href="?page=Ambulan">Ambulan</a></li>
+					<li><a href="?page=BencanaAlam">Bencana Alam</a></li>
+					<li><a href="?page=Polisi">Polisi</a></li>
+				</ul>
+                        </li>
+
+                        <li  class="dropdown"><a href="#"><span>Layanan Umum</span></a>
+					<ul class="isi-dropdown">
+					<li><a href="?page=PLN">PLN</a></li>
+					<li><a href="?page=PDAM">PDAM</a></li>
+					<li><a href="?page=PJU">PJU</a></li>
+					<li><a href="?page=StokDarah">Stok Darah</a></li>
+				</ul>
+                        </li>
+
+              
+                        <li class="#"><a href="#"><span>Pengaduan</span> </a>
+					<ul class="isi-dropdown">
+					<li><a href="?page=SuratWarga">Surat Warga</a></li>
+					<li><a href="?page=Elapor">E-Lapor</a></li>
+				</ul>
+                        </li>
+
+                        <li><a href="#"><span>Informasi</span></a>
+					<ul class="isi-dropdown">
+					<li><a href="?page=Einap">E-Inap</a></li>
+					<li><a href="?page=Faskes">Fasilitas Kesehatan</a></li>
+					<li><a href="?page=DataRS">Data Rumah Sakit</a></li>
+				</ul>
+                        </li>
                     </ul><!-- ei-slider-thumbs -->
                 </div><!-- ei-slider -->
             </div><!-- wrapper -->
