@@ -127,10 +127,36 @@ include"db/koneksi.php";
 </div>
 <!-- start header_btm -->
 
-
+<div class="wrap">
+<div class="header_btm">
+		<div class="menu">
+			<ul>
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="products.html">products</a></li>
+				<li><a href="about.html">about</a></li>
+				<li><a href="index.html">pages</a></li>
+				<li><a href="blog.html">blog</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<div class="clear"></div>
+			</ul>
+		</div>
 		<div id="smart_nav">
 			<a class="navicon" href="#menu-left"> </a>
 		</div>
+		<nav id="menu-left">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="products.html">products</a></li>
+				<li><a href="about.html">about</a></li>
+				<li><a href="index.html">pages</a></li>
+				<li><a href="blog.html">blog</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<div class="clear"></div>
+			</ul>
+		</nav>	
+	<div class="clear"></div>
+</div>
+</div>
 		
 
 		
@@ -214,12 +240,13 @@ include"db/koneksi.php";
 							</a>
 						</li>
 
-                        <li class="dropdown"><a href="#"><span>Kedaruratan</span></a>
-					<ul class="isi-dropdown">
-					<li><a href="?page=Ambulan">Ambulan</a></li>
-					<li><a href="?page=BencanaAlam">Bencana Alam</a></li>
-					<li><a href="?page=Polisi">Polisi</a></li>
-				</ul>
+                        <li class="dropdown"><a href="#"><span>Kedaruratan</span>
+						<ul class="isi-dropdown">
+							<li><a href="?page=Ambulan">Ambulan</a></li>
+							<li><a href="?page=BencanaAlam">Bencana Alam</a></li>
+							<li><a href="?page=Polisi">Polisi</a></li>
+						</ul>
+                        </a>
                         </li>
 
                         <li  class="dropdown"><a href="#"><span>Layanan Umum</span></a>
@@ -232,16 +259,16 @@ include"db/koneksi.php";
                         </li>
 
               
-                        <li class="#"><a href="#"><span>Pengaduan</span> </a>
+                        <li class="dropdown"><a href="#"><span>Pengaduan</span> </a>
 					<ul class="isi-dropdown">
 					<li><a href="?page=SuratWarga">Surat Warga</a></li>
 					<li><a href="?page=Elapor">E-Lapor</a></li>
 				</ul>
                         </li>
 
-                        <li><a href="#"><span>Informasi</span></a>
+                        <li class="dropdown"><a href="#"><span>Informasi</span></a>
 					<ul class="isi-dropdown">
-					<li><a href="?page=Einap">E-Inap</a></li>
+					<li><a href="einap.php">E-Inap</a></li>
 					<li><a href="?page=Faskes">Fasilitas Kesehatan</a></li>
 					<li><a href="?page=DataRS">Data Rumah Sakit</a></li>
 				</ul>
@@ -287,9 +314,9 @@ include"db/koneksi.php";
 			</li>
 			<li class="dropdown"><a>Informasi</a>
 				<ul class="isi-dropdown">
-					<li><a href="?page=Einap">E-Inap</a></li>
+					<li><a href="einap.php">E-Inap</a></li>
 					<li><a href="?page=Faskes">Fasilitas Kesehatan</a></li>
-					<li><a href="?page=DataRS">Data Rumah Sakit</a></li>
+					<li><a href="dataRS.php">Data Rumah Sakit</a></li>
 				</ul>
 			</li>
 		</ul>

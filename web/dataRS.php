@@ -56,9 +56,12 @@
     ============================================ -->
     <script src="js2/vendor/modernizr-2.8.3.min.js"></script>
 </head>
+
 <body>
 
-<div class="data-table-area">
+
+    <!-- Data Table area Start-->
+    <div class="data-table-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -67,94 +70,64 @@
                         </div>
                         <div class="table-responsive">
 
-
-<?php include ("db/koneksi.php"); ?>
-  <!-- start grids_of_3 -->
-
-  <?php
-$id_puskesmas = $_GET['id'];
-
-$data = ("SELECT * FROM einap WHERE DT_RowID = '$id_puskesmas'"); 
-$query = mysqli_query($koneksi, $data); 
-   
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://e-inap.malangkab.go.id/User/getDetailRs/" . $id_puskesmas,
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => false,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  $res = json_decode($response);
-  // var_dump($res);
-} 
-?>
-
-
- <table id="data-table-basic" class="table table-striped">
-  <?php while ($row = mysqli_fetch_array($query)){ ?> 
-
-    <h4><?php echo $row['NamaRS'] ?></h4>
-  
-         <h4> <b>Alamat :  <?php echo $row['Alamat'] ?> </b> </h4>
-         <h4><b>Telp : <?php echo $row['Telp'] ?></b>
-
-  <?php } ?>
+                
+                            <table id="data-table-basic" class="table table-striped">
+                    <center><h4>DATA KEMAMPUAN RUMAH SAKIT KABUPATEN MALANG</h4></center>
+     <h4>
+         <b>Data Terakhir Pada : </b>
          </h4>
-                      
-                            
+         <h4>
+         <b>
+    <?php
+    $tanggal= mktime(date("m"),date("d"),date("Y"));
+    echo "Tanggal : <b>".date("d-M-Y", $tanggal)."</b> ";
+    date_default_timezone_set('Asia/Jakarta');
+    $jam=date("H:i:s");
+    echo "| Pukul : <b>". $jam." "."</b>";
+    $a = date ("H");
+    ?> 
+    </b>
+         </h4>
                                 <thead>
                                     <tr>
-                                       <th>No</th>
-                                            <th>Jenis Tempat Tidur</th>
-                                            <th>Spesialis</th>
-                                            <th>Jenis Kelamin</th>
-                                            <th>Usia</th>
-                                            <th>Jumlah Tempat Tidur</th>
-                                            <th>Terpakai</th>
-                                            <th>Tersedia</th>
+                                        <th>No.</th>
+                                        <th>Nama Rumah Sakit</th>
+                                        <th>Kasus Kegawatdaruratan</th>
+                                    
                                     </tr>
                                 </thead>
                                 <tbody>
-                          
-                                 <?php foreach ($res as $value) { 
-                                  foreach ($value as $item) {      
-                                  $item = (array)$item;?>
+                          <?php 
+                        include 'db/koneksi.php';
+                        $no = 1;
+                        $data = mysqli_query($koneksi,"select * from tb_rs");
+                        while($d = mysqli_fetch_array($data)){
+                           ?>
                                 <tr>
-                                  <td><?= $item['0'] ?></a></td>
-                               <td><?= $item['1'] ?></a></td>
-                                  <td><?= $item['2'] ?></td>
-                                  <td><?= $item['3'] ?></td>
-                                  <td><?= $item['4'] ?></td>
-                                  <td><?= $item['5'] ?></td>
-                                  <td><?= $item['6'] ?></td>
-                                  <td><?= $item['7'] ?></td>
+                                  <td><?php echo $no++; ?></td>
+                                  <td><a style="color: #444444;"><?php echo $d['nama_rs']; ?> </td>
+
+                                  <td> <a href="detail_maternal.php?id=<?php echo $d['id_rs']; ?>">
+                                    <button class="btn btn-success notika-btn-success">Maternal</button></a> 
+                                    <a href="detail_neonatal.php?id=<?php echo $d['id_rs']; ?>">
+                                    <button class="btn btn-success notika-btn-success">Neonatal</button></td>
+                                 </a>
                                 </tr>
-                                  <?php } 
-                                } ?>
+
+                                  <?php 
+                              }
+                                ?>
                                 </tbody>
                         
                             </table>
-  
-</div>
-</div>
-</div>
-</body>
-   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Data Table area End-->
+    
     <!-- jquery
     ============================================ -->
     <script src="js2/vendor/jquery-1.12.4.min.js"></script>
@@ -220,3 +193,7 @@ if ($err) {
     <script src="js2/main.js"></script>
   <!-- tawk chat JS
     ============================================ -->
+  
+</body>
+
+</html>

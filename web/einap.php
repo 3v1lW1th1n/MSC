@@ -130,7 +130,7 @@ if ($err) {
                                   $item = (array)$item;?>
                                 <tr><a href="">
                                   <td><?= $item['0'] ?></td>
-                                  <td><a style="color: #444444;" href="?page=detailRS&id=<?php echo $item['DT_RowId']; ?>"><?= $item['1'] ?></td>
+                                  <td><a style="color: #444444;" href="detail_einap.php?id=<?php echo $item['DT_RowId']; ?>"><?= $item['1'] ?></td>
                                   <td><?= $item['2'] ?></td>
                                   <td><?= $item['3'] ?></td>
                                   <td><?= $item['4'] ?></td>

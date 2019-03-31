@@ -57,7 +57,6 @@
     <script src="js2/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-
 <div class="data-table-area">
         <div class="container">
             <div class="row">
@@ -66,90 +65,75 @@
                         <div class="basic-tb-hd">
                         </div>
                         <div class="table-responsive">
-
-
 <?php include ("db/koneksi.php"); ?>
   <!-- start grids_of_3 -->
 
-  <?php
-$id_puskesmas = $_GET['id'];
 
-$data = ("SELECT * FROM einap WHERE DT_RowID = '$id_puskesmas'"); 
-$query = mysqli_query($koneksi, $data); 
-   
+<?php
+    include 'db/koneksi.php';
+    $id = $_GET['id'];
+    $data = mysqli_query($koneksi,"select * from tb_rs where id_rs='$id'");
+    while($d = mysqli_fetch_array($data)){
+        ?>
 
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://e-inap.malangkab.go.id/User/getDetailRs/" . $id_puskesmas,
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => false,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  $res = json_decode($response);
-  // var_dump($res);
-} 
-?>
+<div class="top_main">
 
 
- <table id="data-table-basic" class="table table-striped">
-  <?php while ($row = mysqli_fetch_array($query)){ ?> 
-
-    <h4><?php echo $row['NamaRS'] ?></h4>
-  
-         <h4> <b>Alamat :  <?php echo $row['Alamat'] ?> </b> </h4>
-         <h4><b>Telp : <?php echo $row['Telp'] ?></b>
-
-  <?php } ?>
+         <b>
          </h4>
-                      
-                            
+  </div>                            
+                             <table id="data-table-basic" class="table table-striped">
+    <h4><?php echo $d['nama_rs'] ?></h4>
+    <h4> Jenis kegawatdaruratan : Maternal</h4></br>
+
                                 <thead>
                                     <tr>
-                                       <th>No</th>
-                                            <th>Jenis Tempat Tidur</th>
-                                            <th>Spesialis</th>
-                                            <th>Jenis Kelamin</th>
-                                            <th>Usia</th>
-                                            <th>Jumlah Tempat Tidur</th>
-                                            <th>Terpakai</th>
-                                            <th>Tersedia</th>
-                                    </tr>
+                                       <input type="hidden" name="id" value="<?php echo $d['id_rs']; ?>">
+                                       <th>Jenis Kegawatdaruratan</th>
+                                       <th>Status Ketersediaan</th>
+                                       <th>Total Ruangan</th>
+                                       <th>Terpakai</th>
+                                       <th>Tersedia</th>
+                                      </tr>
                                 </thead>
                                 <tbody>
-                          
-                                 <?php foreach ($res as $value) { 
-                                  foreach ($value as $item) {      
-                                  $item = (array)$item;?>
+                        <?php 
+                        include 'db/koneksi.php';
+                        $data1 = mysqli_query($koneksi,"select * from tb_kegawatdaruratan where id_rs='$id' AND status_jenis='2'");
+                        while($row = mysqli_fetch_array($data1)){
+                        $status = $row['status_ketersediaan'];
+                        $a = $row ['jml_tersedia'];
+                        $b = $row ['terpakai'];
+                        $tersedia= $a-$b;
+                           ?>
+
                                 <tr>
-                                  <td><?= $item['0'] ?></a></td>
-                               <td><?= $item['1'] ?></a></td>
-                                  <td><?= $item['2'] ?></td>
-                                  <td><?= $item['3'] ?></td>
-                                  <td><?= $item['4'] ?></td>
-                                  <td><?= $item['5'] ?></td>
-                                  <td><?= $item['6'] ?></td>
-                                  <td><?= $item['7'] ?></td>
-                                </tr>
-                                  <?php } 
-                                } ?>
+                                       <td><?php echo $row['jenis_kkg']; ?></td>
+                                       <td>
+                                        <input type="radio" name="status" value="1" <?php if($status=='1'){ echo "checked";} ?> />Ada
+                                        <input type="radio" name="status" value="0" <?php if($status=='0'){ echo "checked";}?> />Tidak Ada   
+                                       </td>
+
+                                       <td><?php echo $row['jml_tersedia']; ?></td>
+                                       <td><?php echo $row['terpakai']; ?></td>
+                                       <td><?php echo $tersedia; ?> </td>
+
+                                   </tr>
+
+                                    <?php 
+    }
+    ?>
+  
                                 </tbody>
                         
                             </table>
-  
+                           
+
+
+                                  <?php 
+                              }
+                                ?>
+
 </div>
 </div>
 </div>

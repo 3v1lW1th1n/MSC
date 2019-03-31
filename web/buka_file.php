@@ -16,6 +16,10 @@ if($_GET) {
 			if(!file_exists ("all_berita.php")) die ("Sorry Empty Page!"); 
 			include "all_berita.php";	break;	
 
+		
+
+
+		#Informasi
 		case 'Einap' :				
 			if(!file_exists ("einap.php")) die ("Sorry Empty Page!"); 
 			include "einap.php";	break;
@@ -26,7 +30,11 @@ if($_GET) {
 
 		case 'Faskes' :				
 			if(!file_exists ("faskes.php")) die ("Sorry Empty Page!"); 
-			include "faskes.php";	break;		
+			include "faskes.php";	break;
+
+		case 'DataRS' :				
+			if(!file_exists ("dataRS.php")) die ("Sorry Empty Page!"); 
+			include "dataRS.php";	break;			
 		
 		
 		
