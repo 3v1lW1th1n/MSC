@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2019 at 07:45 AM
+-- Generation Time: Apr 01, 2019 at 08:15 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -52,77 +52,194 @@ INSERT INTO `berita` (`id_berita`, `JudulBerita`, `IsiBerita`) VALUES
 CREATE TABLE `einap` (
   `DT_RowId` int(11) NOT NULL,
   `Alamat` text NOT NULL,
-  `Telp` varchar(15) NOT NULL
+  `Telp` varchar(15) NOT NULL,
+  `NamaRS` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `einap`
 --
 
-INSERT INTO `einap` (`DT_RowId`, `Alamat`, `Telp`) VALUES
-(1, 'Jl. Panglima Sudirman No.65, Karangploso, Girimoyo, Karangploso, Malang, Jawa Timur 65152', '(0341) 461634'),
-(2, 'JL. Tohjoyo, No. III/1, Pangetan, Pagentan, Singosari, Malang, Jawa Timur 65153', '(0341) 458961'),
-(3, 'Jl. Dorowati, Ampelgading, Mulyoarjo, Lawang, Malang, Jawa Timur 65251', ''),
-(4, 'Jl. Setiawan No.227, Bokor III, Bokor, Tumpang, Malang, Jawa Timur 65156', '(0341) 787231'),
-(5, 'Jl. Kusnan Marjuki No.101, Robyong, Wonomulyo, Poncokusumo, Malang, Jawa Timur 65175', '(0341) 787792'),
-(6, 'Jl. Raya Kemantren No.40, Putuk Rejo, Kemantren, Jabung, Malang, Jawa Timur 65155', '(0341) 793141'),
-(7, 'Jl. Raya Pakis No.69, Krajan Barat, Pakisjajar, Pakis, Malang, Jawa Timur 65154', '(0341) 791549'),
-(10, 'Jl. Raya Ardimulyo No.2, Karangjati, Ardimulyo, Singosari, Malang, Jawa Timur 65153', '(0341) 458388'),
-(12, 'Jl. Raya Sengkaling No.212, Sengkaling, Mulyoagung, Dau, Malang, Jawa Timur 65151', '(0341) 462123'),
-(13, 'Jl. Brigjend Abd Manan Wijaya, Gesingan, Pujon Lor, Pujon, Malang, Jawa Timur 65391', '(0341) 624048'),
-(14, 'Jl. Raya Ngantang No.47, Prabon II, Kaumrejo, Ngantang, Malang, Jawa Timur 65392', '(0341) 521097'),
-(15, 'Jl. Raya Kasembon No. 21 Kecamatan Kasembon, Bululawang, Malang, Jawa Timur 65171 ', '(0354) 326264'),
-(16, 'Jl. Jatirejoyoso No.4, Dawukan, Jatirejoyoso, Kepanjen, Malang, Jawa Timur 65163', '(0341) 396726'),
-(17, 'Jl. Jend. Sudirman No.2, Dusun Pakel, Sumberpucung, Sumber Pucung, Malang, Jawa Timur 65165', '(0341) 385230'),
-(18, 'Jl. Nailun Utara, Kec. Kromengan, Kab Malang, Jawa Timur 65165', '(0341) 384273'),
-(19, 'Jl. Raya Pakisaji No.19, Jatirejo, Pakisaji, Malang, Jawa Timur 65162', '(0341) 802932'),
-(20, 'Jl. Ahmad Yani No.18, Ngajum, Malang, Jawa Timur 65164', '(0341) 398100'),
-(21, 'Bumireja Kidul, Kebobang, Wonosari, Malang, Jawa Timur 65164', '(0341) 370114'),
-(22, 'Jl. Raya Jedong, Krobyokan, Jedong, Wagir, Malang, Jawa Timur 65158', '(0341) 7660353'),
-(23, 'Jl. Hamid Rusdi No.84, Sumbernongko, Pagak, Malang, Jawa Timur 65168', '(0341) 311002'),
-(24, 'Jl. Ahmad Yani, Kulon Kali, Sumbermanjing Kulon, Pagak, Malang, Jawa Timur 65168', ''),
-(25, 'Jl Raya No.343, Donomulyo, Dono Mulyo, Donomulyo, Malang, Jawa Timur 65167', '(0341) 881113'),
-(26, 'Jl. Raya Kalipare No.210, Kalipare, Malang, Jawa Timur 65166', '(0341) 311118'),
-(27, 'Jl. Raya Bantur, Banturkrajan, Bantur, Malang, Jawa Timur 65179', '(0341) 841113'),
-(28, 'Jl. Raya Wonokerto - Bantur, RT.4/RW.1, Wonokerto Krajan, Wonokerto, Bantur, Malang, Jawa Timur 67381', '(0341) 879495'),
-(29, 'Jl. A. Yani No.330, Megersari, Gedangan, Kabupaten Sidoarjo, Jawa Timur 61254', '(031) 8533726'),
-(30, 'Jl. Diponegoro No.62, Krajan Satu, Gondanglegi Kulon, Gondanglegi, Malang, Jawa Timur 65174', '(0341) 879223'),
-(31, 'Jl. Raya Ketawang No.13, Krajan, Ketawang, Gondanglegi, Malang, Jawa Timur 65174', '(0341) 879009'),
-(32, 'Jl. St. No.11-13, Bululawang, Malang, Jawa Timur 65171', '(0341) 833021'),
-(33, 'Jl. Panglima Sudirman No.161, Wajak, Malang, Jawa Timur 65173', '(0341) 824804'),
-(34, 'Jalan Sriwangi No. 1, Tajinan, Malang, Jawa Timur 65172', '(0341) 751380'),
-(35, 'Jl. Panglima Sudirman No.210, Kesatrian, Blimbing, Kota Malang, Jawa Timur 65111', '(0341) 824214'),
-(36, 'Jl. Semeru Sel. No.4, Dampit, Malang, Jawa Timur 65181', ' (0341) 896309'),
-(37, 'Jl. Ahmad Yani No.68, Pamotan, Dampit, Malang, Jawa Timur 65181', '(0341) 8591117'),
-(38, 'Jl. Magenda, Krajan, Harjokuncaran, Sumbermanjing, Malang, Jawa Timur 65176', '(0341) 871141'),
-(39, 'Jl. Raya Sitiarjo No.11, Palung, Sitiarjo, Sumbermanjing, Malang, Jawa Timur 65176', '(0341) 8570485'),
-(40, 'Bahroto, Tirtomarto, Ampelgading, Malang, Jawa Timur 65183', '(0341) 851076'),
-(41, 'Jl. Raya Dampit-Lumajang No.16, Tangsi, Bumirejo, Dampit, Malang, Jawa Timur 65181', '(0341) 897201'),
-(42, 'Jl. Raya Sidorejo No.39, Ardirejo, Sidorejo, Pagelaran, Malang, Jawa Timur 65174', '(0341) 875262'),
-(43, 'Jl. Raya No.17, Kendal Payak, Kendalpayak, Pakisaji, Malang, Jawa Timur 65162', '(0341) 837777'),
-(44, 'Jl. Kartini No.5, Lawang, Malang, Jawa Timur 65211', '(0341) 426072'),
-(45, 'Jl. Protokol Baturetno No.30, Damean, Tamanharjo, Singosari, Malang, Jawa Timur 65153', '(0341) 456383'),
-(46, 'Jl. Raya Bulupayung No.1B, Bulupayung, Krebet, Bululawang, Malang, Jawa Timur 65171', '(0341) 805183'),
-(47, 'Jl. Hayam Wuruk No.66, Krajan, Gondanglegi Wetan, Gondanglegi, Malang, Jawa Timur 65174', '(0341) 879047'),
-(48, 'Jalan Panji No.100, Panggungrejo, Kepanjen, Krajan, Panggungrejo, Kepanjen, Malang, Jawa Timur 65163', '(0341) 395041'),
-(49, 'Jl. Panglima Sudirman No.73, Ketawang, Dilem, Kepanjen, Malang, Jawa Timur 65163', '(0341) 396273'),
-(50, 'Jl. Ps. Baru, Dampit Wetan, Dampit, Malang, Jawa Timur 65181', '(0341) 897607'),
-(51, 'Jalan Raya Sukosari No.32 RT.3/RW.2 Besuk, Besuk, Sukosari, Kasembon, Malang, Jawa Timur 65393', '(0354) 328144'),
-(52, 'Jalan Doktor Cipto No. 8, Bedali, Lawang, Sengkkrajan, Bedali, Lawang, Malang, Jawa Timur 65215', '(0341) 420888'),
-(53, 'Jl. Raya Mondoroko KM 09, Singosari, Ngentong, Purwoasri, Ngentong, Purwoasri, Singosari, Malang, Jawa Timur 65153', '(0341) 458974'),
-(54, 'Jl. Raya Ngijo Karangploso No.25, Kendalsari, Ngijo, Karangploso, Malang, Jawa Timur 65152', '(0341) 460558'),
-(55, 'Jl. Raya Tlogomas No.45, Dusun Rambaan, Tlogomas, Kec. Lowokwaru, Kota Malang, Jawa Timur 65144', '(0341) 561666'),
-(56, 'Jl. Raya Jatikerto No.305, Cupak, Jatikerto, Kromengan, Malang, Jawa Timur 65165', '(0341) 397333'),
-(57, 'Jl. Jenderal Ahmad Yani, Turen, Purwodadi, Blimbing, Malang, Jawa Timur 65126', '(0341) 363653'),
-(58, 'Jalan Mondoroko, Mondoroko, Banjararum, Singosari, Malang, Jawa Timur 65153', '(0341) 458679'),
-(59, 'Jl. Sumber Waras no.32, Lawang\r\nMalang, Jawa Timur, Indonesia 65216', '(0341) 426579'),
-(60, 'Jalan A Yani, Sumber Porong, Lawang, Krajan Utara, Sumber Porong, Lawang, Malang, Jawa Timur 65216', '(0341) 426015'),
-(61, 'Jl. Raya Kebonsari No.221, Kebonsari, Tumpang, Malang, Jawa Timur 65156', '(0341) 787233'),
-(62, 'Jl. Doktor Wahidin No.101, Kalirejo, Lawang, Krajan, Kalirejo, Lawang, Malang, Jawa Timur 65215', '(0341) 426057'),
-(63, 'Jl. Panglima Sudirman No.99A, Lemah Duwur, Dilem, Kepanjen, Malang, Jawa Timur 65163', '(0341) 393000'),
-(64, 'Jl. Bromo No.98-100, Sukun, Kepanjen, Malang, Jawa Timur 65163', '(0341) 399499'),
-(65, 'Desa Sembaluh, Pujon, Jurangrejo, Ngroto, Pujon, Malang, Jawa Timur 65391', '(0341) 524206'),
-(66, 'JL. Raya Sengkaling, No. 245 Rt. 004/004, Kel. Mulyo Agung, Kec. Dau, 65151, Pendem, Junrejo, Kota Batu, Jawa Timur 65233', '0816-506-802');
+INSERT INTO `einap` (`DT_RowId`, `Alamat`, `Telp`, `NamaRS`) VALUES
+(1, 'Jl. Panglima Sudirman No.65, Karangploso, Girimoyo, Karangploso, Malang, Jawa Timur 65152', '(0341) 461634', 'Puskesmas Karangploso'),
+(2, 'JL. Tohjoyo, No. III/1, Pangetan, Pagentan, Singosari, Malang, Jawa Timur 65153', '(0341) 458961', 'Puskesmas Singosari'),
+(3, 'Jl. Dorowati, Ampelgading, Mulyoarjo, Lawang, Malang, Jawa Timur 65251', '', 'Puskesmas Lawang'),
+(4, 'Jl. Setiawan No.227, Bokor III, Bokor, Tumpang, Malang, Jawa Timur 65156', '(0341) 787231', 'Puskesmas Tumpang'),
+(5, 'Jl. Kusnan Marjuki No.101, Robyong, Wonomulyo, Poncokusumo, Malang, Jawa Timur 65175', '(0341) 787792', 'Puskesmas Poncokusumo'),
+(6, 'Jl. Raya Kemantren No.40, Putuk Rejo, Kemantren, Jabung, Malang, Jawa Timur 65155', '(0341) 793141', 'Puskesmas Jabung'),
+(7, 'Jl. Raya Pakis No.69, Krajan Barat, Pakisjajar, Pakis, Malang, Jawa Timur 65154', '(0341) 791549', 'Puskesmas Pakis'),
+(10, 'Jl. Raya Ardimulyo No.2, Karangjati, Ardimulyo, Singosari, Malang, Jawa Timur 65153', '(0341) 458388', 'Puskesmas Ardimulyo'),
+(12, 'Jl. Raya Sengkaling No.212, Sengkaling, Mulyoagung, Dau, Malang, Jawa Timur 65151', '(0341) 462123', 'Puskesmas Dau'),
+(13, 'Jl. Brigjend Abd Manan Wijaya, Gesingan, Pujon Lor, Pujon, Malang, Jawa Timur 65391', '(0341) 624048', 'Puskesmas Pujon'),
+(14, 'Jl. Raya Ngantang No.47, Prabon II, Kaumrejo, Ngantang, Malang, Jawa Timur 65392', '(0341) 521097', 'Puskesmas Ngantang'),
+(15, 'Jl. Raya Kasembon No. 21 Kecamatan Kasembon, Bululawang, Malang, Jawa Timur 65171 ', '(0354) 326264', 'Puskesmas Kasembon'),
+(16, 'Jl. Jatirejoyoso No.4, Dawukan, Jatirejoyoso, Kepanjen, Malang, Jawa Timur 65163', '(0341) 396726', 'Puskesmas Kepanjen'),
+(17, 'Jl. Jend. Sudirman No.2, Dusun Pakel, Sumberpucung, Sumber Pucung, Malang, Jawa Timur 65165', '(0341) 385230', 'Puskesmas Sumber Pucung'),
+(18, 'Jl. Nailun Utara, Kec. Kromengan, Kab Malang, Jawa Timur 65165', '(0341) 384273', 'Puskesmas Kromengan'),
+(19, 'Jl. Raya Pakisaji No.19, Jatirejo, Pakisaji, Malang, Jawa Timur 65162', '(0341) 802932', 'Puskesmas Pakisaji'),
+(20, 'Jl. Ahmad Yani No.18, Ngajum, Malang, Jawa Timur 65164', '(0341) 398100', 'Puskesmas Ngajum'),
+(21, 'Bumireja Kidul, Kebobang, Wonosari, Malang, Jawa Timur 65164', '(0341) 370114', 'Puskesmas Wonosari'),
+(22, 'Jl. Raya Jedong, Krobyokan, Jedong, Wagir, Malang, Jawa Timur 65158', '(0341) 7660353', 'Puskesmas Wagir'),
+(23, 'Jl. Hamid Rusdi No.84, Sumbernongko, Pagak, Malang, Jawa Timur 65168', '(0341) 311002', 'Puskesmas Pagak'),
+(24, 'Jl. Ahmad Yani, Kulon Kali, Sumbermanjing Kulon, Pagak, Malang, Jawa Timur 65168', '', 'Puskesmas Sumbermanjing Kulon'),
+(25, 'Jl Raya No.343, Donomulyo, Dono Mulyo, Donomulyo, Malang, Jawa Timur 65167', '(0341) 881113', 'Puskesmas Donomulyo'),
+(26, 'Jl. Raya Kalipare No.210, Kalipare, Malang, Jawa Timur 65166', '(0341) 311118', 'Puskesmas Kalipare'),
+(27, 'Jl. Raya Bantur, Banturkrajan, Bantur, Malang, Jawa Timur 65179', '(0341) 841113', 'Puskesmas Bantur'),
+(28, 'Jl. Raya Wonokerto - Bantur, RT.4/RW.1, Wonokerto Krajan, Wonokerto, Bantur, Malang, Jawa Timur 67381', '(0341) 879495', 'Puskesmas Wonokerto'),
+(29, 'Jl. A. Yani No.330, Megersari, Gedangan, Kabupaten Sidoarjo, Jawa Timur 61254', '(031) 8533726', 'Puskesmas Gedangan'),
+(30, 'Jl. Diponegoro No.62, Krajan Satu, Gondanglegi Kulon, Gondanglegi, Malang, Jawa Timur 65174', '(0341) 879223', 'Puskesmas Gondanglegi'),
+(31, 'Jl. Raya Ketawang No.13, Krajan, Ketawang, Gondanglegi, Malang, Jawa Timur 65174', '(0341) 879009', 'Puskesmas Ketawang'),
+(32, 'Jl. St. No.11-13, Bululawang, Malang, Jawa Timur 65171', '(0341) 833021', 'Puskesmas Bululawang'),
+(33, 'Jl. Panglima Sudirman No.161, Wajak, Malang, Jawa Timur 65173', '(0341) 824804', 'Puskesmas Wajak'),
+(34, 'Jalan Sriwangi No. 1, Tajinan, Malang, Jawa Timur 65172', '(0341) 751380', 'Puskesmas Tajinan'),
+(35, 'Jl. Panglima Sudirman No.210, Kesatrian, Blimbing, Kota Malang, Jawa Timur 65111', '(0341) 824214', 'Puskesmas Turen'),
+(36, 'Jl. Semeru Sel. No.4, Dampit, Malang, Jawa Timur 65181', ' (0341) 896309', 'Puskesmas Dampit'),
+(37, 'Jl. Ahmad Yani No.68, Pamotan, Dampit, Malang, Jawa Timur 65181', '(0341) 8591117', 'Puskesmas Pamotan'),
+(38, 'Jl. Magenda, Krajan, Harjokuncaran, Sumbermanjing, Malang, Jawa Timur 65176', '(0341) 871141', 'Puskesmas Sumbermanjing Wetan'),
+(39, 'Jl. Raya Sitiarjo No.11, Palung, Sitiarjo, Sumbermanjing, Malang, Jawa Timur 65176', '(0341) 8570485', '	Puskesmas Sitiarjo'),
+(40, 'Bahroto, Tirtomarto, Ampelgading, Malang, Jawa Timur 65183', '(0341) 851076', 'Puskesmas Ampelgading'),
+(41, 'Jl. Raya Dampit-Lumajang No.16, Tangsi, Bumirejo, Dampit, Malang, Jawa Timur 65181', '(0341) 897201', 'Puskesmas Tirtoyudo'),
+(42, 'Jl. Raya Sidorejo No.39, Ardirejo, Sidorejo, Pagelaran, Malang, Jawa Timur 65174', '(0341) 875262', 'Puskesmas Pagelaran'),
+(43, 'Jl. Raya No.17, Kendal Payak, Kendalpayak, Pakisaji, Malang, Jawa Timur 65162', '(0341) 837777', 'RS BEN MARI'),
+(44, 'Jl. Kartini No.5, Lawang, Malang, Jawa Timur 65211', '(0341) 426072', 'RSUD LAWANG'),
+(45, 'Jl. Protokol Baturetno No.30, Damean, Tamanharjo, Singosari, Malang, Jawa Timur 65153', '(0341) 456383', 'RSAU dr. M.MUNIR'),
+(46, 'Jl. Raya Bulupayung No.1B, Bulupayung, Krebet, Bululawang, Malang, Jawa Timur 65171', '(0341) 805183', 'RSU MITRA DELIMA'),
+(47, 'Jl. Hayam Wuruk No.66, Krajan, Gondanglegi Wetan, Gondanglegi, Malang, Jawa Timur 65174', '(0341) 879047', 'RS ISLAM GONDANGLEGI'),
+(48, 'Jalan Panji No.100, Panggungrejo, Kepanjen, Krajan, Panggungrejo, Kepanjen, Malang, Jawa Timur 65163', '(0341) 395041', 'RSUD KANJURUHAN'),
+(49, 'Jl. Panglima Sudirman No.73, Ketawang, Dilem, Kepanjen, Malang, Jawa Timur 65163', '(0341) 396273', 'RS TEJA HUSADA'),
+(50, 'Jl. Ps. Baru, Dampit Wetan, Dampit, Malang, Jawa Timur 65181', '(0341) 897607', 'RSB PERMATA HATI DAMPIT'),
+(51, 'Jalan Raya Sukosari No.32 RT.3/RW.2 Besuk, Besuk, Sukosari, Kasembon, Malang, Jawa Timur 65393', '(0354) 328144', 'RSU ISLAM MADINAH KASEMBON'),
+(52, 'Jalan Doktor Cipto No. 8, Bedali, Lawang, Sengkkrajan, Bedali, Lawang, Malang, Jawa Timur 65215', '(0341) 420888', 'RS LAWANG MEDIKA'),
+(53, 'Jl. Raya Mondoroko KM 09, Singosari, Ngentong, Purwoasri, Ngentong, Purwoasri, Singosari, Malang, Jawa Timur 65153', '(0341) 458974', 'RSU MARSUDI WALUYO'),
+(54, 'Jl. Raya Ngijo Karangploso No.25, Kendalsari, Ngijo, Karangploso, Malang, Jawa Timur 65152', '(0341) 460558', 'RS PRASETYA HUSADA'),
+(55, 'Jl. Raya Tlogomas No.45, Dusun Rambaan, Tlogomas, Kec. Lowokwaru, Kota Malang, Jawa Timur 65144', '(0341) 561666', 'RSU UNIVERSITAS MUHAMMADIYAH MALANG'),
+(56, 'Jl. Raya Jatikerto No.305, Cupak, Jatikerto, Kromengan, Malang, Jawa Timur 65165', '(0341) 397333', 'RS SALSABILA'),
+(57, 'Jl. Jenderal Ahmad Yani, Turen, Purwodadi, Blimbing, Malang, Jawa Timur 65126', '(0341) 363653', 'RS BALA KESELAMATAN TUREN'),
+(58, 'Jalan Mondoroko, Mondoroko, Banjararum, Singosari, Malang, Jawa Timur 65153', '(0341) 458679', 'RS PRIMAHUSADA'),
+(59, 'Jl. Sumber Waras no.32, Lawang\r\nMalang, Jawa Timur, Indonesia 65216', '(0341) 426579', 'Rumkitban Lawang'),
+(60, 'Jalan A Yani, Sumber Porong, Lawang, Krajan Utara, Sumber Porong, Lawang, Malang, Jawa Timur 65216', '(0341) 426015', 'RS DR. Radjiman W'),
+(61, 'Jl. Raya Kebonsari No.221, Kebonsari, Tumpang, Malang, Jawa Timur 65156', '(0341) 787233', 'RS Sumber Sentosa'),
+(62, 'Jl. Doktor Wahidin No.101, Kalirejo, Lawang, Krajan, Kalirejo, Lawang, Malang, Jawa Timur 65215', '(0341) 426057', 'RSB St.Miriam'),
+(63, 'Jl. Panglima Sudirman No.99A, Lemah Duwur, Dilem, Kepanjen, Malang, Jawa Timur 65163', '(0341) 393000', 'RS Wava Husada'),
+(64, 'Jl. Bromo No.98-100, Sukun, Kepanjen, Malang, Jawa Timur 65163', '(0341) 399499', 'RS Khusus Bedah Hasta Husada'),
+(65, 'Desa Sembaluh, Pujon, Jurangrejo, Ngroto, Pujon, Malang, Jawa Timur 65391', '(0341) 524206', 'RS. Wikarta mandala'),
+(66, 'JL. Raya Sengkaling, No. 245 Rt. 004/004, Kel. Mulyo Agung, Kec. Dau, 65151, Pendem, Junrejo, Kota Batu, Jawa Timur 65233', '0816-506-802', 'RS Hayunanto'),
+(67, 'Puskesmas coba input', 'g', '085xx');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_faskes`
+--
+
+CREATE TABLE `tb_faskes` (
+  `id_faskes` varchar(15) NOT NULL,
+  `jenis_faskes` varchar(200) NOT NULL,
+  `id_rs` varchar(15) NOT NULL,
+  `status_ketersediaan` int(11) NOT NULL,
+  `jml_tersedia` varchar(100) NOT NULL,
+  `terpakai` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_faskes`
+--
+
+INSERT INTO `tb_faskes` (`id_faskes`, `jenis_faskes`, `id_rs`, `status_ketersediaan`, `jml_tersedia`, `terpakai`) VALUES
+('FK001', 'Bed Perawatan Perina', 'RS001', 1, '23', 0),
+('FK002', 'Bed Perawatan Kebidanan', 'RS001', 1, '23', 0),
+('FK003', 'Bed di Ruang HCU', 'RS001', 0, '0', 0),
+('FK004', 'Bed di Ruang ICU', 'RS001', 1, '4', 0),
+('FK005', 'Bed di Ruang NICU', 'RS001', 1, '4', 0),
+('FK006', 'Bed di Ruang PICU', 'RS001', 0, '0', 0),
+('FK007', 'Bed di Ruang IGD', 'RS001', 1, '11', 0),
+('FK008', 'Bank Darah/PMI', 'RS001', 1, '1', 0),
+('FK009', 'Laboratorium', 'RS001', 1, '1', 1),
+('FK010', 'Instalasi Radiologi (Rontgen dan USG)', 'RS001', 1, '1', 0),
+('FK011', 'Farmasi', 'RS001', 1, '1', 0),
+('FK012', 'Ambulance Emergency', 'RS001', 1, '2', 0),
+('FK013', 'Tim Emergency', 'RS001', 1, '1', 0),
+('FK014', 'Bed Perawatan Perina', 'RS002', 1, '19', 0),
+('FK015', 'Bed Perawatan Kebidanan', 'RS002', 1, '21', 0),
+('FK016', 'Bed di Ruang HCU', 'RS002', 1, '2', 0),
+('FK017', 'Bed di Ruang ICU', 'RS002', 0, '0', 0),
+('FK018', 'Bed di Ruang NICU', 'RS002', 0, '0', 0),
+('FK019', 'Bed di Ruang PICU', 'RS002', 0, '0', 0),
+('FK020', 'Bed di Ruang IGD', 'RS002', 0, '0', 0),
+('FK021', 'Bank Darah/PMI', 'RS002', 0, '0', 0),
+('FK022', 'Laboratorium', 'RS002', 0, '0', 0),
+('FK023', 'Instalasi Radiologi (Rontgen dan USG)', 'RS002', 0, '0', 0),
+('FK024', 'Farmasi', 'RS002', 0, '0', 0),
+('FK025', 'Ambulance Emergency', 'RS002', 0, '0', 0),
+('FK026', 'Tim Emergency', 'RS002', 0, '0', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_kegawatdaruratan`
+--
+
+CREATE TABLE `tb_kegawatdaruratan` (
+  `id_jenis` varchar(10) NOT NULL,
+  `jenis_kkg` varchar(100) NOT NULL,
+  `id_rs` varchar(15) NOT NULL,
+  `jml_tersedia` int(11) NOT NULL,
+  `status_ketersediaan` int(11) NOT NULL,
+  `terpakai` int(11) NOT NULL,
+  `status_jenis` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_kegawatdaruratan`
+--
+
+INSERT INTO `tb_kegawatdaruratan` (`id_jenis`, `jenis_kkg`, `id_rs`, `jml_tersedia`, `status_ketersediaan`, `terpakai`, `status_jenis`) VALUES
+('KKG001', 'Eklamsi', 'RS001', 20, 1, 5, 1),
+('KKG002', 'PEB', 'RS001', 15, 1, 5, 1),
+('KKG003', 'HPP', 'RS001', 25, 1, 3, 1),
+('KKG004', 'HAP', 'RS001', 10, 1, 5, 1),
+('KKG005', 'Distosia', 'RS001', 25, 0, 5, 1),
+('KKG006', 'Abortus', 'RS001', 30, 0, 2, 1),
+('KKG007', 'KET', 'RS001', 20, 1, 3, 1),
+('KKG008', 'Inversio Uteri', 'RS001', 5, 1, 2, 1),
+('KKG009', 'Febris Puerperalis', 'RS001', 10, 1, 0, 1),
+('KKG010', 'Hyperemesis gravidarum dengan dehidrasi', 'RS001', 20, 1, 0, 1),
+('KKG011', 'Persalinan kehamilan risiko tinggi dan atau persalinan dengan penyulit', 'RS001', 10, 1, 5, 1),
+('KKG012', 'Asfiksia', 'RS001', 10, 1, 5, 2),
+('KKG013', 'Bayi Kecil/Prematur/UGR', 'RS001', 20, 1, 0, 2),
+('KKG014', 'Infeksi/Sepsis', 'RS001', 10, 1, 3, 2),
+('KKG015', 'Ikterus', 'RS001', 10, 1, 5, 2),
+('KKG016', 'Cyanotic Spell (penyakit jantung)', 'RS001', 0, 0, 0, 2),
+('KKG017', 'Tetanus', 'RS001', 30, 1, 3, 2),
+('KKG018', 'Kelainan Kongenital', 'RS001', 20, 1, 15, 2),
+('KKG019', 'ACCPD', 'RS001', 10, 1, 2, 2),
+('KKG020', 'Hipotermia', 'RS001', 5, 1, 2, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_rs`
+--
+
+CREATE TABLE `tb_rs` (
+  `id_rs` varchar(15) NOT NULL,
+  `nama_rs` varchar(200) NOT NULL,
+  `alamat_rs` text NOT NULL,
+  `telp_rs` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_rs`
+--
+
+INSERT INTO `tb_rs` (`id_rs`, `nama_rs`, `alamat_rs`, `telp_rs`) VALUES
+('RS001', 'RSUD Balaraja', 'Jl. Rumah Sakit No.88, Tobat, Balaraja, Tangerang, Banten 15126', '021-29508382; 081211608026'),
+('RS002', 'RSU Selaras', '', '021-5969145'),
+('RS003', 'RSIA Harapan Mulia', '', '021-5991785'),
+('RS004', 'RS Mulia Insani', '', '021-5962790'),
+('RS005', 'RSIA Tiara', '', '021-59401999'),
+('RS006', 'RS Permata Hati', 'Jl. Danau Toba Blok E 6 No.16 - 18, Lesanpuro, Kedungkandang, Kota Malang, Jawa Timur 65138', '(0341) 718068'),
+('RS007', 'RS Suci Paramita', '', '');
 
 --
 -- Indexes for dumped tables
@@ -139,6 +256,42 @@ ALTER TABLE `berita`
 --
 ALTER TABLE `einap`
   ADD PRIMARY KEY (`DT_RowId`);
+
+--
+-- Indexes for table `tb_faskes`
+--
+ALTER TABLE `tb_faskes`
+  ADD PRIMARY KEY (`id_faskes`),
+  ADD KEY `id_rs` (`id_rs`);
+
+--
+-- Indexes for table `tb_kegawatdaruratan`
+--
+ALTER TABLE `tb_kegawatdaruratan`
+  ADD PRIMARY KEY (`id_jenis`),
+  ADD KEY `id_rs` (`id_rs`);
+
+--
+-- Indexes for table `tb_rs`
+--
+ALTER TABLE `tb_rs`
+  ADD PRIMARY KEY (`id_rs`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tb_faskes`
+--
+ALTER TABLE `tb_faskes`
+  ADD CONSTRAINT `tb_faskes_ibfk_1` FOREIGN KEY (`id_rs`) REFERENCES `tb_rs` (`id_rs`);
+
+--
+-- Constraints for table `tb_kegawatdaruratan`
+--
+ALTER TABLE `tb_kegawatdaruratan`
+  ADD CONSTRAINT `tb_kegawatdaruratan_ibfk_1` FOREIGN KEY (`id_rs`) REFERENCES `tb_rs` (`id_rs`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

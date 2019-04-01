@@ -131,7 +131,8 @@ include"db/koneksi.php";
 <div class="header_btm">
 		<div class="menu">
 			<ul>
-				<li class="active"><a href="index.html">Home</a></li>
+				<li class="active"><a href="index.html">Home</a>
+				</li>
 				<li><a href="products.html">products</a></li>
 				<li><a href="about.html">about</a></li>
 				<li><a href="index.html">pages</a></li>
@@ -236,11 +237,11 @@ include"db/koneksi.php";
                         <li class="ei-slider-element">Current</li>
 						<li>
 							<a href="#">
-								<span class="active">Home</span>
+								<span class="active"></span>
 							</a>
 						</li>
 
-                        <li class="dropdown"><a href="#"><span>Kedaruratan</span>
+                        <li class="dropdown"><a href="#"><span></span>
 						<ul class="isi-dropdown">
 							<li><a href="?page=Ambulan">Ambulan</a></li>
 							<li><a href="?page=BencanaAlam">Bencana Alam</a></li>
@@ -315,7 +316,7 @@ include"db/koneksi.php";
 			<li class="dropdown"><a>Informasi</a>
 				<ul class="isi-dropdown">
 					<li><a href="einap.php">E-Inap</a></li>
-					<li><a href="?page=Faskes">Fasilitas Kesehatan</a></li>
+					<li><a href="faskes.php">Fasilitas Kesehatan</a></li>
 					<li><a href="dataRS.php">Data Rumah Sakit</a></li>
 				</ul>
 			</li>
