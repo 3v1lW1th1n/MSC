@@ -100,7 +100,9 @@
                         <?php 
                         include 'db/koneksi.php';
                         $data1 = mysqli_query($koneksi,"select * from tb_kegawatdaruratan where id_rs='$id' AND status_jenis='2'");
+                         $c = 0;
                         while($row = mysqli_fetch_array($data1)){
+                            $c++;
                         $status = $row['status_ketersediaan'];
                         $a = $row ['jml_tersedia'];
                         $b = $row ['terpakai'];
@@ -110,8 +112,22 @@
                                 <tr>
                                        <td><?php echo $row['jenis_kkg']; ?></td>
                                        <td>
-                                        <input type="radio" name="status" value="1" <?php if($status=='1'){ echo "checked";} ?> />Ada
-                                        <input type="radio" name="status" value="0" <?php if($status=='0'){ echo "checked";}?> />Tidak Ada   
+                                       <?php 
+                                        $nem = "status_".$c;
+                                        $nem2 = "status2_".$c;
+                                        if($status==1){ 
+                                            ?>
+                                            <input type="radio" name=<?php echo $nem; ?> value="1" checked />Ada
+                                            <input type="radio" name=<?php echo $nem; ?> value="0" />Tidak Ada
+                                            <?php
+                                        } elseif($status==0) {
+                                            ?>
+                                            <input type="radio" name=<?php echo $nem2; ?> value="1"/>Ada
+                                            <input type="radio" name=<?php echo $nem2; ?> value="0" checked />Tidak Ada
+                                            <?php
+                                        } 
+
+                                        ?>  
                                        </td>
 
                                        <td><?php echo $row['jml_tersedia']; ?></td>
