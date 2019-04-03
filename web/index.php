@@ -90,6 +90,7 @@ include"db/koneksi.php";
  
 	.dropdown:hover .isi-dropdown {
 		display: block;
+
 	}
  
 	.isi-dropdown a:hover {
@@ -102,6 +103,7 @@ include"db/koneksi.php";
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		z-index: 1;
 		background-color: #f9f9f9;
+
 	}
  
 	.isi-dropdown a {
@@ -121,53 +123,28 @@ include"db/koneksi.php";
 		<div class="logo">
 			<a href="index.html"><img src="images/logo2.png" alt=""/></a>
 		</div>	
+		 <div class="log_reg">
+				<ul>
+					<li><a href="login.html">Login</a> </li>
+					<span class="log"> or </span>
+					<li><a href="register.html">Register</a> </li>								   
+					<div class="clear"></div>
+				</ul>
+		</div>	
 		<div class="clear"></div>
 	</div>	
 </div>
 </div>
 <!-- start header_btm -->
 
-<div class="wrap">
-<div class="header_btm">
-		<div class="menu">
-			<ul>
-				<li class="active"><a href="index.html">Home</a>
-				</li>
-				<li><a href="products.html">products</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
-				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<div class="clear"></div>
-			</ul>
-		</div>
-		<div id="smart_nav">
-			<a class="navicon" href="#menu-left"> </a>
-		</div>
-		<nav id="menu-left">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="products.html">products</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
-				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<div class="clear"></div>
-			</ul>
-		</nav>	
-	<div class="clear"></div>
-</div>
-</div>
-		
-
 		
 	<div class="clear"></div>
 </div>
 </div>
 <!-- start slider -->
-<div class="slider">
+
 				<!---start-image-slider---->
-				<div class="image-slider">
+				
 					 <div class="wrapper">
                 <div id="ei-slider" class="ei-slider">
                     <ul class="ei-slider-large">
@@ -236,109 +213,120 @@ include"db/koneksi.php";
                     <ul class="ei-slider-thumbs">
                         <li class="ei-slider-element">Current</li>
 						<li>
-							<a href="#">
-								<span class="active"></span>
-							</a>
 						</li>
-
-                        <li class="dropdown"><a href="#"><span></span>
-						<ul class="isi-dropdown">
-							<li><a href="?page=Ambulan">Ambulan</a></li>
-							<li><a href="?page=BencanaAlam">Bencana Alam</a></li>
-							<li><a href="?page=Polisi">Polisi</a></li>
-						</ul>
-                        </a>
+                        <li class="dropdown">
                         </li>
-
-                        <li  class="dropdown"><a href="#"><span>Layanan Umum</span></a>
-					<ul class="isi-dropdown">
-					<li><a href="?page=PLN">PLN</a></li>
-					<li><a href="?page=PDAM">PDAM</a></li>
-					<li><a href="?page=PJU">PJU</a></li>
-					<li><a href="?page=StokDarah">Stok Darah</a></li>
-				</ul>
+                        <li  class="dropdown">					
                         </li>
-
-              
-                        <li class="dropdown"><a href="#"><span>Pengaduan</span> </a>
-					<ul class="isi-dropdown">
-					<li><a href="?page=SuratWarga">Surat Warga</a></li>
-					<li><a href="?page=Elapor">E-Lapor</a></li>
-				</ul>
+                        <li class="dropdown"> 
                         </li>
-
-                        <li class="dropdown"><a href="#"><span>Informasi</span></a>
-					<ul class="isi-dropdown">
-					<li><a href="einap.php">E-Inap</a></li>
-					<li><a href="?page=Faskes">Fasilitas Kesehatan</a></li>
-					<li><a href="?page=DataRS">Data Rumah Sakit</a></li>
-				</ul>
+                        <li class="dropdown">
                         </li>
                     </ul><!-- ei-slider-thumbs -->
                 </div><!-- ei-slider -->
             </div><!-- wrapper -->
-		</div>
+	
 		<!---End-image-slider---->	
-</div>
+
 <!-- start image1_of_3 -->
-<div class="top_bg">
+
+
 <div class="wrap">
-
-</div>
-</div>
-
-<header class="header">
-	<div class="menu-malasngoding">
- 
-		<ul>
-			<li><a href="index.php">Home</a></li>
-			<li class="dropdown"><a>Kedaruratan</a>
+<div class="header_btm">
+		<div class="menu">
+			<ul>
+				<li class="active"><a href="index.html">Home</a>
+				</li>
+				
+				<li class="dropdown"><a>Kedaruratan</a>
 				<ul class="isi-dropdown">
 					<li><a href="?page=Ambulan">Ambulan</a></li>
 					<li><a href="?page=BencanaAlam">Bencana Alam</a></li>
 					<li><a href="?page=Polisi">Polisi</a></li>
 				</ul>
-			</li>
-			<li class="dropdown"><a>Layanan Umum</a>
+			    </li>
+
+			    <li class="dropdown"><a>Layanan Umum</a>
 				<ul class="isi-dropdown">
 					<li><a href="?page=PLN">PLN</a></li>
 					<li><a href="?page=PDAM">PDAM</a></li>
 					<li><a href="?page=PJU">PJU</a></li>
 					<li><a href="?page=StokDarah">Stok Darah</a></li>
 				</ul>
-			</li>
-			<li class="dropdown"><a>Pengaduan</a>
+				</li>
+
+				<li class="dropdown"><a>Pengaduan</a>
 				<ul class="isi-dropdown">
 					<li><a href="?page=SuratWarga">Surat Warga</a></li>
 					<li><a href="?page=Elapor">E-Lapor</a></li>
 				</ul>
-			</li>
-			<li class="dropdown"><a>Informasi</a>
+				</li>
+				<li class="dropdown"><a>Informasi</a>
 				<ul class="isi-dropdown">
 					<li><a href="einap.php">E-Inap</a></li>
 					<li><a href="faskes.php">Fasilitas Kesehatan</a></li>
 					<li><a href="dataRS.php">Data Rumah Sakit</a></li>
 				</ul>
-			</li>
-		</ul>
- 
-	</div>
-</header>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+		</div>
+</div>
+	
+
 <!-- start main -->
- <?php include "buka_file.php" ?>
-
-<!-- start footer -->
-<div class="footer_top">
+<div class="main_bg">
 <div class="wrap">
+<div class="main">
+	<div class="login_left">
 
-</div>
-</div>
-<!-- start footer -->
-<div class="footer_mid">
-<div class="wrap">
+ 						<?php 
+                        include 'db/koneksi.php';
+                        $data = mysqli_query($koneksi,"select * from berita");
+                        while($d = mysqli_fetch_array($data)){
+                           ?>
 
+		<h3><?php echo $d['JudulBerita']; ?></h3>
+	
+		<?php
+			// Tampilkan hanya sebagian isi berita
+                    $isi_berita = htmlentities(strip_tags($d['IsiBerita'])); // membuat paragraf pada isi berita dan mengabaikan tag html
+                    $isi = substr($isi_berita,0,180); // ambil sebanyak 180 karakter
+                    $isi = substr($isi_berita,0,strrpos($isi," ")); // potong per spasi kalimat
+                ?>
+ 		<p><?php echo $isi ?>... 
+ 			<a href="?page=Artikel&kd=<?php echo $d['id_berita']; ?>">
+             <button class="btn btn-success notika-btn-success" style="height:27px; padding-left:3px; padding-right:3px; padding-top:1px;">Selengkapnya</button></a></p> 
+			<?php } ?>
+	</div>
+
+
+	<div class="login_left">
+		<?php 
+                        include 'db/koneksi.php';
+                        $data = mysqli_query($koneksi,"select * from berita");
+                        while($d = mysqli_fetch_array($data)){
+                           ?>
+
+		<h3><?php echo $d['JudulBerita']; ?></h3>
+	
+		<?php
+			// Tampilkan hanya sebagian isi berita
+                    $isi_berita = htmlentities(strip_tags($d['IsiBerita'])); // membuat paragraf pada isi berita dan mengabaikan tag html
+                    $isi = substr($isi_berita,0,180); // ambil sebanyak 180 karakter
+                    $isi = substr($isi_berita,0,strrpos($isi," ")); // potong per spasi kalimat
+                ?>
+ 		<p><?php echo $isi ?>... 
+ 			<a href="?page=Artikel&kd=<?php echo $d['id_berita']; ?>">
+             <button class="btn btn-success notika-btn-success" style="height:27px; padding-left:3px; padding-right:3px; padding-top:1px;">Selengkapnya</button></a></p> 
+			<?php } ?>
+	</div>
+	<div class="clear"></div>
 </div>
 </div>
+</div>
+
 <!-- start footer -->
 <div class="footer_bg">
 <div class="wrap">
