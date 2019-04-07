@@ -274,47 +274,41 @@
 								<h2 class="panel-title">Data E-inap</h2>
 							</header>
 							<div class="panel-body">
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="mb-md">
-											<a href="EinapTambah.php"><button id="addToTable" class="btn btn-primary">Tambah Data <i class="fa fa-plus"></i></button></a>
-										</div>
-									</div>
-								</div>
-								<table class="table table-bordered table-striped mb-none" id="datatable-editable">
-									<thead>
-										<tr>
-											<th>ID Puskesmas</th>
-											<th>Alamat</th>
-											<th>Telp</th>
-											<th>Aksi</th>
-										</tr>
-									</thead>
+								
+								<form method="post" action="tambah_aksi.php" class="form-horizontal form-bordered">
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">ID Rumah Sakit</label>
+												<div class="col-md-3">
+													<input type="text" name="a" class="form-control" id="inputDefault">
+												</div>
+											</div>
 
-									<?php 
-									include '../../db/koneksi.php';
-									$data = mysqli_query($koneksi,"select * from einap");
-									while($d = mysqli_fetch_array($data)){
-									?>
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Nama Rumah Sakit</label>
+												<div class="col-md-3">
+													<input type="text" name="b" class="form-control" id="inputDefault">
+												</div>
+											</div>
 
-									<tbody>
-										<tr class="gradeX">
-											<td><?php echo $d['DT_RowId']; ?></td>
-											<td><?php echo $d['Alamat']; ?></td>
-											<td><?php echo $d['Telp']; ?></td>
-											<td class="actions">
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Alamat Rumah Sakit</label>
+												<div class="col-md-6">
+													<textarea class="form-control" name="c" rows="3" id="textareaDefault"></textarea>
+												</div>
 
-												
-									<a href="EinapEdit.php?id=<?php echo $d['DT_RowId']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-									<a href="EinapHapus.php?id=<?php echo $d['DT_RowId']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-											</td>
-										</tr>
-									
-									</tbody>
-									<?php 
-									}
-									?>
-								</table>
+											</div>
+
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Telepon Rumah Sakit</label>
+												<div class="col-md-3">
+													<input type="text" name="d" class="form-control" id="inputDefault">
+												</div>
+											</div>
+
+											<div class="col-sm-9 text-right">
+											<button type="submit" class="btn btn-primary hidden-xs">Simpan</button>
+											</div>
+								</form>
 							</div>
 						</section>
 					<!-- end: page -->

@@ -277,36 +277,38 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="mb-md">
-											<a href="EinapTambah.php"><button id="addToTable" class="btn btn-primary">Tambah Data <i class="fa fa-plus"></i></button></a>
+											<a href="RSTambah.php"><button id="addToTable" class="btn btn-primary">Tambah Data <i class="fa fa-plus"></i></button></a>
 										</div>
 									</div>
 								</div>
 								<table class="table table-bordered table-striped mb-none" id="datatable-editable">
 									<thead>
 										<tr>
-											<th>ID Puskesmas</th>
+											<th>ID Rumah Sakit</th>
+											<th>Nama Rumah Sakit</th>
 											<th>Alamat</th>
-											<th>Telp</th>
+											<th>Telepon</th>
 											<th>Aksi</th>
 										</tr>
 									</thead>
 
 									<?php 
 									include '../../db/koneksi.php';
-									$data = mysqli_query($koneksi,"select * from einap");
+									$data = mysqli_query($koneksi,"select * from tb_rs");
 									while($d = mysqli_fetch_array($data)){
 									?>
 
 									<tbody>
 										<tr class="gradeX">
-											<td><?php echo $d['DT_RowId']; ?></td>
-											<td><?php echo $d['Alamat']; ?></td>
-											<td><?php echo $d['Telp']; ?></td>
+											<td><?php echo $d['id_rs']; ?></td>
+											<td><?php echo $d['nama_rs']; ?></td>
+											<td><?php echo $d['alamat_rs']; ?></td>
+											<td><?php echo $d['telp_rs']; ?></td>
 											<td class="actions">
 
 												
-									<a href="EinapEdit.php?id=<?php echo $d['DT_RowId']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-									<a href="EinapHapus.php?id=<?php echo $d['DT_RowId']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+									<a href="RSEdit.php?id=<?php echo $d['id_rs']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+									<a href="RSHapus.php?id=<?php echo $d['id_rs']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
 											</td>
 										</tr>
 									

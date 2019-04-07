@@ -276,45 +276,56 @@
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-sm-6">
-										<div class="mb-md">
-											<a href="EinapTambah.php"><button id="addToTable" class="btn btn-primary">Tambah Data <i class="fa fa-plus"></i></button></a>
-										</div>
+										
 									</div>
 								</div>
-								<table class="table table-bordered table-striped mb-none" id="datatable-editable">
-									<thead>
-										<tr>
-											<th>ID Puskesmas</th>
-											<th>Alamat</th>
-											<th>Telp</th>
-											<th>Aksi</th>
-										</tr>
-									</thead>
 
 									<?php 
 									include '../../db/koneksi.php';
-									$data = mysqli_query($koneksi,"select * from einap");
+									$id = $_GET['id'];
+									$data = mysqli_query($koneksi,"select * from einap where DT_RowId='$id'");
 									while($d = mysqli_fetch_array($data)){
 									?>
 
-									<tbody>
-										<tr class="gradeX">
-											<td><?php echo $d['DT_RowId']; ?></td>
-											<td><?php echo $d['Alamat']; ?></td>
-											<td><?php echo $d['Telp']; ?></td>
-											<td class="actions">
+								<form method="post" action="edit_aksi.php" class="form-horizontal form-bordered">
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">ID Puskesmas</label>
+												<div class="col-md-3">
+													<input type="text" name="a" class="form-control" id="inputDefault" value="<?php echo $d['DT_RowId']; ?>">
+												</div>
+											</div>
 
-												
-									<a href="EinapEdit.php?id=<?php echo $d['DT_RowId']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-									<a href="EinapHapus.php?id=<?php echo $d['DT_RowId']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-											</td>
-										</tr>
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Nama Puskesmas</label>
+												<div class="col-md-3">
+													<input type="text" name="b" class="form-control" id="inputDefault" value="<?php echo $d['NamaRS']; ?>"> 
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Alamat Puskesmas</label>
+												<div class="col-md-6">
+													<input type="text" name="c" class="form-control" id="inputDefault" value="<?php echo $d['Alamat']; ?>">
+												</div>
+
+											</div>
+
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Telepon Puskesmas</label>
+												<div class="col-md-3">
+													<input type="text" name="d" class="form-control" id="inputDefault" value="<?php echo $d['Telp']; ?>">
+												</div>
+											</div>
+
+											<div class="col-sm-9 text-right">
+											<button type="submit" class="btn btn-primary hidden-xs">Simpan</button>
+											</div>
+								</form>
 									
-									</tbody>
 									<?php 
 									}
 									?>
-								</table>
+								
 							</div>
 						</section>
 					<!-- end: page -->
