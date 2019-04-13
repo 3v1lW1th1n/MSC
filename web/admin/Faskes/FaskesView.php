@@ -6,7 +6,7 @@
 									<a href="#" class="fa fa-times"></a>
 								</div>
 						
-								<h2 class="panel-title"><a href="?page=RSView"> Data Rumah Sakit</h2>
+								<h2 class="panel-title"><a href="?page=FaskesView"> Data Fasilitas Kesehatan</h2>
 							</header>
 							<div class="panel-body">
 								<div class="row">
@@ -19,31 +19,35 @@
 								<table class="table table-bordered table-striped mb-none" id="datatable-editable">
 									<thead>
 										<tr>
-											<th width="10px"><p align="center">ID Rumah Sakit</p></th>
+											<th width="10px"><p align="center">ID Faskes</p></th>
 											<th width="20px"><p align="center">Nama Rumah Sakit</p></th>
-											<th width="50px"><p align="center">Alamat</p></th>
-											<th width="10px"><p align="center">Telepon</p></th>
+											<th width="50px"><p align="center">Jenis Faskes</p></th>
+											<th width="10px"><p align="center">Status Ketersediaan</p></th>
+											<th width="10px"><p align="center">Jumlah Tersedia</p></th>
+											<th width="10px"><p align="center">Jumlah Terpakai</p></th>
 											<th width="10px"><p align="center">Aksi</p></th>
 										</tr>
 									</thead>
 
 									<?php 
 									include '../db/koneksi.php';
-									$data = mysqli_query($koneksi,"select * from tb_rs");
+									$data = mysqli_query($koneksi,"select * from tb_faskes INNER JOIN  tb_rs ON tb_rs.id_rs = tb_faskes.id_rs");
 									while($d = mysqli_fetch_array($data)){
 									?>
 
 									<tbody>
 										<tr class="gradeX">
-											<td><?php echo $d['id_rs']; ?></td>
+											<td><?php echo $d['id_faskes']; ?></td>
 											<td><?php echo $d['nama_rs']; ?></td>
-											<td><?php echo $d['alamat_rs']; ?></td>
-											<td><?php echo $d['telp_rs']; ?></td>
+											<td><?php echo $d['jenis_faskes']; ?></td>
+											<td><?php echo $d['status_ketersediaan']; ?></td>
+											<td><?php echo $d['jml_tersedia']; ?></td>
+											<td><?php echo $d['terpakai']; ?></td>
 											<td class="actions">
 
 												
-									<a href="?page=RSEdit&id=<?php echo $d['id_rs']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-									<a href="?page=RSHapus&id=<?php echo $d['id_rs']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+									<a href="?page=FaskesEdit&id=<?php echo $d['id_faskes']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+									<a href="?page=FaskesHapus&id=<?php echo $d['id_faskes']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
 											</td>
 										</tr>
 									

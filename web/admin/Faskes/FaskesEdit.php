@@ -6,7 +6,7 @@
 									<a href="#" class="fa fa-times"></a>
 								</div>
 						
-								<h2 class="panel-title"><a href="?page=RSView"> Data Rumah Sakit</a></h2>
+								<h2 class="panel-title"><a href="?page=FaskesView"> Data Faskes</a></h2>
 							</header>
 							<div class="panel-body">
 								<div class="row">
@@ -18,13 +18,13 @@
 									<?php 
 									include '../db/koneksi.php';
 									$id = $_GET['id'];
-									$data = mysqli_query($koneksi,"select * from tb_rs where id_rs='$id'");
+									$data = mysqli_query($koneksi,"select * from tb_faskes where id_faskes='$id'");
 									while($d = mysqli_fetch_array($data)){
 									?>
 
 								<form method="post" action="?page=rs_edit" class="form-horizontal form-bordered">
 											<div class="form-group">
-												<label class="col-md-3 control-label" for="inputDefault">ID Rumah Sakit</label>
+												<label class="col-md-3 control-label" for="inputDefault">ID Faskes</label>
 												<div class="col-md-3">
 													<input type="text" name="a" class="form-control" id="inputDefault" value="<?php echo $d['id_rs']; ?>">
 												</div>

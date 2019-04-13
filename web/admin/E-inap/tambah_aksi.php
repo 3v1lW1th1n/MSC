@@ -1,6 +1,6 @@
 <?php 
 // koneksi database
-include '../../db/koneksi.php';
+include '../db/koneksi.php';
  
 // menangkap data yang di kirim dari form
 $id = $_POST['a'];
@@ -11,7 +11,7 @@ $telp = $_POST['d'];
 // menginput data ke database
 mysqli_query($koneksi,"insert into einap values('$id','$nama','$alamat','$telp')");
  
-// mengalihkan halaman kembali ke index.php
-header("location:EinapView.php");
+// mengalihkan halaman kembali ke view
+echo "<meta http-equiv='refresh' content='0; url=?page=EinapView'>";
  
 ?>

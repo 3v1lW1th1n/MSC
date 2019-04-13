@@ -1,6 +1,6 @@
 <?php 
 // koneksi database
-include '../../db/koneksi.php';
+include '../db/koneksi.php';
  
 // menangkap data yang di kirim dari form
 $id = $_POST['a'];
@@ -12,6 +12,6 @@ $telp = $_POST['d'];
 mysqli_query($koneksi,"update einap set DT_RowID='$id', NamaRS='$nama', Alamat='$alamat', Telp='$telp' where DT_RowID='$id'");
  
 // mengalihkan halaman kembali ke index.php
-header("location:EinapView.php");
+echo "<meta http-equiv='refresh' content='0; url=?page=EinapView'>";
  
 ?>
