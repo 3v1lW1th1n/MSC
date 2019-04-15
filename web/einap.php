@@ -1,15 +1,14 @@
 <!doctype html>
 <html class="no-js" lang="">
-
+<title>Malang Smart City</title>
+<link rel="shortcut icon" href="images/iconkabmalangresize.png"/>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Google Fonts
-    ============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+
     <!-- Bootstrap CSS
     ============================================ -->
     <link rel="stylesheet" href="css2/bootstrap.min.css">
@@ -57,18 +56,129 @@
     <script src="js2/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<div id="header">
-            <a href=" "><img src="images/logo2.png"/></a>
+<div style="height: 49px; background: #252525">
+            <a href=" "><img style="padding: 14px 20px 0px 105px;" src="images/logo2.png"/></a>
     </div>  
+
+
+<body>
+ 
+    <style type="text/css">
+    html,body{
+        padding: 0;
+        margin:0;
+        font-family: 'Maven Pro', sans-serif;
+    }
+ 
+    .menu-malasngoding{
+        background-color: #ffffff;
+    }
+ 
+    .menu-malasngoding ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px 10px 10px 115px;
+        font-size: 18px;
+        font-weight: 400;
+        overflow: hidden;
+    }
+ 
+    .menu-malasngoding > ul > li {
+        float: left;
+    }
+ 
+    
+    .menu-malasngoding li a {
+        display: inline-block;
+        color: #2d3633;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+ 
+    .menu-malasngoding li a:hover{
+        background-color: #fffff;
+    }
+ 
+    li.dropdown {
+        display: inline-block;
+    }
+ 
+    .dropdown:hover .isi-dropdown {
+        display: block;
+    }
+ 
+    .isi-dropdown a:hover {
+        color: #fff !important;
+    }
+ 
+    .isi-dropdown {
+        position: absolute;
+        display: none;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        background-color: #f9f9f9;
+    }
+ 
+    .isi-dropdown a {
+        color: #3c3c3c !important;
+    }
+ 
+    .isi-dropdown a:hover {
+        color: #232323 !important;
+        background: #f3f3f3 !important;
+    }
+</style>
+ 
+ 
+<header class="header">
+    <div class="menu-malasngoding">
+  <ul>
+                <li ><a href="index.php">Home</a>
+                </li>
+                
+                <li class="dropdown"><a>Kedaruratan</a>
+                <ul class="isi-dropdown">
+                    <li><a href="?page=Ambulan">Ambulan</a></li>
+                    <li><a href="?page=BencanaAlam">Bencana Alam</a></li>
+                    <li><a href="?page=Polisi">Polisi</a></li>
+                </ul>
+                </li>
+
+                <li class="dropdown"><a>Layanan Umum</a>
+                <ul class="isi-dropdown">
+                    <li><a href="?page=PLN">PLN</a></li>
+                    <li><a href="?page=PDAM">PDAM</a></li>
+                    <li><a href="?page=PJU">PJU</a></li>
+                    <li><a href="?page=StokDarah">Stok Darah</a></li>
+                </ul>
+                </li>
+
+                <li class="dropdown"><a>Pengaduan</a>
+                <ul class="isi-dropdown">
+                    <li><a href="?page=SuratWarga">Surat Warga</a></li>
+                    <li><a href="?page=Elapor">E-Lapor</a></li>
+                </ul>
+                </li>
+                <li class="dropdown"><a>Informasi</a>
+                <ul class="isi-dropdown">
+                    <li><a href="einap.php">E-Inap</a></li>
+                    <li><a href="faskes.php">Fasilitas Kesehatan</a></li>
+                    <li><a href="dataRS.php">Data Rumah Sakit</a></li>
+                </ul>
+                </li>
+                <div class="clear"></div>
+            </ul>
+    </div>
+</header>
+ 
 
     <!-- Data Table area Start-->
     <div class="data-table-area">
         <div class="container">
-            <div class="row">
+         
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="data-table-list">
-                        <div class="basic-tb-hd">
-                        </div>
                         <div class="table-responsive">
 
 <?php
@@ -97,24 +207,22 @@ if ($err) {
   $res = json_decode($response);
   // var_dump($res);
 } ?>
+
                          <img src="images/header_einap4.png">   
                             <table id="data-table-basic" class="table table-striped">
     
-     <h4>
-         <b>Data Terakhir Pada : </b>
-         </h4>
-         <h4>
-         <b>
+  
+       Data Terakhir Pada : <br/>
+        
     <?php
     $tanggal= mktime(date("m"),date("d"),date("Y"));
-    echo "Tanggal : <b>".date("d-M-Y", $tanggal)."</b> ";
+    echo "Tanggal : ".date("d-M-Y", $tanggal);
     date_default_timezone_set('Asia/Jakarta');
     $jam=date("H:i:s");
-    echo "| Pukul : <b>". $jam." "."</b>";
+    echo "| Pukul : ". $jam." ";
     $a = date ("H");
     ?> 
-    </b>
-         </h4>
+ <br/> <br/>
                                 <thead>
                                     <tr>
                                         <th>No.</th>
@@ -147,7 +255,7 @@ if ($err) {
                 </div>
             </div>
         </div>
-    </div>
+
     <!-- Data Table area End-->
     
     <!-- jquery
