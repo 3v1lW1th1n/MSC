@@ -16,7 +16,7 @@
 										</div>
 									</div>
 								</div>
-								<table class="table table-bordered table-striped mb-none" id="datatable-editable">
+								<table class="display table table-bordered table-striped mb-none" id="dataRS1">
 									<thead>
 										<tr>
 											<th width="10px"><p align="center">ID Rumah Sakit</p></th>
@@ -26,14 +26,14 @@
 											<th width="10px"><p align="center">Aksi</p></th>
 										</tr>
 									</thead>
-
+								<tbody>
 									<?php 
 									include '../db/koneksi.php';
 									$data = mysqli_query($koneksi,"select * from tb_rs");
 									while($d = mysqli_fetch_array($data)){
 									?>
 
-									<tbody>
+									
 										<tr class="gradeX">
 											<td><?php echo $d['id_rs']; ?></td>
 											<td><?php echo $d['nama_rs']; ?></td>
@@ -47,10 +47,10 @@
 											</td>
 										</tr>
 									
-									</tbody>
 									<?php 
 									}
 									?>
+										</tbody>
 								</table>
 							</div>
 						</section>

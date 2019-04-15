@@ -16,7 +16,7 @@
 										</div>
 									</div>
 								</div>
-								<table class="table table-bordered table-striped mb-none" id="datatable-editable">
+								<table class="display table table-bordered table-striped mb-none" id="faskes1">
 									<thead>
 										<tr>
 											<th width="10px"><p align="center">ID Faskes</p></th>
@@ -28,14 +28,14 @@
 											<th width="10px"><p align="center">Aksi</p></th>
 										</tr>
 									</thead>
-
+									<tbody>
 									<?php 
 									include '../db/koneksi.php';
 									$data = mysqli_query($koneksi,"select * from tb_faskes INNER JOIN  tb_rs ON tb_rs.id_rs = tb_faskes.id_rs");
 									while($d = mysqli_fetch_array($data)){
 									?>
 
-									<tbody>
+									
 										<tr class="gradeX">
 											<td><?php echo $d['id_faskes']; ?></td>
 											<td><?php echo $d['nama_rs']; ?></td>
@@ -50,11 +50,10 @@
 									<a href="?page=FaskesHapus&id=<?php echo $d['id_faskes']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
 											</td>
 										</tr>
-									
-									</tbody>
 									<?php 
 									}
 									?>
+									</tbody>
 								</table>
 							</div>
 						</section>
