@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2019 at 08:15 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Generation Time: Apr 15, 2019 at 07:41 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -225,21 +225,26 @@ CREATE TABLE `tb_rs` (
   `id_rs` varchar(15) NOT NULL,
   `nama_rs` varchar(200) NOT NULL,
   `alamat_rs` text NOT NULL,
-  `telp_rs` varchar(100) NOT NULL
+  `telp_rs` varchar(100) NOT NULL,
+  `lat` float(10,6) NOT NULL,
+  `lng` float(10,6) NOT NULL,
+  `location_status` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_rs`
 --
 
-INSERT INTO `tb_rs` (`id_rs`, `nama_rs`, `alamat_rs`, `telp_rs`) VALUES
-('RS001', 'RSUD Balaraja', 'Jl. Rumah Sakit No.88, Tobat, Balaraja, Tangerang, Banten 15126', '021-29508382; 081211608026'),
-('RS002', 'RSU Selaras', '', '021-5969145'),
-('RS003', 'RSIA Harapan Mulia', '', '021-5991785'),
-('RS004', 'RS Mulia Insani', '', '021-5962790'),
-('RS005', 'RSIA Tiara', '', '021-59401999'),
-('RS006', 'RS Permata Hati', 'Jl. Danau Toba Blok E 6 No.16 - 18, Lesanpuro, Kedungkandang, Kota Malang, Jawa Timur 65138', '(0341) 718068'),
-('RS007', 'RS Suci Paramita', '', '');
+INSERT INTO `tb_rs` (`id_rs`, `nama_rs`, `alamat_rs`, `telp_rs`, `lat`, `lng`, `location_status`) VALUES
+('RS001', 'RSUD Balaraja', 'Jl. Rumah Sakit No.88, Tobat, Balaraja, Tangerang, Banten 15126', '021-29508382; 081211608026', -7.986563, 112.624947, 1),
+('RS002', 'RSU Selaras', 'ghhg', '021-5969145', -7.965738, 112.637886, 1),
+('RS003', 'RSIA Harapan Mulia', 'hhk', '021-5991785', -7.978025, 112.624435, 1),
+('RS004', 'RS Mulia Insani', 'kjh', '021-5962790', -7.972410, 112.631706, 1),
+('RS005', 'RSIA Tiara', 'ssss', '021-59401999', -7.973070, 112.622330, 1),
+('RS006', 'RS Permata Hati', 'Jl. Danau Toba Blok E 6 No.16 - 18, Lesanpuro, Kedungkandang, Kota Malang, Jawa Timur 65138', '(0341) 718068', -7.980056, 112.660721, 1),
+('RS007', 'RS Suci Paramita', 'kosong', 'kosong', -7.978080, 112.702332, 1),
+('RS009', 'AAA', 'JEMBER', '00000', -7.961085, 112.617699, 1),
+('RS010', 'tes dfdddgd', 'malang jjjj', '6668', -7.968650, 112.643791, 1);
 
 --
 -- Indexes for dumped tables

@@ -46,7 +46,14 @@ include"db/koneksi.php";
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
 
-		
+
+
+<script type="text/javascript" src="../assets/jquery-1.11.1.js"></script>
+<link rel="stylesheet" href="..//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="..//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="..//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW-LxWC1ML0a6FbUzgC6ExKfh6xrb8oZM&callback=initMap"></script>
 
 	</head>
 	<body>
@@ -122,7 +129,7 @@ include"db/koneksi.php";
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="E-Inap/EinapView.php">
+												<a href="?page=AmbulanView">
 													 Ambulan
 												</a>
 											</li>
@@ -308,5 +315,15 @@ include"db/koneksi.php";
   				$('#dataRS1').DataTable();
 			});
 		</script>
+
+		<script>
+			$(document).ready(function(){
+  				$('#tbAmbulan').DataTable();
+			});
+		</script>
+
+
+
+
 	</body>
 </html>

@@ -84,6 +84,16 @@ if($_GET) {
 			if(!file_exists ("RS/RSHapus.php")) die ("Sorry Empty Page!"); 
 			include "RS/RSHapus.php";	break;
 
+
+		#Kedaruratan - Ambulan
+		case 'AmbulanView' :				
+			if(!file_exists ("GmapAmbulan/index_mapAmbulan.php")) die ("Sorry Empty Page!"); 
+			include "GmapAmbulan/index_mapAmbulan.php";	break;
+
+		case 'AmbulanDataView' :				
+			if(!file_exists ("GmapAmbulan/input.php")) die ("Sorry Empty Page!"); 
+			include "GmapAmbulan/input.php";	break; 
+
 							
 		default:
 			if(!file_exists ("user/artikel.php")) die ("Empty Main Page!"); 
