@@ -39,8 +39,14 @@ include"db/koneksi.php";
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
 
+		<!-- Data Table JS
+    ============================================ -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
+
+		
 
 	</head>
 	<body>
@@ -232,8 +238,15 @@ include"db/koneksi.php";
 
 		</section>
 
+		
+
+					
+
 		<!-- Vendor -->
 		<script src="assets/vendor/jquery/jquery.js"></script>
+		<!-- Examples -->
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
 		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
 		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
 		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
@@ -276,9 +289,24 @@ include"db/koneksi.php";
 		
 		<!-- Theme Initialization Files -->
 		<script src="assets/javascripts/theme.init.js"></script>
+		
 
+		<script>
+			$(document).ready(function(){
+  				$('#einap1').DataTable();
+			});
+		</script>
 
-		<!-- Examples -->
-		<script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
+		<script>
+			$(document).ready(function(){
+  				$('#faskes1').DataTable();
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+  				$('#dataRS1').DataTable();
+			});
+		</script>
 	</body>
 </html>

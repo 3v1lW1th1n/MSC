@@ -17,7 +17,7 @@
 										</div>
 									</div>
 								</div>
-								<table class="table table-bordered table-striped mb-none" id="datatable-editable">
+								<table class="display table table-bordered table-striped mb-none" id="einap1">
 									<thead>
 										<tr>
 											<th width="1px"><p align="center">ID Puskesmas</p></th>
@@ -27,16 +27,18 @@
 											<th width="14px"><p align="center">Aksi</p></th>
 										</tr>
 									</thead>
-
+									<tbody>
 									<?php 
+									$counter = 0;
 									include '../db/koneksi.php';
 									$data = mysqli_query($koneksi,"select * from einap");
 									while($d = mysqli_fetch_array($data)){
+										$counter++;
 									?>
 
-									<tbody>
+									
 										<tr class="gradeX">
-											<td><p align="center"><?php echo $d['DT_RowId']; ?></p></td>
+											<td><p align="center"><?php echo $counter; ?></p></td>
 											<td><?php echo $d['NamaRS']; ?></td>
 											<td><?php echo $d['Alamat']; ?></td>
 											<td><?php echo $d['Telp']; ?></td>
@@ -46,13 +48,16 @@
 									<a href="?page=EinapHapus&id=<?php echo $d['DT_RowId']; ?>" class="on-default remove-row" onclick="javascript: return confirm('Anda yakin akan menghapus data?')"><i class="fa fa-trash-o"></i></a>
 											</td>
 										</tr>
-									
-									</tbody>
 									<?php 
 									}
 									?>
+									</tbody>
 								</table>
 							</div>
 						</section>
 					<!-- end: page -->
+
+					
+
+
 
