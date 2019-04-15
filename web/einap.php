@@ -57,8 +57,9 @@
     <script src="js2/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body>
-
+<div id="header">
+            <a href=" "><img src="images/logo2.png"/></a>
+    </div>  
 
     <!-- Data Table area Start-->
     <div class="data-table-area">
@@ -96,9 +97,9 @@ if ($err) {
   $res = json_decode($response);
   // var_dump($res);
 } ?>
-                            
+                         <img src="images/header_einap4.png">   
                             <table id="data-table-basic" class="table table-striped">
-                    <center><h4>INFORMASI KETERSEDIAAN TEMPAT TIDUR DI INSTANSI KESEHATAN KABUPATEN MALANG</h4></center>
+    
      <h4>
          <b>Data Terakhir Pada : </b>
          </h4>

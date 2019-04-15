@@ -121,16 +121,9 @@ include"db/koneksi.php";
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo2.png" alt=""/></a>
+			<a href="index.html"><img src="images/logo2.png"/></a>
 		</div>	
-		 <div class="log_reg">
-				<ul>
-					<li><a href="login.html">Login</a> </li>
-					<span class="log"> or </span>
-					<li><a href="register.html">Register</a> </li>								   
-					<div class="clear"></div>
-				</ul>
-		</div>	
+		
 		<div class="clear"></div>
 	</div>	
 </div>
@@ -142,94 +135,6 @@ include"db/koneksi.php";
 </div>
 </div>
 <!-- start slider -->
-
-				<!---start-image-slider---->
-				
-					 <div class="wrapper">
-                <div id="ei-slider" class="ei-slider">
-                    <ul class="ei-slider-large">
-						<li>
-                            <img src="images/bns.jpg"/>
-                            <div class="ei-title">
-                            	<h2>Batu Night Spectacular</h2>
-                                <h3 class="active">Batu Night Spectacular adalah sebuah lokawisata <br>
-                                	yang berada di Kota Batu, Jawa Timur. 
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
-                                	</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="images/pulausempu.jpg" alt="image01" />
-                            <div class="ei-title">
-                            	<h2>Pulau Sempu</h2>
-                                <h3 class="active">Pulau Sempu adalah sebuah pulau kecil yang terletak di<br>
-                                	sebelah selatan Pulau Jawa.
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
-                                </h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="images/museumangkut.jpg" alt="image03"/>
-                            <div class="ei-title">
-                                <h2>Museum Angkut</h2>
-                                <h3 class="active">Museum Angkut merupakan museum transportasi dan <br>
-                                	tempat wisata modern yang terletak di Kota Batu
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
-                                </h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="images/balekambang.jpg" alt="image04"/>
-                            <div class="ei-title">
-                                <h2>Pantai Balekambang</h2>
-                                <h3 class="active">Pantai Balekambang adalah sebuah pantai  <br>
-                                	di pesisir selatan.
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
-                                </h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="images/watuleter.jpg" alt="image05"/>
-                            <div class="ei-title">
-                                <h2>Pantai Watu Leter</h2>
-                                <h3 class="active">Suasana alam yang menyenangkan, deburan ombak <br>
-                                	yang menyejukkan kerap menjadi pilihan banyak wisatawan 
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="details.html"><img src="images/icon_1.png" alt=""></a>
-                                </h3>
-                            </div>
-                        </li>
-                        
-                    </ul><!-- ei-slider-large -->
-                    <ul class="ei-slider-thumbs">
-                        <li class="ei-slider-element">Current</li>
-						<li>
-						</li>
-                        <li class="dropdown">
-                        </li>
-                        <li  class="dropdown">					
-                        </li>
-                        <li class="dropdown"> 
-                        </li>
-                        <li class="dropdown">
-                        </li>
-                    </ul><!-- ei-slider-thumbs -->
-                </div><!-- ei-slider -->
-            </div><!-- wrapper -->
-	
-		<!---End-image-slider---->	
-
-<!-- start image1_of_3 -->
-
 
 <div class="wrap">
 <div class="header_btm">
@@ -273,59 +178,132 @@ include"db/koneksi.php";
 		</div>
 		</div>
 </div>
+
+				<!---start-image-slider---->
+				
+					 <div class="wrapper">
+                <div style="width: 1180px; height: 350px" id="ei-slider" class="ei-slider">
+                    <ul class="ei-slider-large">
+						<li>
+                            <img src="images/slider1.png"/>
+                            <div class="ei-title">
+                             </div>
+                        </li>
+                        <li>
+                            <img src="images/slider2.png"/>
+                            <div class="ei-title">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/slider3.png" alt="image03"/>
+                            <div class="ei-title">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/balekambang.jpg" alt="image04"/>
+                            <div class="ei-title">
+                                <h2>Pantai Balekambang</h2>
+                                <h3 class="active">Pantai Balekambang adalah sebuah pantai  <br>
+                                	di pesisir selatan.
+                                </h3>
+                               
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/watuleter.jpg" alt="image05"/>
+                            <div class="ei-title">
+                                <h2>Pantai Watu Leter</h2>
+                                <h3 class="active">Suasana alam yang menyenangkan, deburan ombak <br>
+                                	yang menyejukkan kerap menjadi pilihan banyak wisatawan 
+                                </h3>
+                            </div>
+                        </li>
+                        
+                         <!--  <li>
+                          <img src="images/watuleter.jpg" alt="image05"/>
+                            <div class="ei-title">
+                                <h2>Pantai Watu Leter</h2>
+                                <h3 class="active">Suasana alam yang menyenangkan, deburan ombak <br>
+                                	yang menyejukkan kerap menjadi pilihan banyak wisatawan 
+                                </h3>
+                            </div>
+                        </li> -->
+
+                    </ul><!-- ei-slider-large -->
+                    <ul class="ei-slider-thumbs">
+                        <li class="ei-slider-element">Current</li>
+						<li>
+						</li>
+                        <li class="dropdown">
+                        </li>
+                        <li  class="dropdown">					
+                        </li>
+                        <li class="dropdown"> 
+                        </li>
+                        <li class="dropdown">
+                        </li>
+                    </ul><!-- ei-slider-thumbs -->
+                </div><!-- ei-slider -->
+            </div><!-- wrapper -->
 	
+		<!---End-image-slider---->	
+<div style="padding: 0px 100px 0px 105px">
+<br/><br/><br/><br/><br/><br/>
+<p align="center"  style="font-family:Maven Pro; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; color: #57C5A0; line-height: 18px">Apa itu Smart City?</p><br/>
+<p align="center">Menurut Perwali Kota Batu No. 78 Tahun 2017 tentang Master Plan Smart City, ide mengenai smart city ialah kota cerdas/pintar yang inovatif menggunakan teknologi informasi dan komunikasi (TIK) yang berkelanjutan dalam membantu masyarakat mengelola sumber daya yang ada, memberikan informasi yang tepat, efisiensi operasi perkotaan, jasa, dan daya saing seiring dengan pemenuhan kebutuhan generasi saat ini dan setelahnya. 
+Pada konsepnya, kota cerdas harus memungkinkan warga masyarakat untuk berperan secara aktif dalam pengelolaan kota dengan memberikan umpan balik kepada penyedia layanan, baik dari sektor privat maupun publik.</p>
+</div>
 
 <!-- start main -->
-<div class="main_bg">
+
 <div class="wrap">
 <div class="main">
-	<div class="login_left">
 
- 						<?php 
-                        include 'db/koneksi.php';
-                        $data = mysqli_query($koneksi,"select * from berita");
-                        while($d = mysqli_fetch_array($data)){
-                           ?>
-
-		<h3><?php echo $d['JudulBerita']; ?></h3>
+	<div style="padding: 0px 10px 10px 20px" class="login_left">
+		<h3>Kedaruratan</h3><br/>
+	<img width="150px" height="150px" src="images/ambulan.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/bencana alam.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/polisi.png"><br/>
+	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ambulan
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bencana Alam
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Polisi
+	</h1><br/>
 	
-		<?php
-			// Tampilkan hanya sebagian isi berita
-                    $isi_berita = htmlentities(strip_tags($d['IsiBerita'])); // membuat paragraf pada isi berita dan mengabaikan tag html
-                    $isi = substr($isi_berita,0,180); // ambil sebanyak 180 karakter
-                    $isi = substr($isi_berita,0,strrpos($isi," ")); // potong per spasi kalimat
-                ?>
- 		<p><?php echo $isi ?>... 
- 			<a href="?page=Artikel&kd=<?php echo $d['id_berita']; ?>">
-             <button class="btn btn-success notika-btn-success" style="height:27px; padding-left:3px; padding-right:3px; padding-top:1px;">Selengkapnya</button></a></p> 
-			<?php } ?>
+	<h3>Pengaduan</h3><br/>
+	<img width="150px" height="150px" src="images/suratwarga.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/elapor.png"><br/>
+	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surat Warga
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-lapor
+	</h1>		
+
 	</div>
 
+<div style="padding: 0px 10px 10px 40px" class="login_left">
+		<h3>Layanan Umum</h3><br/>
+	<img width="150px" height="150px" src="images/pju.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/pdam.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/STOKDARAH.png"><br/>
+	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PJU
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PDAM
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stok Darah
+	</h1><br/>
 
-	<div class="login_left">
-		<?php 
-                        include 'db/koneksi.php';
-                        $data = mysqli_query($koneksi,"select * from berita");
-                        while($d = mysqli_fetch_array($data)){
-                           ?>
-
-		<h3><?php echo $d['JudulBerita']; ?></h3>
-	
-		<?php
-			// Tampilkan hanya sebagian isi berita
-                    $isi_berita = htmlentities(strip_tags($d['IsiBerita'])); // membuat paragraf pada isi berita dan mengabaikan tag html
-                    $isi = substr($isi_berita,0,180); // ambil sebanyak 180 karakter
-                    $isi = substr($isi_berita,0,strrpos($isi," ")); // potong per spasi kalimat
-                ?>
- 		<p><?php echo $isi ?>... 
- 			<a href="?page=Artikel&kd=<?php echo $d['id_berita']; ?>">
-             <button class="btn btn-success notika-btn-success" style="height:27px; padding-left:3px; padding-right:3px; padding-top:1px;">Selengkapnya</button></a></p> 
-			<?php } ?>
+	<h3>Informasi</h3><br/>
+	<a href="einap.php"><img width="150px" height="150px" src="images/einap2.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="faskes.php"><img width="150px" height="150px" src="images/faskes.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="dataRS.php"><img width="150px" height="150px" src="images/datars.png"></a><br/>
+	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-inap
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faskes
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Rumah Sakit
+	</h1>		
 	</div>
+</div>
+</div>
+
 	<div class="clear"></div>
 </div>
 </div>
-</div>
+
 
 <!-- start footer -->
 <div class="footer_bg">
