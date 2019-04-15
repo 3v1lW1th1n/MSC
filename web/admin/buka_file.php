@@ -84,8 +84,6 @@ if($_GET) {
 			if(!file_exists ("RS/RSHapus.php")) die ("Sorry Empty Page!"); 
 			include "RS/RSHapus.php";	break;
 
-		
-		
 							
 		default:
 			if(!file_exists ("user/artikel.php")) die ("Empty Main Page!"); 

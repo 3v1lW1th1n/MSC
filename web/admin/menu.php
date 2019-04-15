@@ -116,7 +116,7 @@ include"db/koneksi.php";
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="E-inap/EinapView.php">
+												<a href="E-Inap/EinapView.php">
 													 Ambulan
 												</a>
 											</li>
