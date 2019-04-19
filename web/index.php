@@ -261,12 +261,12 @@ Pada konsepnya, kota cerdas harus memungkinkan warga masyarakat untuk berperan s
 
 	<div style="padding: 0px 10px 10px 20px" class="login_left">
 		<h3>Kedaruratan</h3><br/>
-	<img width="150px" height="150px" src="images/ambulan.png">&nbsp;&nbsp;&nbsp;&nbsp;
-	<img width="150px" height="150px" src="images/bencana alam.png">&nbsp;&nbsp;&nbsp;&nbsp;
-	<img width="150px" height="150px" src="images/polisi.png"><br/>
+	<img width="150px" height="150px" src="images/ambulannew.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/kantorpolisi.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/bencana.png"><br/>
 	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ambulan
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bencana Alam
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Polisi
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kantor Polisi
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bencana Alam
 	</h1><br/>
 	
 	<h3>Pengaduan</h3><br/>
