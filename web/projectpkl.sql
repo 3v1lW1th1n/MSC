@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2019 at 07:35 AM
+-- Generation Time: Apr 19, 2019 at 04:27 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -125,6 +125,32 @@ INSERT INTO `einap` (`DT_RowId`, `Alamat`, `Telp`, `NamaRS`) VALUES
 (65, 'Desa Sembaluh, Pujon, Jurangrejo, Ngroto, Pujon, Malang, Jawa Timur 65391', '(0341) 524206', 'RS. Wikarta mandala'),
 (66, 'JL. Raya Sengkaling, No. 245 Rt. 004/004, Kel. Mulyo Agung, Kec. Dau, 65151, Pendem, Junrejo, Kota Batu, Jawa Timur 65233', '0816-506-802', 'RS Hayunanto'),
 (67, 'Puskesmas coba input', 'g', '085xx');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_bencana`
+--
+
+CREATE TABLE `tb_bencana` (
+  `id_bencana` varchar(15) NOT NULL,
+  `nama_pelapor` varchar(100) NOT NULL,
+  `telp_pelapor` varchar(50) NOT NULL,
+  `alamat_bencana` text NOT NULL,
+  `jenis_bencana` varchar(50) NOT NULL,
+  `keterangan` varchar(200) NOT NULL,
+  `tgl_bencana` datetime NOT NULL,
+  `lat` float(10,6) NOT NULL,
+  `lng` float(10,6) NOT NULL,
+  `location_status` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_bencana`
+--
+
+INSERT INTO `tb_bencana` (`id_bencana`, `nama_pelapor`, `telp_pelapor`, `alamat_bencana`, `jenis_bencana`, `keterangan`, `tgl_bencana`, `lat`, `lng`, `location_status`) VALUES
+('BA001', 'Admin', '089111222333', 'Jl Kelud No. 41', 'Longsor', 'Terjadi longsor sepanjang jalan kelud, korban luka-luka 3 orang', '2019-04-19 20:52:21', -7.977023, 112.622421, 0);
 
 -- --------------------------------------------------------
 
@@ -283,6 +309,12 @@ ALTER TABLE `berita`
 --
 ALTER TABLE `einap`
   ADD PRIMARY KEY (`DT_RowId`);
+
+--
+-- Indexes for table `tb_bencana`
+--
+ALTER TABLE `tb_bencana`
+  ADD PRIMARY KEY (`id_bencana`);
 
 --
 -- Indexes for table `tb_faskes`
