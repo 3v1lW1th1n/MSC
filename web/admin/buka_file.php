@@ -104,6 +104,20 @@ if($_GET) {
 			if(!file_exists ("GmapKanpol/input.php")) die ("Sorry Empty Page!"); 
 			include "GmapKanpol/input.php";	break; 
 
+
+		#Kedaruratan - Bencana Alam
+		case 'BencanaView' :				
+			if(!file_exists ("GmapBencana/index_mapBencana.php")) die ("Sorry Empty Page!"); 
+			include "GmapBencana/index_mapBencana.php";	break;
+
+		case 'BencanaDataView' :				
+			if(!file_exists ("GmapBencana/input.php")) die ("Sorry Empty Page!"); 
+			include "GmapBencana/input.php";	break; 
+
+		case 'BencanaKonfirmasiMap' :				
+			if(!file_exists ("GmapBencana/locations_modelBencana.php")) die ("Sorry Empty Page!"); 
+			include "GmapBencana/locations_modelBencana.php";	break;
+
 							
 		default:
 			if(!file_exists ("user/artikel.php")) die ("Empty Main Page!"); 

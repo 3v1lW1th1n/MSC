@@ -139,7 +139,7 @@ include"db/koneksi.php";
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="?page=BencanaView">
 													 Bencana Alam
 												</a>
 											</li>
@@ -325,6 +325,12 @@ include"db/koneksi.php";
 		<script>
 			$(document).ready(function(){
   				$('#tbKanpol').DataTable();
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+  				$('#tbBencana').DataTable();
 			});
 		</script>
 
