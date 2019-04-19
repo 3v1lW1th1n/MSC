@@ -9,7 +9,7 @@ include'locations_modelAmbulan.php';
 									<a href="#" class="fa fa-times"></a>
 								</div>
 						
-								<h2 class="panel-title">Map Ambulan Malang</h2>
+								<h2 class="panel-title">Map Ambulan</h2>
 							</header>
 							<div class="panel-body">
 								<div class="row">
@@ -32,7 +32,7 @@ include'locations_modelAmbulan.php';
     var map;
     var marker;
     var infowindow;
-    var red_icon =  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' ;
+    var red_icon =  '../images/ic_ambulan.png' ;
     var purple_icon =  'http://maps.google.com/mapfiles/ms/icons/purple-dot.png' ;
     var locations = <?php get_all_locations() ?>;
 
@@ -98,7 +98,7 @@ include'locations_modelAmbulan.php';
     function saveData() {
         var confirmed = document.getElementById('confirmed').checked ? 1 : 0;
         var id_rs = document.getElementById('id_rs').value;
-        var url = 'locations_model.php?confirm_location&id_rs=' + id_rs + '&confirmed=' + confirmed ;
+        var url = 'locations_modelAmbulan.php?confirm_location&id_rs=' + id_rs + '&confirmed=' + confirmed ;
         downloadUrl(url, function(data, responseCode) {
             if (responseCode === 200  && data.length > 1) {
                 infowindow.close();
@@ -145,7 +145,7 @@ include'locations_modelAmbulan.php';
 
         <tr>
             <input name="id_rs" type='hidden' id='id_rs'/>
-            <td><a>Telp:</a></td>
+            <td><a>Telepon:</a></td>
             <td><textarea disabled id='telp_rs' placeholder='Telepon'></textarea></td>
         </tr>
                 

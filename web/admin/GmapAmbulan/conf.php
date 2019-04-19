@@ -25,7 +25,7 @@ public function getXMLData($tabel){
    return $getXMLData;
 }
 public function tampil($tabel , $id_rs){
-   $tampil = $this->db->prepare("SELECT * FROM $tabel ORDER BY $id_rs DESC");
+   $tampil = $this->db->prepare("SELECT * FROM $tabel ORDER BY $id_rs ASC");
    $tampil->execute();
    return $tampil;
 }
