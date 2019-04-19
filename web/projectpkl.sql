@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2019 at 07:41 AM
+-- Generation Time: Apr 19, 2019 at 07:35 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -176,6 +176,30 @@ INSERT INTO `tb_faskes` (`id_faskes`, `jenis_faskes`, `id_rs`, `status_ketersedi
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_kanpol`
+--
+
+CREATE TABLE `tb_kanpol` (
+  `id_kanpol` varchar(15) NOT NULL,
+  `jenis_kanpol` varchar(20) NOT NULL,
+  `nama_kanpol` varchar(200) NOT NULL,
+  `alamat_kanpol` text NOT NULL,
+  `telp_kanpol` varchar(50) NOT NULL,
+  `lat` float(10,6) NOT NULL,
+  `lng` float(10,6) NOT NULL,
+  `location_status` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_kanpol`
+--
+
+INSERT INTO `tb_kanpol` (`id_kanpol`, `jenis_kanpol`, `nama_kanpol`, `alamat_kanpol`, `telp_kanpol`, `lat`, `lng`, `location_status`) VALUES
+('KP001', 'Polsek', 'Resort Malang Kota Sektor Klojen', 'Jl. Kelud No.11, Kauman, Klojen, Kota Malang, Jawa Timur 65116', '(0341)361667', -7.981014, 112.625244, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_kegawatdaruratan`
 --
 
@@ -241,10 +265,8 @@ INSERT INTO `tb_rs` (`id_rs`, `nama_rs`, `alamat_rs`, `telp_rs`, `lat`, `lng`, `
 ('RS003', 'RSIA Harapan Mulia', 'hhk', '021-5991785', -7.978025, 112.624435, 1),
 ('RS004', 'RS Mulia Insani', 'kjh', '021-5962790', -7.972410, 112.631706, 1),
 ('RS005', 'RSIA Tiara', 'ssss', '021-59401999', -7.973070, 112.622330, 1),
-('RS006', 'RS Permata Hati', 'Jl. Danau Toba Blok E 6 No.16 - 18, Lesanpuro, Kedungkandang, Kota Malang, Jawa Timur 65138', '(0341) 718068', -7.980056, 112.660721, 1),
-('RS007', 'RS Suci Paramita', 'kosong', 'kosong', -7.978080, 112.702332, 1),
-('RS009', 'AAA', 'JEMBER', '00000', -7.961085, 112.617699, 1),
-('RS010', 'tes dfdddgd', 'malang jjjj', '6668', -7.968650, 112.643791, 1);
+('RS006', 'RS Permata Hati', 'Jl. Danau Toba Blok E 6 No.16 - 18, Lesanpuro, Kedungkandang, Kota Malang, Jawa Timur 65138', '(0341)718068', -7.980056, 112.660721, 1),
+('RS007', 'RS Suci Paramita', 'kosong', '0', -7.978080, 112.702332, 1);
 
 --
 -- Indexes for dumped tables
@@ -268,6 +290,12 @@ ALTER TABLE `einap`
 ALTER TABLE `tb_faskes`
   ADD PRIMARY KEY (`id_faskes`),
   ADD KEY `id_rs` (`id_rs`);
+
+--
+-- Indexes for table `tb_kanpol`
+--
+ALTER TABLE `tb_kanpol`
+  ADD PRIMARY KEY (`id_kanpol`);
 
 --
 -- Indexes for table `tb_kegawatdaruratan`

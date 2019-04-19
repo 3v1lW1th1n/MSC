@@ -134,13 +134,13 @@ include"db/koneksi.php";
 												</a>
 											</li>
 											<li>
-												<a href="#">
-													 Bencana Alam
+												<a href="?page=KanpolView">
+													 Kantor Polisi
 												</a>
 											</li>
 											<li>
 												<a href="#">
-													 Polisi
+													 Bencana Alam
 												</a>
 											</li>
 										</ul>
@@ -319,6 +319,12 @@ include"db/koneksi.php";
 		<script>
 			$(document).ready(function(){
   				$('#tbAmbulan').DataTable();
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+  				$('#tbKanpol').DataTable();
 			});
 		</script>
 

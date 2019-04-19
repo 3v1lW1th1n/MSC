@@ -94,6 +94,16 @@ if($_GET) {
 			if(!file_exists ("GmapAmbulan/input.php")) die ("Sorry Empty Page!"); 
 			include "GmapAmbulan/input.php";	break; 
 
+
+		#Kedaruratan - Kantor Polisi
+		case 'KanpolView' :				
+			if(!file_exists ("GmapKanpol/index_mapKanpol.php")) die ("Sorry Empty Page!"); 
+			include "GmapKanpol/index_mapKanpol.php";	break;
+
+		case 'KanpolDataView' :				
+			if(!file_exists ("GmapKanpol/input.php")) die ("Sorry Empty Page!"); 
+			include "GmapKanpol/input.php";	break; 
+
 							
 		default:
 			if(!file_exists ("user/artikel.php")) die ("Empty Main Page!"); 
