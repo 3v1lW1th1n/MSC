@@ -57,7 +57,7 @@ include"db/koneksi.php";
 	}
  
 	.menu-malasngoding{
-		background-color: #ffffff;
+		background-color: #242424;
 	}
  
 	.menu-malasngoding ul {
@@ -81,7 +81,7 @@ include"db/koneksi.php";
 	}
  
 	.menu-malasngoding li a:hover{
-		background-color: #ffffff;
+		background-color: #242424;
 	}
  
 	li.dropdown {
@@ -94,53 +94,41 @@ include"db/koneksi.php";
 	}
  
 	.isi-dropdown a:hover {
-		color: #fff !important;
+		color: #242424 !important;
+		
 	}
  
 	.isi-dropdown {
 		position: absolute;
 		display: none;
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-		background-color: #f9f9f9;
-
+		z-index: 9999;
+		background-color: #242424;
+		padding: 14px 16px;
 	}
  
 	.isi-dropdown a {
-		color: #2d9270 !important;
+		color: #777777 !important;
 	}
  
 	.isi-dropdown a:hover {
-		color: #2d9270  !important;
+		color: #ffffff  !important;
 		background: #242424 !important;
+		padding: 14px 16px;
 	}
 </style>
 
 <!-- start header -->
+
 <div class="top_bg">
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo2.png"/></a>
-		</div>	
-		
-		<div class="clear"></div>
-	</div>	
-</div>
-</div>
-<!-- start header_btm -->
-
-		
-	<div class="clear"></div>
-</div>
-</div>
-<!-- start slider -->
-
-<div class="wrap">
-<div class="header_btm">
-		<div class="menu">
-			<ul>
-				<li class="active"><a href="index.html">Home</a>
+			<a href="index.html"><img src="images/logo2.png" alt=""/></a>
+		</div>
+		 <div class="log_reg">
+				<ul>
+				<li class="active"><a href="index.php">Home</a>
 				</li>
 				
 				<li class="dropdown"><a>Kedaruratan</a>
@@ -175,38 +163,45 @@ include"db/koneksi.php";
 				</li>
 				<div class="clear"></div>
 			</ul>
-		</div>
-		</div>
+		</div>				
+		<div class="clear"></div>
+	</div>	
 </div>
+</div>
+
+
+<!-- start slider -->
 
 				<!---start-image-slider---->
 				
 					 <div class="wrapper">
                 <div style="width: 1180px; height: 350px" id="ei-slider" class="ei-slider">
+
                     <ul class="ei-slider-large">
 						<li>
-                            <img src="images/slider1.png"/>
+                            <img src="images/bns.jpg"/>
                             <div class="ei-title">
+                            	<h2>Batu Night Spectacular</h2>
+                                <h3 class="active">BNS menggabungkan konsep pusat perbelanjaan,   <br>
+                                	permainan, olahraga, dan hiburan di dalamnya.
+                                </h3>
                              </div>
                         </li>
                         <li>
-                            <img src="images/slider2.png"/>
+                            <img src="images/museumangkut.jpg"/>
                             <div class="ei-title">
-                            </div>
-                        </li>
-                        <li>
-                            <img src="images/slider3.png" alt="image03"/>
-                            <div class="ei-title">
-                            </div>
-                        </li>
-                        <li>
-                            <img src="images/balekambang.jpg" alt="image04"/>
-                            <div class="ei-title">
-                                <h2>Pantai Balekambang</h2>
-                                <h3 class="active">Pantai Balekambang adalah sebuah pantai  <br>
-                                	di pesisir selatan.
+                            	<h2>Museum Angkut</h2>
+                                <h3 class="active">Museum Angkut merupakan museum transportasi dan tempat <br>wisata modern yang terletak di Kota Batu
                                 </h3>
-                               
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/balekambang.jpg"/>
+                            <div class="ei-title">
+                            	<h2>Pantai Balekambang</h2>
+                                <h3 class="active">Pantai yang tengah naik daun ini terletak di kota Malang Jawa Timur.<br>
+                                	 Pantai Balekambang memiliki julukan “Tanah Lot-nya Jawa Timur” 
+                                </h3>
                             </div>
                         </li>
                         <li>
@@ -218,17 +213,7 @@ include"db/koneksi.php";
                                 </h3>
                             </div>
                         </li>
-                        
-                         <!--  <li>
-                          <img src="images/watuleter.jpg" alt="image05"/>
-                            <div class="ei-title">
-                                <h2>Pantai Watu Leter</h2>
-                                <h3 class="active">Suasana alam yang menyenangkan, deburan ombak <br>
-                                	yang menyejukkan kerap menjadi pilihan banyak wisatawan 
-                                </h3>
-                            </div>
-                        </li> -->
-
+                       
                     </ul><!-- ei-slider-large -->
                     <ul class="ei-slider-thumbs">
                         <li class="ei-slider-element">Current</li>
@@ -247,47 +232,64 @@ include"db/koneksi.php";
             </div><!-- wrapper -->
 	
 		<!---End-image-slider---->	
-<div style="padding: 0px 100px 0px 105px">
-<br/><br/><br/><br/><br/><br/>
-<p align="center"  style="font-family:Maven Pro; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; color: #57C5A0; line-height: 18px">Apa itu Smart City?</p><br/>
-<p align="center">Menurut Perwali Kota Batu No. 78 Tahun 2017 tentang Master Plan Smart City, ide mengenai smart city ialah kota cerdas/pintar yang inovatif menggunakan teknologi informasi dan komunikasi (TIK) yang berkelanjutan dalam membantu masyarakat mengelola sumber daya yang ada, memberikan informasi yang tepat, efisiensi operasi perkotaan, jasa, dan daya saing seiring dengan pemenuhan kebutuhan generasi saat ini dan setelahnya. 
-Pada konsepnya, kota cerdas harus memungkinkan warga masyarakat untuk berperan secara aktif dalam pengelolaan kota dengan memberikan umpan balik kepada penyedia layanan, baik dari sektor privat maupun publik.</p>
-</div>
 
+	<?php 
+	include 'db/koneksi.php';
+	$data = mysqli_query($koneksi,"select * from berita");
+	while($d = mysqli_fetch_array($data)){
+	?>
+
+<div style="padding: 0px 100px 0px 105px;  border: 2px solid #57C5A0; margin-right: 80px;  margin-left: 80px; margin-top: 15px; box-shadow: 5px 5px 8px #57C5A0; border-radius: 5px">
+<br/>
+<p align="center"  style="font-family:Maven Pro; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; color: #57C5A0; line-height: 18px"><?php echo $d['JudulBerita']; ?></p><br/>
+<p align="center"><?php echo $d['IsiBerita']; ?></p><br/>
+</div>
+<?php
+}
+?>
 <!-- start main -->
 
 <div class="wrap">
 <div class="main">
 
-	<div style="padding: 0px 10px 10px 20px" class="login_left">
+	<div style="padding: 10px 0px 10px 20px; border: 2px solid #57C5A0; width: 530px; box-shadow: 5px 5px 8px #57C5A0; border-radius: 5px; margin-top: -25px; margin-left: -5px; " class="login_left">
 		<h3>Kedaruratan</h3><br/>
 	<img width="150px" height="150px" src="images/ambulannew.png">&nbsp;&nbsp;&nbsp;&nbsp;
-	<img width="150px" height="150px" src="images/kantorpolisi.png">&nbsp;&nbsp;&nbsp;&nbsp;
-	<img width="150px" height="150px" src="images/bencana.png"><br/>
+	<img width="150px" height="150px" src="images/bencana.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/kantorpolisi.png"><br/>
 	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ambulan
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kantor Polisi
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bencana Alam
-	</h1><br/>
-	
-	<h3>Pengaduan</h3><br/>
-	<img width="150px" height="150px" src="images/suratwarga.png">&nbsp;&nbsp;&nbsp;&nbsp;
-	<img width="150px" height="150px" src="images/elapor.png"><br/>
-	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surat Warga
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-lapor
-	</h1>		
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bencana Alam
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Polisi
+	</h1>
+</div>
 
-	</div>
-
-<div style="padding: 0px 10px 10px 40px" class="login_left">
-		<h3>Layanan Umum</h3><br/>
+	<div style="padding: 10px 0px 10px 20px; border: 2px solid #57C5A0; width: 530px; box-shadow: 5px 5px 8px #57C5A0; border-radius: 5px;  margin-top: -25px; margin-left: 75px" class="login_left">
+	<h3>Layanan Umum</h3><br/>
 	<img width="150px" height="150px" src="images/pju.png">&nbsp;&nbsp;&nbsp;&nbsp;
 	<img width="150px" height="150px" src="images/pdam.png">&nbsp;&nbsp;&nbsp;&nbsp;
 	<img width="150px" height="150px" src="images/STOKDARAH.png"><br/>
 	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PJU
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PDAM
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stok Darah
-	</h1><br/>
+	</h1>	
+	</div>
+</div>
+</div>
 
+
+<div class="wrap">
+<div class="main">
+<div style="padding: 10px 0px 10px 20px; border: 2px solid #57C5A0; width: 530px; box-shadow: 5px 5px 8px #57C5A0; border-radius: 5px; margin-bottom: 20px; margin-top: 20px; margin-left: -5px" class="login_left">
+		
+	<h3>Pengaduan</h3><br/>
+	<img width="150px" height="150px" src="images/suratwarga.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<img width="150px" height="150px" src="images/elapor.png"><br/>
+	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surat Warga
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-lapor
+	</h1>
+</div>
+
+<div style="padding: 10px 0px 10px 20px; border: 2px solid #57C5A0; width: 530px; box-shadow: 5px 5px 8px #57C5A0; border-radius: 5px;  margin-top: 20px; margin-left: 75px; margin-bottom: 20px " class="login_left">
 	<h3>Informasi</h3><br/>
 	<a href="einap.php"><img width="150px" height="150px" src="images/einap2.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="faskes.php"><img width="150px" height="150px" src="images/faskes.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -295,14 +297,16 @@ Pada konsepnya, kota cerdas harus memungkinkan warga masyarakat untuk berperan s
 	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-inap
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faskes
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Rumah Sakit
-	</h1>		
+	</h1>
 	</div>
 </div>
 </div>
 
 	<div class="clear"></div>
-</div>
-</div>
+
+
+
+
 
 
 <!-- start footer -->
