@@ -96,8 +96,11 @@ $konfigurasi = new konfigurasi();
       <div class="form-group">
        <div class="col-md-12">
         <select class="form-control" name="jenis_kanpol" id="jenis_kanpol">
+         <option>Polresta</option>
          <option>Polres</option>
+         <option>Polsekta</option>
          <option>Polsek</option>
+         <option>Polwil</option>
         </select>
        </div>
       </div>
@@ -213,16 +216,49 @@ $konfigurasi = new konfigurasi();
          <div class="col-md-12">
           <select class="form-control" name="jenis_kanpol">
           <?php
-          if ($result['jenis_kanpol'] == "Polres") {
+          if ($result['jenis_kanpol'] == "Polresta") {
            echo "
-           <option selected>Polres</option>
+           <option selected>Polresta</option>
+           <option>Polres</option>
+           <option>Polsekta</option>
            <option>Polsek</option>
+           <option>Polwil</option>
            ";
+          }
+          else if ($result['jenis_kanpol'] == "Polres") {
+           echo "
+           <option>Polresta</option>
+           <option selected>Polres</option>
+           <option>Polsekta</option>
+           <option>Polsek</option>
+           <option>Polwil</option>
+          ";
+          }
+          else if ($result['jenis_kanpol'] == "Polsekta") {
+           echo "
+           <option>Polresta</option>
+           <option>Polres</option>
+           <option selected>Polsekta</option>
+           <option>Polsek</option>
+           <option>Polwil</option>
+          ";
           }
           else if ($result['jenis_kanpol'] == "Polsek") {
            echo "
-            <option>Polres</option>
-            <option selected>Polsek</option>
+           <option>Polresta</option>
+           <option>Polres</option>
+           <option>Polsekta</option>
+           <option selected>Polsek</option>
+           <option>Polwil</option>
+          ";
+          }
+          else if ($result['jenis_kanpol'] == "Polwil") {
+           echo "
+           <option>Polresta</option>
+           <option>Polres</option>
+           <option>Polsekta</option>
+           <option>Polsek</option>
+           <option selected>Polwil</option>
           ";
           }
           ?>
