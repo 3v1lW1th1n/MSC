@@ -132,7 +132,7 @@ include"db/koneksi.php";
 <div class="wrap">
     <div class="header">
         <div class="logo">
-            <a href="index.html"><img src="images/logo2.png" alt=""/></a>
+            <a><img src="images/logo2.png" alt=""/></a>
         </div>
          <div class="log_reg">
                 <ul>
