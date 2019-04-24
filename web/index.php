@@ -124,18 +124,18 @@ include"db/koneksi.php";
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo2.png" alt=""/></a>
+			<img src="images/logo2.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
 				<li class="active"><a href="index.php">Home</a>
 				</li>
-				
+				 
 				<li class="dropdown"><a>Kedaruratan</a>
 				<ul class="isi-dropdown">
-					<li><a href="?page=Ambulan">Ambulan</a></li>
+					<li><a href="mapAmbulan.php">Ambulan</a></li>
 					<li><a href="?page=BencanaAlam">Bencana Alam</a></li>
-					<li><a href="?page=Polisi">Polisi</a></li>
+					<li><a href="mapKanpol.php">Kantor Polisi</a></li>
 				</ul>
 			    </li>
 
@@ -254,12 +254,12 @@ include"db/koneksi.php";
 
 	<div style="padding: 10px 0px 10px 20px; border: 2px solid #57C5A0; width: 530px; box-shadow: 5px 5px 8px #57C5A0; border-radius: 5px; margin-top: -25px; margin-left: -5px; " class="login_left">
 		<h3>Kedaruratan</h3><br/>
-	<img width="150px" height="150px" src="images/ambulannew.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="mapAmbulan.php"><img width="150px" height="150px" src="images/ambulannew.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 	<img width="150px" height="150px" src="images/bencana.png">&nbsp;&nbsp;&nbsp;&nbsp;
-	<img width="150px" height="150px" src="images/kantorpolisi.png"><br/>
+	<a href="mapKanpol.php"><img width="150px" height="150px" src="images/kantorpolisi.png"></a><br/>
 	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ambulan
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bencana Alam
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Polisi
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kantor Polisi
 	</h1>
 </div>
 
@@ -268,7 +268,7 @@ include"db/koneksi.php";
 	<img width="150px" height="150px" src="images/pju.png">&nbsp;&nbsp;&nbsp;&nbsp;
 	<img width="150px" height="150px" src="images/pdam.png">&nbsp;&nbsp;&nbsp;&nbsp;
 	<img width="150px" height="150px" src="images/STOKDARAH.png"><br/>
-	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PJU
+	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PJU
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PDAM
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stok Darah
 	</h1>	
@@ -284,7 +284,7 @@ include"db/koneksi.php";
 	<h3>Pengaduan</h3><br/>
 	<img width="150px" height="150px" src="images/suratwarga.png">&nbsp;&nbsp;&nbsp;&nbsp;
 	<img width="150px" height="150px" src="images/elapor.png"><br/>
-	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surat Warga
+	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surat Warga
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-lapor
 	</h1>
 </div>
