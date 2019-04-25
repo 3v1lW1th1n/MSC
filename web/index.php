@@ -124,7 +124,7 @@ include"db/koneksi.php";
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<img src="images/logo2.png" alt=""/></a>
+			<img src="images/logo2.png" alt=""/>
 		</div>
 		 <div class="log_reg">
 				<ul>
@@ -134,7 +134,7 @@ include"db/koneksi.php";
 				<li class="dropdown"><a>Kedaruratan</a>
 				<ul class="isi-dropdown">
 					<li><a href="mapAmbulan.php">Ambulan</a></li>
-					<li><a href="?page=BencanaAlam">Bencana Alam</a></li>
+					<li><a href="mapBencana.php">Bencana Alam</a></li>
 					<li><a href="mapKanpol.php">Kantor Polisi</a></li>
 				</ul>
 			    </li>

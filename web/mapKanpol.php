@@ -139,7 +139,7 @@ include "admin/GmapKanpol/locations_modelKanpol.php";
                 <li class="dropdown"><a>Kedaruratan</a>
                 <ul class="isi-dropdown">
                     <li><a href="mapAmbulan.php">Ambulan</a></li>
-                    <li><a href="?page=BencanaAlam">Bencana Alam</a></li>
+                    <li><a href="mapBencana.php">Bencana Alam</a></li>
                     <li><a href="mapKanpol.php">Kantor Polisi</a></li>
                 </ul>
                 </li>
