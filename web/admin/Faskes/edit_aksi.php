@@ -3,15 +3,18 @@
 include '../db/koneksi.php';
  
 // menangkap data yang di kirim dari form
-$id = $_POST['a'];
-$nama = $_POST['b'];
-$alamat = $_POST['c'];
-$telp = $_POST['d'];
+$id_faskes = $_POST['a'];
+$id_rs = $_POST['b'];
+$jenis_faskes = $_POST['c'];
+$status_tersedia = $_POST['d'];
+$jml_tersedia = $_POST['e'];
+$jml_terpakai = $_POST['f'];
+
  
 // menginput data ke database
-mysqli_query($koneksi,"update tb_rs set id_rs='$id', nama_rs='$nama', alamat_rs='$alamat', telp_rs='$telp' where id_rs='$id'");
+mysqli_query($koneksi,"update tb_faskes set id_faskes='$id_faskes',  jenis_faskes='$jenis_faskes', id_rs='$id_rs', status_ketersediaan='$status_tersedia', jml_tersedia='$jml_tersedia', terpakai='$jml_terpakai' where id_faskes='$id_faskes'");
  
 // mengalihkan halaman kembali ke index.php
-echo "<meta http-equiv='refresh' content='0; url=?page=RSView'>";
+echo "<meta http-equiv='refresh' content='0; url=?page=FaskesView'>";
  
 ?>

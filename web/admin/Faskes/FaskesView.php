@@ -12,7 +12,7 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="mb-md">
-											<a href="?page=RSTambah"><button id="addToTable" class="btn btn-primary">Tambah Data <i class="fa fa-plus"></i></button></a>
+											<a href="?page=FaskesTambah"><button id="addToTable" class="btn btn-primary">Tambah Data <i class="fa fa-plus"></i></button></a>
 										</div>
 									</div>
 								</div>
@@ -47,7 +47,7 @@
 
 												
 									<a href="?page=FaskesEdit&id=<?php echo $d['id_faskes']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-									<a href="?page=FaskesHapus&id=<?php echo $d['id_faskes']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+									<a href="?page=FaskesHapus&id=<?php echo $d['id_faskes']; ?>" class="on-default remove-row" onclick="javascript: return confirm('Anda yakin akan menghapus data?')"><i class="fa fa-trash-o"></i></a>
 											</td>
 										</tr>
 									<?php 
