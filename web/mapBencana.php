@@ -11,6 +11,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
 <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW-LxWC1ML0a6FbUzgC6ExKfh6xrb8oZM&callback=initMap">
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <link rel="shortcut icon" href="images/iconkabmalangresize.png"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -181,19 +182,17 @@ include "admin/GmapBencana/locations_modelBencana.php";
 
 <!-- start main -->
 
-<div class="wrap">
+<div class="wrap"> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <img style="width:80%; height:100px" src="images/header_bencana.png">
 <div class="main">
-
-    
-
-<div class="container">
-      <div class="col-lg-9">
-        <div id="map" style="width:100%; height:520px;"></div>
-      </div>
+<div class="mb-md">
+     <a href="?page=BencanaDataView">
+     &nbsp;&nbsp;&nbsp;&nbsp;<button id="addToTable">Terjadi Bencana Alam?</button></a>
 </div>
+<br>
     
 
-    <div id="map"></div>
+    <div id="map" style="width:100%; height:520px;"></div>
     <script>
         /**
          * Create new map
@@ -260,6 +259,46 @@ include "admin/GmapBencana/locations_modelBencana.php";
             return new google.maps.LatLng(lat, lng);
         };
 
+        /**
+         * Binds click event to given map and invokes a callback that appends a new marker to clicked location.
+         */
+        var addMarker = google.maps.event.addListener(map, 'click', function(e) {
+            var lat = e.latLng.lat(); // lat of clicked point
+            var lng = e.latLng.lng(); // lng of clicked point
+            var markerId = getMarkerUniqueId(lat, lng); // an that will be used to cache this marker in markers object.
+            var marker = new google.maps.Marker({
+                position: getLatLng(lat, lng),
+                map: map,
+                animation: google.maps.Animation.DROP,
+                id: 'marker_' + markerId,
+                html: "<div id='info_"+markerId+"'>\n" +
+                "<table class=\"map1\">\n" +
+                "<tr>\n" +
+                "    <td><a>Nama:</a></td>\n" +
+                "    <td><textarea  id='manual_nama' placeholder='Nama Pelapor'></textarea></td></tr>\n" +
+                "<tr>\n" +
+                "    <td><a>Telp:</a></td>\n" +
+                "    <td><textarea  id='manual_telp' placeholder='Telepon Pelapor'></textarea></td></tr>\n" +
+                "<tr>\n" +
+                "    <td><a>Lokasi:</a></td>\n" +
+                "    <td><textarea  id='manual_alamat' placeholder='Lokasi Bencana'></textarea></td></tr>\n" +
+                "<tr>\n" +
+                "    <td><a>Jenis:</a></td>\n" +
+                "    <td><textarea  id='manual_jenis' placeholder='Jenis Bencana'></textarea></td></tr>\n" +
+                "<tr>\n" +
+                "    <td><a>Keterangan:</a></td>\n" +
+                "    <td><textarea  id='manual_keterangan' placeholder='Keterangan Keadaan'></textarea></td></tr>\n" +
+                "<tr>\n" +
+                "    <td><a>Waktu:</a></td>\n" +
+                "    <td><textarea  id='manual_tgl' placeholder='Waktu Kejadian'><?php date_default_timezone_set('Asia/Jakarta');echo date("Y-m-d H:i:s");?></textarea></td></tr>\n \n \n" +
+                "<tr><td></td><td><input type='button' value='Save' onclick='saveData("+lat+","+lng+")'/></td></tr>\n" +
+                "</table>\n" +
+                "</div>"
+            });
+            markers[markerId] = marker; // cache marker in markers object
+            bindMarkerEvents(marker); // bind right click event to marker
+            bindMarkerinfo(marker); // bind infowindow with click event to marker
+        });
     
         /**
          * Binds  click event to given marker and invokes a callback function that will remove the marker from map.
@@ -312,15 +351,15 @@ include "admin/GmapBencana/locations_modelBencana.php";
                 "<table class=\"map1\">\n" +
                 "<tr>\n" +
                 "<td><a>Pelapor:</a></td>\n" +
-                "<td><textarea disabled id='manual_pelapor' placeholder='Pelapor'>"+locations[i][1]+"</textarea></td></tr>\n" +
+                "<td><textarea disabled id='manual_namar' placeholder='Pelapor'>"+locations[i][1]+"</textarea></td></tr>\n" +
                 "<td><a>Lokasi:</a></td>\n" +
-                "<td><textarea disabled id='manual_lokasi' placeholder='Lokasi'>"+locations[i][3]+"</textarea></td></tr>\n" +
+                "<td><textarea disabled id='manual_alamat' placeholder='Lokasi'>"+locations[i][3]+"</textarea></td></tr>\n" +
                 "<td><a>Jenis Bencana:</a></td>\n" +
                 "<td><textarea disabled id='manual_jenis' placeholder='Jenis Bencana'>"+locations[i][4]+"</textarea></td></tr>\n" +
                 "<td><a>Keterangan:</a></td>\n" +
                 "<td><textarea disabled id='manual_keterangan' placeholder='Keterangan'>"+locations[i][5]+"</textarea></td></tr>\n" +
                 "<td><a>Waktu:</a></td>\n" +
-                "<td><textarea disabled id='manual_waktu' placeholder='Waktu'>"+locations[i][6]+"</textarea></td></tr>\n" +
+                "<td><textarea disabled id='manual_tgl' placeholder='Waktu'>"+locations[i][6]+"</textarea></td></tr>\n" +
                 "</table>\n" +
                 "</div>"
             });
@@ -332,6 +371,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
                     $("#confirmed").prop(confirmed,locations[i][9]);
                     $("#id_bencana").val(locations[i][0]);
                     $("#nama_pelapor").val(locations[i][1]);
+                    $("#telp_pelapor").val(locations[i][2]);
                     $("#alamat_bencana").val(locations[i][3]);
                     $("#jenis_bencana").val(locations[i][4]);
                     $("#keterangan").val(locations[i][5]);
@@ -349,8 +389,14 @@ include "admin/GmapBencana/locations_modelBencana.php";
          * @param lng A longitude of marker.
          */
         function saveData(lat,lng) {
-            var description = document.getElementById('manual_pelapor').value;
-            var url = 'admin/GmapBencana/locations_modelBencana.php?add_location&id_bencana=' + id_bencana + '&lat=' + lat + '&lng=' + lng;
+            var nama_pelapor = document.getElementById('manual_nama').value;
+            var telp_pelapor = document.getElementById('manual_telp').value;
+            var alamat_bencana = document.getElementById('manual_alamat').value;
+            var jenis_bencana = document.getElementById('manual_jenis').value;
+            var keterangan = document.getElementById('manual_keterangan').value;
+            var tgl_bencana = document.getElementById('manual_tgl').value;
+            var url = 'admin/GmapBencana/locations_modelBencana.php?add_location&nama_pelapor=' + nama_pelapor + '&telp_pelapor=' + telp_pelapor + '&alamat_bencana=' + alamat_bencana + '&jenis_bencana=' + jenis_bencana + '&keterangan=' + keterangan + '&tgl_bencana=' + tgl_bencana + '&lat=' + lat + '&lng=' + lng;
+
             downloadUrl(url, function(data, responseCode) {
                 if (responseCode === 200  && data.length > 1) {
                     var markerId = getMarkerUniqueId(lat,lng); // get marker id by using clicked point's coordinate

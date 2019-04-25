@@ -29,7 +29,7 @@ function add_location(){
     // Inserts new row with place data.
     $query = sprintf("INSERT INTO tb_bencana " .
         " (id_bencana, nama_pelapor, telp_pelapor, alamat_bencana, jenis_bencana, keterangan, tgl_bencana, lat, lng) " .
-        " VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');",
+        " VALUES ('NULL', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');",
         mysqli_real_escape_string($con,$id_bencana),
         mysqli_real_escape_string($con,$nama_pelapor),
         mysqli_real_escape_string($con,$telp_pelapor),

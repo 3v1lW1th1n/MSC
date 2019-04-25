@@ -181,16 +181,13 @@ include "admin/GmapKanpol/locations_modelKanpol.php";
 
 <!-- start main -->
 
-<div class="wrap">
+<div class="wrap"> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <img style="width:80%; height:100px" src="images/header_kanpol.png">
 <div class="main">
 
-    
 
-<div class="container">
-      <div class="col-lg-9">
+      
         <div id="map" style="width:100%; height:520px;"></div>
-      </div>
-</div>
     
 
     <div id="map"></div>
