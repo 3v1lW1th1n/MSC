@@ -40,8 +40,31 @@
 												</div>
 											</div>
 
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Lat</label>
+												<div class="col-md-3">
+													<input type="text" name="e" class="form-control" id="inputDefault">
+												</div>
+											</div>
+										
+											<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Long</label>
+												<div class="col-md-3">
+													<input type="text" name="f" class="form-control" id="inputDefault">
+												</div>
+											</div>
+
+												<div class="form-group">
+												<label class="col-md-3 control-label" for="inputDefault">Loc</label>
+												<div class="col-md-3">
+													<input type="text" name="g" class="form-control" id="inputDefault">
+												</div>
+											</div>
+										
+										
+
 											<div class="col-sm-9 text-right">
-											<button type="submit" class="btn btn-primary hidden-xs">Simpan</button>
+											<button type="submit" name="tambah" class="btn btn-primary hidden-xs">Simpan</button>
 											</div>
 								</form>
 							</div>
