@@ -185,10 +185,6 @@ include "admin/GmapBencana/locations_modelBencana.php";
 <div class="wrap"> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     <img style="width:80%; height:100px" src="images/header_bencana.png">
 <div class="main">
-<div class="mb-md">
-     <a href="?page=BencanaDataView">
-     &nbsp;&nbsp;&nbsp;&nbsp;<button id="addToTable">Terjadi Bencana Alam?</button></a>
-</div>
 <br>
     
 
@@ -290,7 +286,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
                 "    <td><textarea  id='manual_keterangan' placeholder='Keterangan Keadaan'></textarea></td></tr>\n" +
                 "<tr>\n" +
                 "    <td><a>Waktu:</a></td>\n" +
-                "    <td><textarea  id='manual_tgl' placeholder='Waktu Kejadian'><?php date_default_timezone_set('Asia/Jakarta');echo date("Y-m-d H:i:s");?></textarea></td></tr>\n \n \n" +
+                "    <td><textarea  id='manual_tgl'><?php date_default_timezone_set('Asia/Jakarta');echo date("Y-m-d H:i:s");?></textarea></td></tr>\n" +
                 "<tr><td></td><td><input type='button' value='Save' onclick='saveData("+lat+","+lng+")'/></td></tr>\n" +
                 "</table>\n" +
                 "</div>"
@@ -351,7 +347,9 @@ include "admin/GmapBencana/locations_modelBencana.php";
                 "<table class=\"map1\">\n" +
                 "<tr>\n" +
                 "<td><a>Pelapor:</a></td>\n" +
-                "<td><textarea disabled id='manual_namar' placeholder='Pelapor'>"+locations[i][1]+"</textarea></td></tr>\n" +
+                "<td><textarea disabled id='manual_nama' placeholder='Pelapor'>"+locations[i][1]+"</textarea></td></tr>\n" +
+                "<td><a>Telp Pelapor:</a></td>\n" +
+                "<td><textarea disabled id='manual_telp' placeholder='Lokasi'>"+locations[i][2]+"</textarea></td></tr>\n" +
                 "<td><a>Lokasi:</a></td>\n" +
                 "<td><textarea disabled id='manual_alamat' placeholder='Lokasi'>"+locations[i][3]+"</textarea></td></tr>\n" +
                 "<td><a>Jenis Bencana:</a></td>\n" +
@@ -403,13 +401,13 @@ include "admin/GmapBencana/locations_modelBencana.php";
                     var manual_marker = markers[markerId]; // find marker
                     manual_marker.setIcon(purple_icon);
                     infowindow.close();
-                    infowindow.setContent("<div style=' color: purple; font-size: 25px;'> Waiting for admin confirm!!</div>");
+                    infowindow.setContent("<div style=' color: purple; font-size: 25px;'> Terimakasih, Silahkan Menunggu Konfirmasi!</div>");
                     infowindow.open(map, manual_marker);
 
                 }else{
                     console.log(responseCode);
                     console.log(data);
-                    infowindow.setContent("<div style='color: red; font-size: 25px;'>Inserting Errors</div>");
+                    infowindow.setContent("<div style='color: red; font-size: 25px;'>Terjadi Kesalahan!</div>");
                 }
             });
         }
