@@ -210,9 +210,8 @@ include "admin/GmapAmbulan/locations_modelAmbulan.php";
         map = new google.maps.Map(document.getElementById('map'), myOptions);
 
        
- infoWindow = new google.maps.InfoWindow;
-
-        // Try HTML5 geolocation.
+        infoWindow = new google.maps.InfoWindow;
+         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -237,7 +236,7 @@ include "admin/GmapAmbulan/locations_modelAmbulan.php";
          */
         var markers = {};
 
-        /**
+       /**
          * Concatenates given lat and lng with an underscore and returns it.
          * This id will be used as a key of marker to cache the marker in markers object.
          * @param {!number} lat Latitude.
@@ -275,28 +274,6 @@ include "admin/GmapAmbulan/locations_modelAmbulan.php";
             });
         };
 
-        /**
-         * Binds right click event to given marker and invokes a callback function that will remove the marker from map.
-         * @param {!google.maps.Marker} marker A google.maps.Marker instance that the handler will binded.
-         */
-        var bindMarkerEvents = function(marker) {
-            google.maps.event.addListener(marker, "rightclick", function (point) {
-                var markerId = getMarkerUniqueId(point.latLng.lat(), point.latLng.lng()); // get marker id by using clicked point's coordinate
-                var marker = markers[markerId]; // find marker
-                removeMarker(marker, markerId); // remove it
-            });
-        };
-
-        /**
-         * Removes given marker from map.
-         * @param {!google.maps.Marker} marker A google.maps.Marker instance that will be removed.
-         * @param {!string} markerId Id of marker.
-         */
-        var removeMarker = function(marker, markerId) {
-            marker.setMap(null); // set markers setMap to null to remove it from map
-            delete markers[markerId]; // delete marker instance from markers object
-        };
-
 
         /**
          * loop through (Mysql) dynamic locations to add markers to map.
@@ -320,6 +297,7 @@ include "admin/GmapAmbulan/locations_modelAmbulan.php";
                 "</div>"
             });
 
+            //untuk menampilkan informasi
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
                     infowindow = new google.maps.InfoWindow();
@@ -336,31 +314,7 @@ include "admin/GmapAmbulan/locations_modelAmbulan.php";
             })(marker, i));
         }
 
-        /**
-         * SAVE save marker from map.
-         * @param lat  A latitude of marker.
-         * @param lng A longitude of marker.
-         */
-        function saveData(lat,lng) {
-            var description = document.getElementById('manual_description').value;
-            var url = 'admin/GmapAmbulan/locations_modelAmbulan.php?add_location&id_rs=' + id_rs + '&lat=' + lat + '&lng=' + lng;
-            downloadUrl(url, function(data, responseCode) {
-                if (responseCode === 200  && data.length > 1) {
-                    var markerId = getMarkerUniqueId(lat,lng); // get marker id by using clicked point's coordinate
-                    var manual_marker = markers[markerId]; // find marker
-                    manual_marker.setIcon(purple_icon);
-                    infowindow.close();
-                    infowindow.setContent("<div style=' color: purple; font-size: 25px;'> Waiting for admin confirm!!</div>");
-                    infowindow.open(map, manual_marker);
-
-                }else{
-                    console.log(responseCode);
-                    console.log(data);
-                    infowindow.setContent("<div style='color: red; font-size: 25px;'>Inserting Errors</div>");
-                }
-            });
-        }
-
+        
         function downloadUrl(url, callback) {
             var request = window.ActiveXObject ?
                 new ActiveXObject('Microsoft.XMLHTTP') :

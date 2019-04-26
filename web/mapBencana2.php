@@ -211,8 +211,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
 
        
         infoWindow = new google.maps.InfoWindow;
-
-        // Try HTML5 geolocation.
+         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -237,7 +236,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
          */
         var markers = {};
 
-        /**
+       /**
          * Concatenates given lat and lng with an underscore and returns it.
          * This id will be used as a key of marker to cache the marker in markers object.
          * @param {!number} lat Latitude.
@@ -259,48 +258,8 @@ include "admin/GmapBencana/locations_modelBencana.php";
             return new google.maps.LatLng(lat, lng);
         };
 
-        /**
-         * Binds click event to given map and invokes a callback that appends a new marker to clicked location.
-         */
-        var addMarker = google.maps.event.addListener(map, 'click', function(e) {
-            var lat = e.latLng.lat(); // lat of clicked point
-            var lng = e.latLng.lng(); // lng of clicked point
-            var markerId = getMarkerUniqueId(lat, lng); // an that will be used to cache this marker in markers object.
-            var marker = new google.maps.Marker({
-                position: getLatLng(lat, lng),
-                map: map,
-                animation: google.maps.Animation.DROP,
-                id: 'marker_' + markerId,
-                html: "<div id='info_"+markerId+"'>\n" +
-                "<table class=\"map1\">\n" +
-                "<tr>\n" +
-                "    <td><a>Nama:</a></td>\n" +
-                "    <td><textarea  id='manual_nama' placeholder='Nama Pelapor'></textarea></td></tr>\n" +
-                "<tr>\n" +
-                "    <td><a>Telp:</a></td>\n" +
-                "    <td><textarea  id='manual_telp' placeholder='Telepon Pelapor'></textarea></td></tr>\n" +
-                "<tr>\n" +
-                "    <td><a>Lokasi:</a></td>\n" +
-                "    <td><textarea  id='manual_alamat' placeholder='Lokasi Bencana'></textarea></td></tr>\n" +
-                "<tr>\n" +
-                "    <td><a>Jenis:</a></td>\n" +
-                "    <td><textarea  id='manual_jenis' placeholder='Jenis Bencana'></textarea></td></tr>\n" +
-                "<tr>\n" +
-                "    <td><a>Keterangan:</a></td>\n" +
-                "    <td><textarea  id='manual_keterangan' placeholder='Keterangan Keadaan'></textarea></td></tr>\n" +
-                "<tr>\n" +
-                "    <td><a>Waktu:</a></td>\n" +
-                "    <td><textarea  id='manual_tgl'><?php date_default_timezone_set('Asia/Jakarta');echo date("Y-m-d H:i:s");?></textarea></td></tr>\n" +
-                "<tr><td></td><td><input type='button' value='Save' onclick='saveData("+lat+","+lng+")'/></td></tr>\n" +
-                "</table>\n" +
-                "</div>"
-            });
-            markers[markerId] = marker; // cache marker in markers object
-            bindMarkerEvents(marker); // bind right click event to marker
-            bindMarkerinfo(marker); // bind infowindow with click event to marker
-        });
     
-         /**
+        /**
          * Binds  click event to given marker and invokes a callback function that will remove the marker from map.
          * @param {!google.maps.Marker} marker A google.maps.Marker instance that the handler will binded.
          */
@@ -315,30 +274,8 @@ include "admin/GmapBencana/locations_modelBencana.php";
             });
         };
 
-        /**
-         * Binds right click event to given marker and invokes a callback function that will remove the marker from map.
-         * @param {!google.maps.Marker} marker A google.maps.Marker instance that the handler will binded.
-         */
-        var bindMarkerEvents = function(marker) {
-            google.maps.event.addListener(marker, "rightclick", function (point) {
-                var markerId = getMarkerUniqueId(point.latLng.lat(), point.latLng.lng()); // get marker id by using clicked point's coordinate
-                var marker = markers[markerId]; // find marker
-                removeMarker(marker, markerId); // remove it
-            });
-        };
 
-        /**
-         * Removes given marker from map.
-         * @param {!google.maps.Marker} marker A google.maps.Marker instance that will be removed.
-         * @param {!string} markerId Id of marker.
-         */
-        var removeMarker = function(marker, markerId) {
-            marker.setMap(null); // set markers setMap to null to remove it from map
-            delete markers[markerId]; // delete marker instance from markers object
-        };
-
-
-        /**
+       /**
          * loop through (Mysql) dynamic locations to add markers to map.
          */
         var i ; var confirmed = 0;
@@ -390,37 +327,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
             })(marker, i));
         }
 
-        /**
-         * SAVE save marker from map.
-         * @param lat  A latitude of marker.
-         * @param lng A longitude of marker.
-         */
-        function saveData(lat,lng) {
-            var nama_pelapor = document.getElementById('manual_nama').value;
-            var telp_pelapor = document.getElementById('manual_telp').value;
-            var alamat_bencana = document.getElementById('manual_alamat').value;
-            var jenis_bencana = document.getElementById('manual_jenis').value;
-            var keterangan = document.getElementById('manual_keterangan').value;
-            var tgl_bencana = document.getElementById('manual_tgl').value;
-            var url = 'admin/GmapBencana/locations_modelBencana.php?add_location&nama_pelapor=' + nama_pelapor + '&telp_pelapor=' + telp_pelapor + '&alamat_bencana=' + alamat_bencana + '&jenis_bencana=' + jenis_bencana + '&keterangan=' + keterangan + '&tgl_bencana=' + tgl_bencana + '&lat=' + lat + '&lng=' + lng;
-
-            downloadUrl(url, function(data, responseCode) {
-                if (responseCode === 200  && data.length > 1) {
-                    var markerId = getMarkerUniqueId(lat,lng); // get marker id by using clicked point's coordinate
-                    var manual_marker = markers[markerId]; // find marker
-                    manual_marker.setIcon(purple_icon);
-                    infowindow.close();
-                    infowindow.setContent("<div style=' color: purple; font-size: 25px;'> Terimakasih, Silahkan Menunggu Konfirmasi!</div>");
-                    infowindow.open(map, manual_marker);
-
-                }else{
-                    console.log(responseCode);
-                    console.log(data);
-                    infowindow.setContent("<div style='color: red; font-size: 25px;'>Terjadi Kesalahan!</div>");
-                }
-            });
-        }
-
+        
         function downloadUrl(url, callback) {
             var request = window.ActiveXObject ?
                 new ActiveXObject('Microsoft.XMLHTTP') :

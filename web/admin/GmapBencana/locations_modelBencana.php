@@ -68,8 +68,8 @@ function get_confirmed_locations(){
     }
     // update location with location_status if admin location_status.
     $sqldata = mysqli_query($con,"
-select SSSSnama_pelapor,telp_pelapor,alamat_bencana,jenis_bencana,keterangan,tgl_bencana,lat,lng,location_status as isconfirmed
-from tb_rs WHERE  location_status = 1
+select id_bencana,nama_pelapor,telp_pelapor,alamat_bencana,jenis_bencana,keterangan,tgl_bencana,lat,lng,location_status as isconfirmed
+from tb_bencana WHERE  location_status = 1
   ");
 
     $rows = array();
