@@ -43,7 +43,7 @@
 
 												
 									<a href="?page=RSEdit&id=<?php echo $d['id_rs']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-									<a href="?page=RSHapus&id=<?php echo $d['id_rs']; ?>" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+									<a href="?page=RSHapus&id=<?php echo $d['id_rs']; ?>" class="on-default remove-row" onclick="javascript: return confirm('Anda yakin akan menghapus data?')"><i class="fa fa-trash-o"></i></a>
 											</td>
 										</tr>
 									
