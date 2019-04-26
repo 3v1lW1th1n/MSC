@@ -6,6 +6,31 @@ if($_GET) {
 		case '' :				
 			if(!file_exists ("menuutama.php")) die ("Empty Main Page!"); 
 			include "menuutama.php";	break;
+
+		#Berita
+		case 'BeritaView' :				
+			if(!file_exists ("Berita/berita.php")) die ("Sorry Empty Page!"); 
+			include "Berita/berita.php";	break;
+		
+		case 'BeritaTambah' :				
+			if(!file_exists ("Berita/BeritaTambah.php")) die ("Sorry Empty Page!"); 
+			include "E-inap/EinapTambah.php";	break;
+
+		case 'tambah' :				
+			if(!file_exists ("Berita/tambah_aksi.php")) die ("Sorry Empty Page!"); 
+			include "Berita/tambah_aksi.php";	break;
+
+		case 'BeritaEdit' :				
+			if(!file_exists ("Berita/BeritaEdit.php")) die ("Sorry Empty Page!"); 
+			include "Berita/BeritaEdit.php";	break;
+
+		case 'edit' :				
+			if(!file_exists ("Berita/edit_aksi.php")) die ("Sorry Empty Page!"); 
+			include "Berita/edit_aksi.php";	break;
+
+		case 'BeritaHapus' :				
+			if(!file_exists ("Berita/BeritaHapus.php")) die ("Sorry Empty Page!"); 
+			include "Berita/BeritaHapus.php";	break;
 		
 		#E-Inap
 		case 'EinapView' :				
@@ -59,31 +84,30 @@ if($_GET) {
 			include "RS/RSHapus.php";	break;
 
 
-			#Faskes
+		#Faskes
 		case 'FaskesView' :				
 			if(!file_exists ("Faskes/FaskesView.php")) die ("Sorry Empty Page!"); 
 			include "Faskes/FaskesView.php";	break;
 
-		case 'RSTambah' :				
-			if(!file_exists ("RS/RSTambah.php")) die ("Sorry Empty Page!"); 
-			include "RS/RSTambah.php";	break;
+		case 'FaskesTambah' :				
+			if(!file_exists ("Faskes/FaskesTambah.php")) die ("Sorry Empty Page!"); 
+			include "Faskes/FaskesTambah.php";	break;
 
-		case 'rs_tambah' :				
-			if(!file_exists ("RS/tambah_aksi.php")) die ("Sorry Empty Page!"); 
-			include "RS/tambah_aksi.php";	break;
+		case 'faskes_tambah' :				
+			if(!file_exists ("Faskes/tambah_aksi.php")) die ("Sorry Empty Page!"); 
+			include "Faskes/tambah_aksi.php";	break;
 
-		case 'RSEdit' :				
-			if(!file_exists ("RS/RSEdit.php")) die ("Sorry Empty Page!"); 
-			include "RS/RSEdit.php";	break;
+		case 'FaskesEdit' :				
+			if(!file_exists ("Faskes/FaskesEdit.php")) die ("Sorry Empty Page!"); 
+			include "Faskes/FaskesEdit.php";	break;
 
-		case 'rs_edit' :				
-			if(!file_exists ("RS/edit_aksi.php")) die ("Sorry Empty Page!"); 
-			include "RS/edit_aksi.php";	break;
+		case 'faskes_edit' :				
+			if(!file_exists ("Faskes/edit_aksi.php")) die ("Sorry Empty Page!"); 
+			include "Faskes/edit_aksi.php";	break;
 
-		case 'RSHapus' :				
-			if(!file_exists ("RS/RSHapus.php")) die ("Sorry Empty Page!"); 
-			include "RS/RSHapus.php";	break;
-
+		case 'FaskesHapus' :				
+			if(!file_exists ("Faskes/FaskesHapus.php")) die ("Sorry Empty Page!"); 
+			include "Faskes/FaskesHapus.php";	break;
 
 		#Kedaruratan - Ambulan
 		case 'AmbulanView' :				

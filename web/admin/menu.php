@@ -121,6 +121,13 @@ include"db/koneksi.php";
 										</a>
 									</li>
 
+										<li>
+										<a href="?page=BeritaView">
+											<i class="fa fa-list-alt" aria-hidden="true"></i>
+											<span>Konten</span> 
+										</a>
+									</li>
+
 									
 									<li class="nav-parent">
 										<a>
