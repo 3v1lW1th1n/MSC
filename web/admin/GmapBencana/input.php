@@ -107,7 +107,7 @@ $konfigurasi = new konfigurasi();
 
       <div class="form-group">
        <div class="col-md-12">
-        <input type="text" placeholder="Lokasi Kejadian" name="alamat_bencana" id="alamat_bencana" class="form-control">
+        <input type="text" placeholder="Lokasi Bencana" name="alamat_bencana" id="alamat_bencana" class="form-control">
        </div>
       </div>
 
@@ -172,7 +172,7 @@ $konfigurasi = new konfigurasi();
    $result = $read->fetch();
    if (isset($_POST['ubah'])) {
     try {
-     $update = $konfigurasi->ubah('tb_bencana' , $_POST['nama_pelapor'],$_POST['telp_pelapor'],$_POST['alamat_bencana'],$_POST['jenis_bencana'],$_POST['keterangan'],$_POST['lat'],$_POST['lng'],$_POST['location_status'],'id_bencana',$_GET['data']);
+     $update = $konfigurasi->ubah('tb_bencana' , $_POST['nama_pelapor'],$_POST['telp_pelapor'],$_POST['alamat_bencana'],$_POST['jenis_bencana'],$_POST['keterangan'],$_POST['tgl_bencana'],$_POST['lat'],$_POST['lng'],$_POST['location_status'],'id_bencana',$_GET['data']);
      if ($update) {
       echo "<script>alert('Data Lokasi Berhasil Diubah');window.location.href = '?page=BencanaDataView'</script>";
      }
@@ -220,7 +220,7 @@ $konfigurasi = new konfigurasi();
        <form class="form-horizontal" method="POST" action="">
         <div class="form-group">
          <div class="col-md-12">
-          <input type="text" placeholder="ID Bencana" name="id_bencana" id="id_bencana" class="form-control" value="<?php echo $result['id_bencana']; ?>">
+          <input type="text" placeholder="ID" name="id_bencana" id="id_bencana" class="form-control" value="<?php echo $result['id_bencana']; ?>">
          </div>
         </div>
 
@@ -238,7 +238,7 @@ $konfigurasi = new konfigurasi();
 
         <div class="form-group">
          <div class="col-md-12">
-          <input type="text" placeholder="Lokasi" name="alamat_bencana" id="alamat_bencana" class="form-control" value="<?php echo $result['alamat_bencana']; ?>">
+          <input type="text" placeholder="Lokasi Bencana" name="alamat_bencana" id="alamat_bencana" class="form-control" value="<?php echo $result['alamat_bencana']; ?>">
          </div>
         </div>
 
@@ -250,7 +250,7 @@ $konfigurasi = new konfigurasi();
 
         <div class="form-group">
          <div class="col-md-12">
-          <input type="text" placeholder="keterangan" name="keterangan" id="keterangan" class="form-control" value="<?php echo $result['keterangan']; ?>">
+          <input type="text" placeholder="Keterangan" name="keterangan" id="keterangan" class="form-control" value="<?php echo $result['keterangan']; ?>">
          </div>
         </div>
 
@@ -275,7 +275,7 @@ $konfigurasi = new konfigurasi();
         <div class="form-group">
          <div class="col-md-12">
           <select class="form-control" name="location_status">
-           <?php
+          <?php
           if ($result['location_status'] == "0") {
            echo "
            <option selected>0</option>
@@ -292,9 +292,10 @@ $konfigurasi = new konfigurasi();
           </select>
          </div>
         </div>
-
+        <div>
         <input type="submit" class="btn btn-success" name="ubah" value="UBAH">
         <a href="?page=BencanaDataView" class="btn btn-warning">BATAL</a>
+        </div>
        </form>
        </div>
        <div class="col-md-6">
@@ -308,7 +309,7 @@ $konfigurasi = new konfigurasi();
     ?>
      <table class="display table table-bordered table-striped mb-none" id="tbBencana">
       <thead>
-       <th width="1%">No.</th>
+       <th width="2%">No.</th>
        <th width="2%">ID</th>
        <th width="10%">Nama Pelapor</th>
        <th width="10%">Telepon Pelapor</th>
@@ -319,7 +320,7 @@ $konfigurasi = new konfigurasi();
        <th width="7%">Latitude</th>
        <th width="7%">Longitude</th>
        <th width="2%">Status Lokasi</th>
-       <th width="30%"><center>Aksi</center></th>
+       <th width="20%"><center>Aksi</center></th>
       </thead>
           <tbody>
           <?php
@@ -339,8 +340,8 @@ $konfigurasi = new konfigurasi();
                 <td><?php  echo $result['lat'];?></td>
                 <td><?php  echo $result['lng'];?></td>
                 <td><center><?php  echo $result['location_status'];?></center></td>
-                <td><center><a href="?page=BencanaDataView&edit&data=<?php echo $result['id_bencana']; ?>" class="on-default edit-row"><i class='fa fa-pencil'></i></a>
-            &nbsp;<a href="?page=BencanaDataView&hapus=true&data=<?php echo $result['id_bencana']; ?>" class="on-default remove-row"><i class='fa fa-trash-o'></i></a></center></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<center><a href="?page=BencanaDataView&aksi=edit&data=<?php echo $result['id_bencana']; ?>" class="on-default edit-row"><i class='fa fa-pencil'></i></a>
+            &nbsp;&nbsp;<a href="?page=BencanaDataView&hapus=true&data=<?php echo $result['id_bencana']; ?>" class="on-default remove-row"><i class='fa fa-trash-o'></i></a></center></td>
               </tr>
                 <?php
               }

@@ -243,8 +243,10 @@ $konfigurasi = new konfigurasi();
           </select>
          </div>
         </div>
+        <div>
         <input type="submit" class="btn btn-success" name="ubah" value="UBAH">
         <a href="?page=AmbulanDataView" class="btn btn-warning">BATAL</a>
+        </div>
        </form>
        </div>
        <div class="col-md-6">

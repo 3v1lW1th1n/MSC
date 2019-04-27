@@ -36,16 +36,17 @@ public function tampilBerdasarkanData($tabel , $kondisi ,$id_bencana){
    $tampil->execute();
    return $tampil;
 }
-public function tambah($tabel , $id_bencana, $nama_pelapor, $telp_pelapor, $alamat_bencana,$jenis_bencana,$keterangan, $tgl_bencana, $lat, $lng, $location_status){
+public function tambah($tabel , $id_bencana, $nama_pelapor, $telp_pelapor, $alamat_bencana,$jenis_bencana,$keterangan,$tgl_bencana, $lat, $lng, $location_status){
    $tambah = $this->db->prepare("INSERT INTO $tabel (id_bencana,nama_pelapor,telp_pelapor,alamat_bencana,jenis_bencana,keterangan,tgl_bencana,lat,lng,location_status) VALUES ('$id_bencana','$nama_pelapor','$telp_pelapor','$alamat_bencana','$jenis_bencana','$keterangan','$tgl_bencana','$lat','$lng','$location_status') ");
    $tambah->execute();
    return $tambah;
-}
-public function ubah($tabel ,  $nama_pelapor, $telp_pelapor, $alamat_bencana,$jenis_bencana,$keterangan, $tgl_bencana, $lat, $lng, $location_status,$kondisi,$nilai){
-   $ubah = $this->db->prepare("UPDATE $tabel SET nama_pelapor='$nama_pelapor', telp_pelapor='$telp_pelapor',alamat_bencana='$alamat_bencana', jenis_bencana='$jenis_bencana', keterangan='$keterangan', tgl_bencana='$tgl_bencana',lat='$lat', lng='$lng' WHERE $kondisi='$nilai'");
+} 
+public function ubah($tabel ,  $nama_pelapor,$telp_pelapor,$alamat_bencana,$jenis_bencana,$keterangan, $tgl_bencana,$lat,$lng,$location_status,$kondisi,$nilai){
+   $ubah = $this->db->prepare("UPDATE $tabel SET nama_pelapor='$nama_pelapor', telp_pelapor='$telp_pelapor',alamat_bencana='$alamat_bencana', jenis_bencana='$jenis_bencana',keterangan='$keterangan',tgl_bencana='$tgl_bencana',lat='$lat',lng='$lng' WHERE $kondisi='$nilai'");
    $ubah->execute();
    return $ubah;
 }
+
 public function hapus($tabel , $kondisi,$nilai){
    $hapus = $this->db->prepare("DELETE FROM $tabel WHERE $kondisi='$nilai'");
    $hapus->execute();
