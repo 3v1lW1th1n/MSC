@@ -353,8 +353,8 @@ $konfigurasi = new konfigurasi();
                 <td><?php  echo $result['lat'];?></td>
                 <td><?php  echo $result['lng'];?></td>
                 <td><center><?php  echo $result['location_status'];?><center></td>
-                <td>&nbsp;&nbsp;&nbsp;<a href="?page=KanpolDataView&aksi=edit&data=<?php echo $result['id_kanpol']; ?>" class="btn btn-info"><i class='fa fa-pencil'></i></a>
-            &nbsp;<a href="?page=KanpolDataView&hapus=true&data=<?php echo $result['id_kanpol']; ?>" class="btn btn-danger"><i class='fa fa-trash-o'></i></a></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<center><a href="?page=KanpolDataView&aksi=edit&data=<?php echo $result['id_kanpol']; ?>" class="on-default edit-row"><i class='fa fa-pencil'></i></a>
+            &nbsp;&nbsp;<a href="?page=KanpolDataView&hapus=true&data=<?php echo $result['id_kanpol']; ?>" class="on-default remove-row"><i class='fa fa-trash-o'></i></a></center></td>
               </tr>
                 <?php
               }

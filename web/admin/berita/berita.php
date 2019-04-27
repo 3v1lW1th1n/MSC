@@ -36,7 +36,7 @@
 											<td><?php echo $d['IsiBerita']; ?></td>
 											<td class="actions">
 
-									<center><a href="?page=BeritaEdit&id=<?php echo $d['id_berita']; ?>" class="on-default edit-row"><i class="fa fa-pencil"></i></a></center>
+									<center><a href="?page=BeritaEdit&id=<?php echo $d['id_berita']; ?>" class="on-default edit-row" ><i class="fa fa-pencil"></i></a></center>
 											</td>
 										</tr>
 									<?php 

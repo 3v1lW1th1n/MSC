@@ -141,7 +141,6 @@ include"db/koneksi.php";
 
 			    <li class="dropdown"><a>Layanan Umum</a>
 				<ul class="isi-dropdown">
-					<li><a href="pln.php">PLN</a></li>
 					<li><a href="pdam.php">PDAM</a></li>
 					<li><a href="pju.php">PJU</a></li>
 					<li><a href="stokdarah.php">Stok Darah</a></li>

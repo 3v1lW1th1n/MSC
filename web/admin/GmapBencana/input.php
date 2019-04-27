@@ -339,8 +339,8 @@ $konfigurasi = new konfigurasi();
                 <td><?php  echo $result['lat'];?></td>
                 <td><?php  echo $result['lng'];?></td>
                 <td><center><?php  echo $result['location_status'];?></center></td>
-                <td><a href="?page=BencanaDataView&aksi=edit&data=<?php echo $result['id_bencana']; ?>" class="btn btn-info"><i class='fa fa-pencil'></i></a>
-            &nbsp;<a href="?page=BencanaDataView&hapus=true&data=<?php echo $result['id_bencana']; ?>" class="btn btn-danger"><i class='fa fa-trash-o'></i></a></td>
+                <td><center><a href="?page=BencanaDataView&edit&data=<?php echo $result['id_bencana']; ?>" class="on-default edit-row"><i class='fa fa-pencil'></i></a>
+            &nbsp;<a href="?page=BencanaDataView&hapus=true&data=<?php echo $result['id_bencana']; ?>" class="on-default remove-row"><i class='fa fa-trash-o'></i></a></center></td>
               </tr>
                 <?php
               }
