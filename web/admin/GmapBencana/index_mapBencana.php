@@ -1,5 +1,5 @@
 <?php
-include'locations_modelBencana.php';
+include'locations_modelBencana.php'; 
 ?>
 <!-- start: page -->
 					<section class="panel">
@@ -85,6 +85,7 @@ include'locations_modelBencana.php';
                     $("#confirmed").prop(confirmed,locations[i][9]);
                     $("#id_bencana").val(locations[i][0]);
                     $("#nama_pelapor").val(locations[i][1]);
+                    $("#telp_pelapor").val(locations[i][2]);
                     $("#alamat_bencana").val(locations[i][3]);
                     $("#jenis_bencana").val(locations[i][4]);
                     $("#keterangan").val(locations[i][5]);
