@@ -135,42 +135,41 @@ include"db/koneksi.php";
             <img src="images/logo2.png" alt=""/>
         </div>
          <div class="log_reg">
-                <ul>
-                <li class="active"><a href="index.php">Home</a>
-                </li>
-                
-                <li class="dropdown"><a>Kedaruratan</a>
-                <ul class="isi-dropdown">
-                    <li><a href="mapAmbulan.php">Ambulan</a></li>
-                    <li><a href="mapBencana.php">Bencana Alam</a></li>
-                    <li><a href="mapKanpol.php">Kantor Polisi</a></li>
-                </ul>
-                </li>
+      <ul>
+        <li class="active"><a href="index.php">Home</a>
+        </li>
+         
+        <li class="dropdown"><a>Kedaruratan</a>
+        <ul class="isi-dropdown">
+          <li><a href="mapAmbulan.php">Ambulan</a></li>
+          <li><a href="mapBencana.php">Bencana Alam</a></li>
+          <li><a href="mapKanpol.php">Kantor Polisi</a></li>
+        </ul>
+          </li>
 
-                <li class="dropdown"><a>Layanan Umum</a>
-                <ul class="isi-dropdown">
-                    <li><a href="?page=PLN">PLN</a></li>
-                    <li><a href="?page=PDAM">PDAM</a></li>
-                    <li><a href="?page=PJU">PJU</a></li>
-                    <li><a href="?page=StokDarah">Stok Darah</a></li>
-                </ul>
-                </li>
+          <li class="dropdown"><a>Layanan Umum</a>
+        <ul class="isi-dropdown">
+          <li><a href="PDAMFE.php">PDAM</a></li>
+          <li><a href="PJUFE.php">PJU</a></li>
+          <li><a href="StokDarahFE.php">Stok Darah</a></li>
+        </ul>
+        </li>
 
-                <li class="dropdown"><a>Pengaduan</a>
-                <ul class="isi-dropdown">
-                    <li><a href="?page=SuratWarga">Surat Warga</a></li>
-                    <li><a href="?page=Elapor">E-Lapor</a></li>
-                </ul>
-                </li>
-                <li class="dropdown"><a>Informasi</a>
-                <ul class="isi-dropdown">
-                    <li><a href="einap.php">E-Inap</a></li>
-                    <li><a href="faskes.php">Fasilitas Kesehatan</a></li>
-                    <li><a href="dataRS.php">Data Rumah Sakit</a></li>
-                </ul>
-                </li>
-                <div class="clear"></div>
-            </ul>
+        <li class="dropdown"><a>Pengaduan</a>
+        <ul class="isi-dropdown">
+          <li><a href="SuratWarga.php">Surat Warga</a></li>
+          <li><a href="Elapor_FE.php">E-Lapor</a></li>
+        </ul>
+        </li>
+        <li class="dropdown"><a>Informasi</a>
+        <ul class="isi-dropdown">
+          <li><a href="einap.php">E-Inap</a></li>
+          <li><a href="faskes.php">Fasilitas Kesehatan</a></li>
+          <li><a href="dataRS.php">Data Rumah Sakit</a></li>
+        </ul>
+        </li>
+        <div class="clear"></div>
+      </ul>
         </div>              
         <div class="clear"></div>
     </div>  

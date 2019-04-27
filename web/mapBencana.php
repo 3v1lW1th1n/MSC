@@ -11,7 +11,6 @@ include "admin/GmapBencana/locations_modelBencana.php";
 <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW-LxWC1ML0a6FbUzgC6ExKfh6xrb8oZM&callback=initMap">
 </script>
-<link rel="stylesheet" href="popup.css">
 
 <link rel="shortcut icon" href="images/iconkabmalangresize.png"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -136,7 +135,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
                 <ul>
                 <li class="active"><a href="index.php">Home</a>
                 </li>
-                
+                 
                 <li class="dropdown"><a>Kedaruratan</a>
                 <ul class="isi-dropdown">
                     <li><a href="mapAmbulan.php">Ambulan</a></li>
@@ -147,17 +146,16 @@ include "admin/GmapBencana/locations_modelBencana.php";
 
                 <li class="dropdown"><a>Layanan Umum</a>
                 <ul class="isi-dropdown">
-                    <li><a href="?page=PLN">PLN</a></li>
-                    <li><a href="?page=PDAM">PDAM</a></li>
-                    <li><a href="?page=PJU">PJU</a></li>
-                    <li><a href="?page=StokDarah">Stok Darah</a></li>
+                    <li><a href="PDAMFE.php">PDAM</a></li>
+                    <li><a href="PJUFE.php">PJU</a></li>
+                    <li><a href="StokDarahFE.php">Stok Darah</a></li>
                 </ul>
                 </li>
 
                 <li class="dropdown"><a>Pengaduan</a>
                 <ul class="isi-dropdown">
-                    <li><a href="?page=SuratWarga">Surat Warga</a></li>
-                    <li><a href="?page=Elapor">E-Lapor</a></li>
+                    <li><a href="SuratWarga.php">Surat Warga</a></li>
+                    <li><a href="Elapor_FE.php">E-Lapor</a></li>
                 </ul>
                 </li>
                 <li class="dropdown"><a>Informasi</a>
@@ -182,25 +180,14 @@ include "admin/GmapBencana/locations_modelBencana.php";
 
 <!-- start main -->
 
-
-
 <div class="wrap"> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    <img style="width:80%; height:100px" src="images/header_bencana.png">
+    <img style="margin-left: 35px" src="images/header_bencana.png">
 <div class="main">
+
 
       
         <div id="map" style="width:100%; height:520px;"></div>
-      <!-- start popup -->
-    <div id="close">
-        <div class="container-popup">
-            <form action="#" method="post" class="popup-form">
-                <img src="images/popupbencana.png" alt="">
-            </form>
-            <a class="close" href="#close">close</a>
-        </div>
-    </div>
-<!-- end popup -->
-
+      
 
     
 

@@ -138,7 +138,7 @@ include"db/koneksi.php";
                 <ul>
                 <li class="active"><a href="index.php">Home</a>
                 </li>
-                
+                 
                 <li class="dropdown"><a>Kedaruratan</a>
                 <ul class="isi-dropdown">
                     <li><a href="mapAmbulan.php">Ambulan</a></li>
@@ -149,17 +149,16 @@ include"db/koneksi.php";
 
                 <li class="dropdown"><a>Layanan Umum</a>
                 <ul class="isi-dropdown">
-                    <li><a href="#">PLN</a></li>
-                    <li><a href="pdam.php">PDAM</a></li>
-                    <li><a href="#">PJU</a></li>
-                    <li><a href="#">Stok Darah</a></li>
+                    <li><a href="PDAMFE.php">PDAM</a></li>
+                    <li><a href="PJUFE.php">PJU</a></li>
+                    <li><a href="StokDarahFE.php">Stok Darah</a></li>
                 </ul>
                 </li>
 
                 <li class="dropdown"><a>Pengaduan</a>
                 <ul class="isi-dropdown">
-                    <li><a href="#">Surat Warga</a></li>
-                    <li><a href="#">E-Lapor</a></li>
+                    <li><a href="SuratWarga.php">Surat Warga</a></li>
+                    <li><a href="Elapor_FE.php">E-Lapor</a></li>
                 </ul>
                 </li>
                 <li class="dropdown"><a>Informasi</a>
