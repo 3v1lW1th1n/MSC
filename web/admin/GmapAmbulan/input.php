@@ -282,7 +282,7 @@ $konfigurasi = new konfigurasi();
                 <td><?php  echo $result['telp_rs'];?></td>
                 <td><?php  echo $result['lat'];?></td>
                 <td><?php  echo $result['lng'];?></td>
-                <td><?php  echo $result['location_status'];?></td>
+                <td><center><?php  echo $result['location_status'];?></center></td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="?page=AmbulanDataView&aksi=edit&data=<?php echo $result['id_rs']; ?>" class="btn btn-info"><i class='fa fa-pencil'></i></a>
             &nbsp;<a href="?page=AmbulanDataView&hapus=true&data=<?php echo $result['id_rs']; ?>" class="btn btn-danger"><i class='fa fa-trash-o'></i></a></td>
               </tr>

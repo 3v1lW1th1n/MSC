@@ -308,19 +308,18 @@ $konfigurasi = new konfigurasi();
     ?>
      <table class="display table table-bordered table-striped mb-none" id="tbBencana">
       <thead>
-       <th width="2%">No</th>
-       <th>ID Bencana</th>
-       <th>Nama Pelapor</th>
-       <th>Telepon Pelapor</th>
-       <th>Lokasi Kejadian</th>
-       <th>Jenis Bencana</th>
-       <th>Keterangan</th>
-       <th>Waktu Kejadian</th>
-       <th>Latitude</th>
-       <th>Longitude</th>
-       <th>Status Lokasi</th>
-       <th width="5%">Ubah</th>
-       <th width="5%">Hapus</th>
+       <th width="1%">No.</th>
+       <th width="2%">ID</th>
+       <th width="10%">Nama Pelapor</th>
+       <th width="10%">Telepon Pelapor</th>
+       <th width="15%">Lokasi Kejadian</th>
+       <th width="15%">Jenis Bencana</th>
+       <th width="10%">Keterangan</th>
+       <th width="10%">Waktu Kejadian</th>
+       <th width="7%">Latitude</th>
+       <th width="7%">Longitude</th>
+       <th width="2%">Status Lokasi</th>
+       <th width="30%"><center>Aksi</center></th>
       </thead>
           <tbody>
           <?php
@@ -339,9 +338,9 @@ $konfigurasi = new konfigurasi();
                 <td><?php  echo $result['tgl_bencana'];?></td>
                 <td><?php  echo $result['lat'];?></td>
                 <td><?php  echo $result['lng'];?></td>
-                <td><?php  echo $result['location_status'];?></td>
-                <td><a href="?page=BencanaDataView&aksi=edit&data=<?php echo $result['id_bencana']; ?>" class="btn btn-info"><i class='fa fa-edit'></i></a></td>
-            &nbsp        <td><a href="?page=BencanaDataView&hapus=true&data=<?php echo $result['id_bencana']; ?>" class="btn btn-danger"><i class='fa fa-remove'></i></a></td>
+                <td><center><?php  echo $result['location_status'];?></center></td>
+                <td><a href="?page=BencanaDataView&aksi=edit&data=<?php echo $result['id_bencana']; ?>" class="btn btn-info"><i class='fa fa-pencil'></i></a>
+            &nbsp;<a href="?page=BencanaDataView&hapus=true&data=<?php echo $result['id_bencana']; ?>" class="btn btn-danger"><i class='fa fa-trash-o'></i></a></td>
               </tr>
                 <?php
               }

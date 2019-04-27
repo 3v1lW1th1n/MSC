@@ -326,17 +326,16 @@ $konfigurasi = new konfigurasi();
     ?>
      <table class="display table table-bordered table-striped mb-none" id="tbKanpol">
       <thead>
-       <th width="3%">No</th>
-       <th>ID Kantor</th>
-       <th width="10%">Jenis</th>
-       <th width="15%">Nama Kantor</th>
-       <th width="20%">Alamat</th>
-       <th width="15%">Telepon</th>
-       <th width="15%">Latitude</th>
-       <th width="15%">Longitude</th>
-       <th width="5">Status Lokasi</th>
-       <th width="5%">Ubah</th>
-       <th width="5%">Hapus</th>
+       <th width="2%"><center>No</center></th>
+       <th width="2%"><center>ID</center></th>
+       <th width="5%"><center>Jenis</center></th>
+       <th width="10%"><center>Nama Kantor</center></th>
+       <th width="20%"><center>Alamat</center></th>
+       <th width="10%"><center>Telepon</center></th>
+       <th width="5%"><center>Latitude</center></th>
+       <th width="5%"><center>Longitude</center></th>
+       <th width="5"><center>Status Lokasi</center></th>
+       <th width="30%"><center>Aksi</center></th>
       </thead>
           <tbody>
           <?php
@@ -353,9 +352,9 @@ $konfigurasi = new konfigurasi();
                 <td><?php  echo $result['telp_kanpol'];?></td>
                 <td><?php  echo $result['lat'];?></td>
                 <td><?php  echo $result['lng'];?></td>
-                <td><?php  echo $result['location_status'];?></td>
-                <td><a href="?page=KanpolDataView&aksi=edit&data=<?php echo $result['id_kanpol']; ?>" class="btn btn-info"><i class='fa fa-edit'></i></a></td>
-            &nbsp        <td><a href="?page=KanpolDataView&hapus=true&data=<?php echo $result['id_kanpol']; ?>" class="btn btn-danger"><i class='fa fa-remove'></i></a></td>
+                <td><center><?php  echo $result['location_status'];?><center></td>
+                <td>&nbsp;&nbsp;&nbsp;<a href="?page=KanpolDataView&aksi=edit&data=<?php echo $result['id_kanpol']; ?>" class="btn btn-info"><i class='fa fa-pencil'></i></a>
+            &nbsp;<a href="?page=KanpolDataView&hapus=true&data=<?php echo $result['id_kanpol']; ?>" class="btn btn-danger"><i class='fa fa-trash-o'></i></a></td>
               </tr>
                 <?php
               }
