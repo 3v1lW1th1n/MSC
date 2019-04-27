@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2019 at 05:11 AM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Generation Time: Apr 27, 2019 at 03:51 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,7 +39,7 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id_berita`, `JudulBerita`, `IsiBerita`) VALUES
-(1, 'Apa Itu Malang Smart City?', 'Ide mengenai smart city ialah kota cerdas/pintar yang inovatif menggunakan teknologi informasi dan komunikasi (TIK) yang berkelanjutan dalam membantu masyarakat mengelola sumber daya yang ada, memberikan informasi yang tepat, efisiensi operasi perkotaan, jasa, dan daya saing seiring dengan pemenuhan kebutuhan generasi saat ini dan setelahnya. Pada konsepnya, kota cerdas harus memungkinkan warga masyarakat untuk berperan secara aktif dalam pengelolaan kota dengan memberikan umpan balik kepada penyedia layanan, baik dari sektor privat maupun publik.');
+(1, 'Apa Itu Malang Smart City??', 'Ide mengenai smart city ialah kota cerdas/pintar yang inovatif menggunakan teknologi informasi dan komunikasi (TIK) yang berkelanjutan dalam membantu masyarakat mengelola sumber daya yang ada, memberikan informasi yang tepat, efisiensi operasi perkotaan, jasa, dan daya saing seiring dengan pemenuhan kebutuhan generasi saat ini dan setelahnya. Pada konsepnya, kota cerdas harus memungkinkan warga masyarakat untuk berperan secara aktif dalam pengelolaan kota dengan memberikan umpan balik kepada penyedia layanan, baik dari sektor privat maupun publik.');
 
 -- --------------------------------------------------------
 
@@ -121,8 +121,31 @@ INSERT INTO `einap` (`DT_RowId`, `Alamat`, `Telp`, `NamaRS`) VALUES
 (63, 'Jl. Panglima Sudirman No.99A, Lemah Duwur, Dilem, Kepanjen, Malang, Jawa Timur 65163', '(0341) 393000', 'RS Wava Husada'),
 (64, 'Jl. Bromo No.98-100, Sukun, Kepanjen, Malang, Jawa Timur 65163', '(0341) 399499', 'RS Khusus Bedah Hasta Husada'),
 (65, 'Desa Sembaluh, Pujon, Jurangrejo, Ngroto, Pujon, Malang, Jawa Timur 65391', '(0341) 524206', 'RS. Wikarta mandala'),
-(66, 'JL. Raya Sengkaling, No. 245 Rt. 004/004, Kel. Mulyo Agung, Kec. Dau, 65151, Pendem, Junrejo, Kota Batu, Jawa Timur 65233', '0816-506-802', 'RS Hayunanto'),
-(67, 'Puskesmas coba input', 'g', '085xx');
+(66, 'JL. Raya Sengkaling, No. 245 Rt. 004/004, Kel. Mulyo Agung, Kec. Dau, 65151, Pendem, Junrejo, Kota Batu, Jawa Timur 65233', '0816-506-802', 'RS Hayunanto');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `info_pdam`
+--
+
+CREATE TABLE `info_pdam` (
+  `id_info_pdam` int(11) NOT NULL,
+  `judul_info` varchar(100) NOT NULL,
+  `info` text NOT NULL,
+  `tanggal` date NOT NULL,
+  `foto` varchar(50) NOT NULL,
+  `foto_desc` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `info_pdam`
+--
+
+INSERT INTO `info_pdam` (`id_info_pdam`, `judul_info`, `info`, `tanggal`, `foto`, `foto_desc`) VALUES
+(1, 'IN HOUSE TRAINING RENCANA PENGAMANAN AIR MINUM PDAM KOTA MALANG', 'PDAM Kota Malang mengadakan In House Training RPAM (Rencana Pengamanan Air Minum) pada tanggal 8 - 11 April 2019, bertempat di ruang Oproom 1 dan 2 PDAM Kota Malang. Sebanyak 100 peserta dari beberapa bagian yang terkait di PDAM Kota Malang ditugaskan untuk mengikuti Pelatihan tersebut. In House Training tersebut bertujuan untuk memenuhi kebutuhan kompetensi dan pengetahuan karyawan dan karyawati PDAM Kota Malang dalam bidang RPAM (Rencana Pengamanan Air Minum). Acara tersebut dibuka secara langsung oleh Direktur Teknik PDAM Kota Malang Ir Ari Mukti, MT. Terdapat beberapa materi yang disampaikan dalam In House Training RPAM, diantaranya ZAMP sebagai implementasi pelaksanaan RPAM dengan pemateri Djaka Setyanta, ST, Kuantitas dan Kontinuitas pendukung Kualitas dengan pemateri Sutjibto, S.Kom, Evaluasi dan Monitoring RPAM dengan pemateri Gigih Yuli Asmara, ST, Pengantar Management Aset dengan pemateri Rahmad Hadi Sasmito, SH, Pengenalan Aplikasi Manajemen Aset dan Implementasi Management Aset di lapangan dengan pemateri Agung Putra Kusuma, S.Kom. M, Nor Muhlas, S.Pd, M.Si  selaku Direktur Utama PDAM Kota Malang berharap \"Dengan adanya In House Training ini, akan menciptakan Inovasi - inovasi baru untuk PDAM Kota Malang, SDM juga merupakan aset yang sangat penting bagi PDAM Kota Malang, jadi harus di tingkatkan keahlianya. Potensi SDM akan berpengaruh secara kolektif, dan hal tersebut akan berpengaruh kepada citra PDAM Kota Malang, kalau kita ramah kepada palanggan maka akan menciptakan citra yang  baik bagi perusahaan\".\r\nKetua RPAM Kota Malang, Subandi, SAB, menyampaikan \"Dengan terseleggaranya pelatihan In House RPAM ini karyawan dan karyawati PDAM Kota dapat memahami lebih dalam mengenai RPAM PDAM Kota Malang baik yang bagian teknik dan bagian administrasi, dan yang terpenting ikut mendukung RPAM Kota Malang\".\r\nSebagai salah satu peserta terbaik di Inhouse Training RPAM PDAM Joefri Mulyana, SE Kota Malang menyampaikan kesan dalam mengikuti pelatihan Inhouse Training RPAM, sangat menghibur, menambah pengetahuan terkait RPAM, Program dan Narasumbernya \"Keren\", dan saya berharap terus diadakan pelatihan seperti ini, dan modul-modulnya lebih di tingkatkan. Harapannya semoga semakin banyak yang tau tentang RPAM PDAM Kota Malang dan semakin besarnya kepedulian karyawan kita terhadap RPAM itu sendiri\".', '2019-04-09', 'berita_1.jpg', 'Malang, 09 April 2019'),
+(2, 'PDAM KOTA MALANG GELAR PERTANDINGAN PERSAHABATAN SEPAK BOLA DENGAN PDAM KABUPATEN MALANG', 'Untuk melancarkan sinergi dan kerjasama, PDAM Kota Malang dan PDAM Kabupaten Malang,  melangsungkan pertandingan persahabatan Sepakbola yang digelar di Sumber Puti Wajak, tempatnya di lapangan Wonoayu Kabupaten Malang hari ini Senin, tanggal 22 April 2019.\r\n\r\nIni merupakan kali pertama, PDAM Kota Malang dan PDAM Kabupaten Malang menggelar partai persahabatan sepak bola. Direktur Utama PDAM Kota Malang M. Nor Muhlas, S.Pd, M.Si dan Direktur Utama PDAM Kabupaten Malang  Syamsul Hadi, S.Sos, MM  turut hadir dalam pertandingan ini. PDAM Kota Malang sendiri mengirimkan dua tim untuk menjajal kekuatan tim Sepak Bola PDAM Kabupaten Malang.\r\n\r\nPertandingan Pertama  dimenangkan oleh PDAM Kabupaten Malang dengan Score     5 -1, dan pertandingan kedua di menangkan oleh PDAM Kota Malang denan Score 4 -1. Pertandingan persahabatan sepakbola ini sebagai bentuk persahabatan sesama tukang ledeng yang terus berupaya memberikan pelayanan kebutuhan masyarakat khususnya di Kota Malang dan di Kabupaten Malang. Acara kedua tim larut dalam suasana kekeluargaan dengan diakhiri foto bersama dan saling tukar jersey yang ikut menambah kemeriahan persahabatan tukang ledeng untuk mencairkan suasana.', '2019-04-22', 'berita_2.jpg', 'Kabupaten Malang, 22/4/2019.'),
+(3, 'PDAM TURUT SERTA DALAM PAMERAN DAN SYMPOSIUM PELAYANAN PUBLIK JAWA TIMUR 2018 BANYUWANGI', 'Para OPD dari seluruh Jawa Timur masing-masing menciptakan inovasi pelayanan publik agar semakin dekat dan mudah bagi masyarakat. Masing-masing instansi strategis di Jawa Timur dan juga swasta menciptakan inovasi yang bisa memberikan kemudahan layanan bagi masyarakat.\r\nSimposium inovasi pelayanan publik ini dilakukan dalam rangka mewujudkan pelayanan Jawa Timur yang Cepat, Efektif/Efisien, Transparan, Tanggap dan Responsif sesuai tagline Gubernur Jawa Timur Khofifah Indar Parawansa dan Wagub Emil Elestianto Dardak.\r\nKhofifah selaku Gubenur Jawa Timur Mengatakan \"Di Pemerintahan Jawa Timur kita ada CETTAR. Kita ingin bagaimana layanan kita ke masyarakat bisa cepat, efektif, efisien, transparan, tanggap dan responsif,\".<br/><br/>\r\n\r\n\r\nGubernur perempuan pertama Jawa Timur ini melanjutkan pameran dan simposium inovasi pelayanan publik ini akan menjadi tempat untuk saling belajar dan saling memberikan energi positif untuk inovasi-inovasi yang baik untuk masyarakat.<br/>\r\nDi pameran ini kita bisa langsung konfirmasi ke seluruh OPD yang punya inovasi layanan publik. Menurut Khofifah dengan menggelar pameran dan simposium semacam ini setiap daerah dan intansi bisa saling melihat.<br/><br/>\r\n\r\n\r\nKhofifah menambahkan \"Jadi kalau di sini ada, tidak usah studi banding ke luar negeri. Kalau konsulnya di sini kan lebih dekat, apa yang bisa kita ciptakan dari berbagai layanan publik yang inovatif, supaya masing-masing tahu ada update inovasi,\" kata Khofifah.<br/><br/> \r\n\r\nPDAM Kota Malang merupakan salah satu Perwakilan Pemerintah Kota Malang, menampilkan tekhnologi aplikasi yang terintegrasi satu sama lain dalam Portal Aplikasi PDAM Kota Malang yang digunakan dalam sistem bisnisnya PDAM Kota Malang, yang sesuai dengan tema Pameran dan Symposium Jawa Timur 2019 yaitu 4.0 dan Monitoring kelayakan air siap minum (ZAMP) PDAM disetiap daerah yang tersebar di Kota Malang secara live melalui Website PDAM Kota Malang. ', '2019-04-02', 'berita_3.jpg', 'Sebanyak 89 instansi dengan 178 inovasi pelayanan publik mewarnai Pameran dan Simposium Inovasi Pelayanan Publik Jawa Timur 2019  di Taman Blambangan,  Banyuwangi, Rabu (24/4/2019).');
 
 -- --------------------------------------------------------
 
@@ -131,7 +154,7 @@ INSERT INTO `einap` (`DT_RowId`, `Alamat`, `Telp`, `NamaRS`) VALUES
 --
 
 CREATE TABLE `tb_bencana` (
-  `id_bencana` varchar(15) NOT NULL,
+  `id_bencana` int(15) NOT NULL,
   `nama_pelapor` varchar(100) NOT NULL,
   `telp_pelapor` varchar(50) NOT NULL,
   `alamat_bencana` text NOT NULL,
@@ -142,13 +165,6 @@ CREATE TABLE `tb_bencana` (
   `lng` float(10,6) NOT NULL,
   `location_status` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_bencana`
---
-
-INSERT INTO `tb_bencana` (`id_bencana`, `nama_pelapor`, `telp_pelapor`, `alamat_bencana`, `jenis_bencana`, `keterangan`, `tgl_bencana`, `lat`, `lng`, `location_status`) VALUES
-('BA001', 'Admin', '089111222333', 'Jl Kelud No. 41', 'Longsor', 'Terjadi longsor sepanjang jalan kelud, korban luka-luka 3 orang', '2019-04-19 20:52:21', -7.977023, 112.622421, 0);
 
 -- --------------------------------------------------------
 
@@ -194,8 +210,7 @@ INSERT INTO `tb_faskes` (`id_faskes`, `jenis_faskes`, `id_rs`, `status_ketersedi
 ('FK022', 'Laboratorium', 'RS002', 0, '0', 0),
 ('FK023', 'Instalasi Radiologi (Rontgen dan USG)', 'RS002', 0, '0', 0),
 ('FK024', 'Farmasi', 'RS002', 0, '0', 0),
-('FK025', 'Ambulance Emergency', 'RS002', 0, '0', 0),
-('FK026', 'Tim Emergency', 'RS002', 0, '0', 0);
+('FK025', 'Ambulance Emergency', 'RS002', 0, '0', 0);
 
 -- --------------------------------------------------------
 
@@ -306,6 +321,28 @@ INSERT INTO `tb_kegawatdaruratan` (`id_jenis`, `jenis_kkg`, `id_rs`, `jml_tersed
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_pdam`
+--
+
+CREATE TABLE `tb_pdam` (
+  `id_pdam` varchar(10) NOT NULL,
+  `nama_pdam` varchar(200) NOT NULL,
+  `alamat_pdam` text NOT NULL,
+  `telp_pdam` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_pdam`
+--
+
+INSERT INTO `tb_pdam` (`id_pdam`, `nama_pdam`, `alamat_pdam`, `telp_pdam`) VALUES
+('PDAM001', 'PDAM Kota Malang', 'Jl. Danau Sentani Raya No.100, Madyopuro, Kedungkandang, Kota Malang, Jawa Timur 65142', '(0341) 715103'),
+('PDAM002', 'PDAM Tirta Dharma', 'Jl. W.R. Supratman, Rampal Celaket, Klojen, Kota Malang, Jawa Timur 65111', '-'),
+('PDAM003', 'MOJOLANGU WATER TANK PDAM KOTA MALANG', 'Mojolangu, Kec. Lowokwaru, Kota Malang, Jawa Timur 65142', '(0341) 715103');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_rs`
 --
 
@@ -330,7 +367,7 @@ INSERT INTO `tb_rs` (`id_rs`, `nama_rs`, `alamat_rs`, `telp_rs`, `lat`, `lng`, `
 ('RS004', 'RS Mulia Insani', '-', '021-5962790', 0.000000, 0.000000, 1),
 ('RS005', 'RSIA Tiara', '-', '021-59401999', 0.000000, 0.000000, 1),
 ('RS006', 'RS Permata Hati', 'Jl. Danau Toba Blok E 6 No.16 - 18, Lesanpuro, Kedungkandang, Kota Malang, Jawa Timur 65138', '(0341)718068', -7.980056, 112.660721, 1),
-('RS007', 'RS Suci Paramita', '-', '-', 0.000000, 0.000000, 1);
+('RS007', 'RS Suci Paramita', '-', '-', 0.000000, 0.000000, 0);
 
 --
 -- Indexes for dumped tables
@@ -347,6 +384,12 @@ ALTER TABLE `berita`
 --
 ALTER TABLE `einap`
   ADD PRIMARY KEY (`DT_RowId`);
+
+--
+-- Indexes for table `info_pdam`
+--
+ALTER TABLE `info_pdam`
+  ADD PRIMARY KEY (`id_info_pdam`);
 
 --
 -- Indexes for table `tb_bencana`
@@ -375,10 +418,26 @@ ALTER TABLE `tb_kegawatdaruratan`
   ADD KEY `id_rs` (`id_rs`);
 
 --
+-- Indexes for table `tb_pdam`
+--
+ALTER TABLE `tb_pdam`
+  ADD PRIMARY KEY (`id_pdam`);
+
+--
 -- Indexes for table `tb_rs`
 --
 ALTER TABLE `tb_rs`
   ADD PRIMARY KEY (`id_rs`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tb_bencana`
+--
+ALTER TABLE `tb_bencana`
+  MODIFY `id_bencana` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
