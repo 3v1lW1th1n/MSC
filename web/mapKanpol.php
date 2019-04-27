@@ -180,7 +180,7 @@ include "admin/GmapKanpol/locations_modelKanpol.php";
 
 <!-- start main -->
 
-<div class="wrap"> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<div class="wrap"> <br>
     <img style="margin-left: 35px" src="images/header_kanpol.png">
 <div class="main">
 

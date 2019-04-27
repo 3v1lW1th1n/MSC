@@ -180,7 +180,7 @@ include "admin/GmapAmbulan/locations_modelAmbulan.php";
 
 <!-- start main -->
 
-<div class="wrap"> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<div class="wrap"> <br>
     <img style="margin-left: 35px" src="images/header_ambulan.png">
 <div class="main">
 

@@ -11,6 +11,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
 <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW-LxWC1ML0a6FbUzgC6ExKfh6xrb8oZM&callback=initMap">
 </script>
+<link rel="stylesheet" href="popup.css">
 
 <link rel="shortcut icon" href="images/iconkabmalangresize.png"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -180,7 +181,7 @@ include "admin/GmapBencana/locations_modelBencana.php";
 
 <!-- start main -->
 
-<div class="wrap"> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<div class="wrap"> <br>
     <img style="margin-left: 35px" src="images/header_bencana.png">
 <div class="main">
 
@@ -189,7 +190,17 @@ include "admin/GmapBencana/locations_modelBencana.php";
         <div id="map" style="width:100%; height:520px;"></div>
       
 
-    
+<!-- start popup -->
+    <div id="close">
+        <div class="container-popup">
+            <form action="#" method="post" class="popup-form">
+                <img src="images/popupbencana.png" alt="">
+            </form>
+            <a class="close" href="#close">close</a>
+        </div>
+    </div>
+<!-- end popup -->
+
 
     <div id="map"></div>
     <script>
