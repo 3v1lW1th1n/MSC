@@ -149,17 +149,17 @@ include"db/koneksi.php";
 
                 <li class="dropdown"><a>Layanan Umum</a>
                 <ul class="isi-dropdown">
-                    <li><a href="?page=PLN">PLN</a></li>
-                    <li><a href="?page=PDAM">PDAM</a></li>
-                    <li><a href="?page=PJU">PJU</a></li>
-                    <li><a href="?page=StokDarah">Stok Darah</a></li>
+                    <li><a href="#">PLN</a></li>
+                    <li><a href="pdam.php">PDAM</a></li>
+                    <li><a href="#">PJU</a></li>
+                    <li><a href="#">Stok Darah</a></li>
                 </ul>
                 </li>
 
                 <li class="dropdown"><a>Pengaduan</a>
                 <ul class="isi-dropdown">
-                    <li><a href="?page=SuratWarga">Surat Warga</a></li>
-                    <li><a href="?page=Elapor">E-Lapor</a></li>
+                    <li><a href="#">Surat Warga</a></li>
+                    <li><a href="#">E-Lapor</a></li>
                 </ul>
                 </li>
                 <li class="dropdown"><a>Informasi</a>
@@ -180,71 +180,32 @@ include"db/koneksi.php";
 
 <!-- start slider -->
 
-    
 
 <!-- start main -->
-
+    <img style="margin-left: 70px; margin-bottom: -40px; margin-top: 10px" src="images/header_pdam.png"> 
 <div class="wrap">
 <div class="main">
-
   
-                         <img src="images/header_rs1.png">   
-                            <table class="display table table-bordered table-striped mb-none" id="dataRS">
-    
-  
-       Data Terakhir Pada : <br/>
-        
-    <?php
-    $tanggal= mktime(date("m"),date("d"),date("Y"));
-    echo "Tanggal : ".date("d-M-Y", $tanggal);
-    date_default_timezone_set('Asia/Jakarta');
-    $jam=date("H:i:s");
-    echo "| Pukul : ". $jam." ";
-    $a = date ("H");
-    ?> 
- <br/> <br/>
+<?php
+    include 'db/koneksi.php';
+    $id = $_GET['id'];
+    $data = mysqli_query($koneksi,"select * from info_pdam where id_info_pdam='$id'");
+    while($d = mysqli_fetch_array($data)){
+        ?>
 
-
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Nama Rumah Sakit</th>
-                                        <th>Kasus Kegawatdaruratan</th>
-                                    
-                                    </tr>
-                                </thead>
-                                <tbody>
-                          <?php 
-                        include 'db/koneksi.php';
-                        $no = 1;
-                        $data = mysqli_query($koneksi,"select * from tb_rs");
-                        while($d = mysqli_fetch_array($data)){
-                           ?>
-                                 <tr class="gradeX">
-                                  <td><?php echo $no++; ?></td>
-                                  <td><a style="color: #444444;"><?php echo $d['nama_rs']; ?> </td>
-
-                                  <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="detail_maternal.php?id=<?php echo $d['id_rs']; ?>">
-                                    <button >Maternal</button></a> 
-                                    <a href="detail_neonatal.php?id=<?php echo $d['id_rs']; ?>">
-                                    <button>Neonatal</button></td>
-                                 </a>
-                                </tr>
-
-                                  <?php 
-                              }
-                                ?>
-                                </tbody>
-                        
-                            </table>
+   <p style=" font-size: 24px; font-style: normal; font-variant: normal; font-weight: 500; color: #57C5A0; line-height: 18px"><?php echo $d['judul_info']; ?></p><br/>
+    <center><img src="images/berita/<?php echo $d['foto']?>"></center><br/>
+    <p align="center" style="margin-left: 30px; margin-right: 30px"><?php echo $d['foto_desc']; ?></p><br/><br/>
+    <?php echo $d['info']; ?>
+ 
 </div>
-</div>
-
     <div class="clear"></div>
 </div>
-</div>
 
+
+                                    <?php 
+    }
+    ?>
 
 <!-- start footer -->
 <div class="footer_bg">
@@ -278,12 +239,7 @@ include"db/koneksi.php";
 </div>
  
         <!-- Examples -->
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script>
-            $(document).ready(function(){
-                $('#dataRS').DataTable();
-            });
-        </script>
+   
 
 </body>
 </html>

@@ -141,17 +141,17 @@ include"db/koneksi.php";
 
 			    <li class="dropdown"><a>Layanan Umum</a>
 				<ul class="isi-dropdown">
-					<li><a href="?page=PLN">PLN</a></li>
-					<li><a href="?page=PDAM">PDAM</a></li>
-					<li><a href="?page=PJU">PJU</a></li>
-					<li><a href="?page=StokDarah">Stok Darah</a></li>
+					<li><a href="pln.php">PLN</a></li>
+					<li><a href="pdam.php">PDAM</a></li>
+					<li><a href="pju.php">PJU</a></li>
+					<li><a href="stokdarah.php">Stok Darah</a></li>
 				</ul>
 				</li>
 
 				<li class="dropdown"><a>Pengaduan</a>
 				<ul class="isi-dropdown">
-					<li><a href="?page=SuratWarga">Surat Warga</a></li>
-					<li><a href="?page=Elapor">E-Lapor</a></li>
+					<li><a href="suratwarga.php">Surat Warga</a></li>
+					<li><a href="elapor.php">E-Lapor</a></li>
 				</ul>
 				</li>
 				<li class="dropdown"><a>Informasi</a>
@@ -266,7 +266,7 @@ include"db/koneksi.php";
 	<div style="padding: 10px 0px 10px 20px; border: 2px solid #57C5A0; width: 530px; box-shadow: 5px 5px 8px #57C5A0; border-radius: 5px;  margin-top: -25px; margin-left: 75px" class="login_left">
 	<h3>Layanan Umum</h3><br/>
 	<img width="150px" height="150px" src="images/pju.png">&nbsp;&nbsp;&nbsp;&nbsp;
-	<img width="150px" height="150px" src="images/pdam.png">&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="pdam.php"> <img width="150px" height="150px" src="images/pdam.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 	<img width="150px" height="150px" src="images/STOKDARAH.png"><br/>
 	<h1><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PJU
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PDAM

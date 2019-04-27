@@ -188,34 +188,6 @@ include"db/koneksi.php";
 <div class="main">
 
   
-
-<?php
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://e-inap.malangkab.go.id/User/GetdataRs",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => false,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  $res = json_decode($response);
-  // var_dump($res);
-} ?>
-
                          <img src="images/header_faskes2.png">   
                             <table class="display table table-bordered table-striped mb-none" id="faskes_">
              

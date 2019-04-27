@@ -150,7 +150,7 @@ include"db/koneksi.php";
                 <li class="dropdown"><a>Layanan Umum</a>
                 <ul class="isi-dropdown">
                     <li><a href="?page=PLN">PLN</a></li>
-                    <li><a href="?page=PDAM">PDAM</a></li>
+                    <li><a href="pdam.php">PDAM</a></li>
                     <li><a href="?page=PJU">PJU</a></li>
                     <li><a href="?page=StokDarah">Stok Darah</a></li>
                 </ul>
@@ -180,70 +180,66 @@ include"db/koneksi.php";
 
 <!-- start slider -->
 
-    
 
 <!-- start main -->
-
+    <img style="margin-left: 70px; margin-bottom: -40px; margin-top: 10px" src="images/header_pdam.png"> 
 <div class="wrap">
 <div class="main">
 
-  
-                         <img src="images/header_rs1.png">   
-                            <table class="display table table-bordered table-striped mb-none" id="dataRS">
-    
-  
-       Data Terakhir Pada : <br/>
-        
-    <?php
-    $tanggal= mktime(date("m"),date("d"),date("Y"));
-    echo "Tanggal : ".date("d-M-Y", $tanggal);
-    date_default_timezone_set('Asia/Jakarta');
-    $jam=date("H:i:s");
-    echo "| Pukul : ". $jam." ";
-    $a = date ("H");
-    ?> 
- <br/> <br/>
+    <div class="login_left">
+        <h3>Lokasi Anjungan Kran Air Siap Minum</h3>
+        <img style="width: 600px; height: 600px; margin-top: 33px" src="images/map_pdam.png"/>
 
-
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Nama Rumah Sakit</th>
-                                        <th>Kasus Kegawatdaruratan</th>
-                                    
-                                    </tr>
-                                </thead>
-                                <tbody>
-                          <?php 
+                         <?php 
                         include 'db/koneksi.php';
                         $no = 1;
-                        $data = mysqli_query($koneksi,"select * from tb_rs");
+                        $data = mysqli_query($koneksi,"select * from tb_PDAM");
                         while($d = mysqli_fetch_array($data)){
                            ?>
-                                 <tr class="gradeX">
-                                  <td><?php echo $no++; ?></td>
-                                  <td><a style="color: #444444;"><?php echo $d['nama_rs']; ?> </td>
-
-                                  <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="detail_maternal.php?id=<?php echo $d['id_rs']; ?>">
-                                    <button >Maternal</button></a> 
-                                    <a href="detail_neonatal.php?id=<?php echo $d['id_rs']; ?>">
-                                    <button>Neonatal</button></td>
-                                 </a>
-                                </tr>
-
-                                  <?php 
+        <p style="color: #57C5A0; font-size: 18px; "><?php echo $d['nama_pdam']; ?></p>
+        <p style="margin-top: -30px; font-size: 15px; "><?php echo $d['alamat_pdam']; ?></p>
+        <p style="margin-top: -25px; font-size: 15px; "><?php echo $d['telp_pdam']; ?></p>
+           <?php 
                               }
                                 ?>
-                                </tbody>
-                        
-                            </table>
-</div>
-</div>
+    </div>
 
+
+    <div class="login_left">
+        <h3>berita sebelumnya</h3>
+        
+
+                         <?php 
+                        include 'db/koneksi.php';
+                        $no = 1;
+                        $data = mysqli_query($koneksi,"select * from info_pdam order by tanggal ASC");
+                        while($d = mysqli_fetch_array($data)){
+                           ?>
+        <p style="color: #57C5A0; font-size: 15px; margin-top: 30px"><?php echo $d['tanggal']; ?></p> 
+        <p style="margin-top: -28px; line-height: 30px; color: #57C5A0; font-size: 18px; "><?php echo $d['judul_info']; ?></p>
+        <p style="margin-top: -15px; font-size: 15px; ">
+                <?php
+             $isi_berita = htmlentities(strip_tags($d['info'])); // membuat paragraf pada isi berita dan mengabaikan tag html
+                    $isi = substr($isi_berita,0,180); // ambil sebanyak 180 karakter
+                    $isi = substr($isi_berita,0,strrpos($isi," ")); // potong per spasi kalimat
+                    ?>
+                    <?php echo $isi ?>...
+                        <div class="top_main">
+                            <a style="margin-top: -25px" href="detail_pdam.php?id=<?php echo $d['id_info_pdam']; ?>">Selengkapnya</a> 
+
+                        </div>
+                 
+            </p>    
+            
+           <?php 
+                              }
+                                ?>
+
+</div>
+</div>
     <div class="clear"></div>
 </div>
-</div>
+
 
 
 <!-- start footer -->
@@ -278,12 +274,7 @@ include"db/koneksi.php";
 </div>
  
         <!-- Examples -->
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script>
-            $(document).ready(function(){
-                $('#dataRS').DataTable();
-            });
-        </script>
+
 
 </body>
 </html>
