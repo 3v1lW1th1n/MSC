@@ -41,7 +41,7 @@ if($_GET) {
 			if(!file_exists ("E-inap/EinapTambah.php")) die ("Sorry Empty Page!"); 
 			include "E-inap/EinapTambah.php";	break;
 
-		case 'tambah' :				
+		case 'einap_tambah' :				
 			if(!file_exists ("E-inap/tambah_aksi.php")) die ("Sorry Empty Page!"); 
 			include "E-inap/tambah_aksi.php";	break;
 
@@ -49,7 +49,7 @@ if($_GET) {
 			if(!file_exists ("E-inap/EinapEdit.php")) die ("Sorry Empty Page!"); 
 			include "E-inap/EinapEdit.php";	break;
 
-		case 'edit' :				
+		case 'einap_edit' :				
 			if(!file_exists ("E-inap/edit_aksi.php")) die ("Sorry Empty Page!"); 
 			include "E-inap/edit_aksi.php";	break;
 

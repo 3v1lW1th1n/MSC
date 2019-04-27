@@ -11,7 +11,7 @@
 							</header>
 							<div class="panel-body">
 								
-								<form method="post" action="?page=tambah" class="form-horizontal form-bordered">
+								<form method="post" action="?page=einap_tambah" class="form-horizontal form-bordered">
 											<div class="form-group">
 												<label class="col-md-3 control-label" for="inputDefault">ID Puskesmas</label>
 												<div class="col-md-3">
@@ -22,14 +22,14 @@
 											<div class="form-group">
 												<label class="col-md-3 control-label" for="inputDefault">Nama Puskesmas</label>
 												<div class="col-md-3">
-													<input type="text" name="b" class="form-control" id="inputDefault">
+													<input type="text" name="d" class="form-control" id="inputDefault">
 												</div>
 											</div>
 
 											<div class="form-group">
 												<label class="col-md-3 control-label" for="inputDefault">Alamat Puskesmas</label>
 												<div class="col-md-6">
-													<textarea class="form-control" name="c" rows="3" id="textareaDefault"></textarea>
+													<textarea class="form-control" name="b" rows="3" id="textareaDefault"></textarea>
 												</div>
 
 											</div>
@@ -37,7 +37,7 @@
 											<div class="form-group">
 												<label class="col-md-3 control-label" for="inputDefault">Telepon Puskesmas</label>
 												<div class="col-md-3">
-													<input type="text" name="d" class="form-control" id="inputDefault">
+													<input type="text" name="c" class="form-control" id="inputDefault">
 												</div>
 											</div>
 

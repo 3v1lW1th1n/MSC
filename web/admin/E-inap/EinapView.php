@@ -38,7 +38,7 @@
 
 									
 										<tr class="gradeX">
-											<td><p align="center"><?php echo $counter; ?></p></td>
+											<td><p align="center"><?php echo $d['DT_RowId']; ?></p></td>
 											<td><?php echo $d['NamaRS']; ?></td>
 											<td><?php echo $d['Alamat']; ?></td>
 											<td><?php echo $d['Telp']; ?></td>

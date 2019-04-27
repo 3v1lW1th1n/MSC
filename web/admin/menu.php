@@ -169,11 +169,7 @@ include"db/koneksi.php";
 													 PDAM
 												</a>
 											</li>
-											<li>
-												<a href="#">
-													 PLN
-												</a>
-											</li>
+											
 											<li>
 												<a href="#">
 													 Stok Darah
