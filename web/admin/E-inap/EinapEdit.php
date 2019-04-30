@@ -28,7 +28,7 @@
 											<div class="form-group">
 												<label class="col-md-3 control-label" for="inputDefault">ID Puskesmas</label>
 												<div class="col-md-3">
-													<input type="text" name="a" class="form-control" id="inputDefault" value="<?php echo $d['DT_RowId']; ?>">
+													<input disabled="disabled" type="text" name="a" class="form-control" id="inputDefault" value="<?php echo $d['DT_RowId']; ?>">
 												</div>
 											</div>
 

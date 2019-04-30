@@ -26,7 +26,7 @@
 											<div class="form-group">
 												<label class="col-md-3 control-label" for="inputDefault">ID Rumah Sakit</label>
 												<div class="col-md-3">
-													<input type="text" name="a" class="form-control" id="inputDefault" value="<?php echo $d['id_rs']; ?>">
+													<input disabled="disabled" type="text" name="a" class="form-control" id="inputDefault" value="<?php echo $d['id_rs']; ?>">
 												</div>
 											</div>
 
